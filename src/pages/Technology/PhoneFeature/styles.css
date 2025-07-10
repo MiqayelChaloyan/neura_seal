@@ -1,0 +1,92 @@
+.neuro-container {
+    background: radial-gradient(ellipse at center, #0d0020, #080014 80%);
+    color: white;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .phone-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .phone-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    transform: rotate(-10deg);
+    filter: drop-shadow(0 0 30px #ae00ff);
+    z-index: 1;
+  }
+  
+  /* Base feature style */
+  .feature-bubble {
+    position: absolute;
+    width: 220px;
+    color: white;
+    text-align: left;
+    z-index: 2;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  /* Placeholder icons (you should use SVGs) */
+  .icon-tech {
+    background-image: url('/icons/patent.svg');
+  }
+  .icon-ai {
+    background-image: url('/icons/ai.svg');
+  }
+  .icon-integration {
+    background-image: url('/icons/factory.svg');
+  }
+  .icon-security {
+    background-image: url('/icons/lock.svg');
+  }
+  
+  .feature-title {
+    color: #e600ff;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  
+  .feature-desc {
+    color: #ccc;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  
+  /* Positioning based on image */
+  .top-right {
+    top: 0;
+    right: -30px;
+  }
+  
+  .middle-right {
+    top: 120px;
+    right: -40px;
+  }
+  
+  .middle-left {
+    top: 140px;
+    left: -30px;
+  }
+  
+  .bottom-left {
+    bottom: 10px;
+    left: 0;
+  }
+  
