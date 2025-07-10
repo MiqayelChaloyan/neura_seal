@@ -1,61 +1,61 @@
 .features-wrapper {
-    background-color: #000;
+    background-color: #0a0a0a;
     color: white;
     font-family: 'Helvetica Neue', sans-serif;
-    padding: 40px 20px;
+    padding: 20px 20px;
     overflow: hidden;
 
   }
   
+/* InfoCard.css */
+.info-card {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* center vertically */
+  background-color: #0a0a0a;
+  padding: 40px;
+  border: 1px solid #333;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0 auto;
+  position: relative;
+}
 
+.info-number {
+  font-size: 130px;
+  font-weight: 100;
+  color: white;
+  opacity: 0.1; /* faint, just like background */
+  flex: 1;
+  line-height: 1;
+  transform: translateY(59px);
+}
 
+.info-content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+}
 
-  .feature-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: #000407;
-    color: white;
-    padding: 40px;
-    font-family: 'Arial', sans-serif;
-    border: 2px solid #BFBFBF;
-    position: relative;
-    height: 180px; /* instead of 200px */
-    width: 70%;
-    margin: 0 auto;
-    z-index: 10;
-  }
-  
-  .feature-number {
-    position: absolute;
-    bottom: -36px; /* or remove */
-    font-size: 140px; /* smaller size */
-    margin-bottom: 0;
-    letter-spacing: 15px;
-  }
-  
-  .feature-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .feature-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0 0 20px 0;
-    color: white !important;
+.info-title {
+  font-size: 20px;
+  margin: 0;
+  color: white;
+}
 
-  }
-  
-  .feature-description {
-    font-size: 16px;
-    line-height: 1.5;
-    color: white;
+.info-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0 0;
+  color: white;
+}
 
-    /* margin: 0; */
-  }
-  
-  
+.info-description {
+  flex: 3;
+  text-align: right;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+}
