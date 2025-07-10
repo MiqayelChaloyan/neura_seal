@@ -1,0 +1,74 @@
+.hero-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-image: url('https://img.freepik.com/premium-photo/robot-hand-with-word-ai-it_870833-134.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0000006c;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .brand-name {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Instead of margin on span for consistency */
+    margin-bottom: 100px;
+  }
+  
+  .brand-name span {
+    font-size: 100px;
+    font-weight: 400;
+    display: inline-block;
+    color: white;
+    transition: transform 0.3s ease;
+    font-family: 'Quicksand', 'Poppins', sans-serif;
+  }
+  
+  /* Diagonal arrangement using translateY instead of margin-top */
+  .brand-name span:nth-child(1) {
+    transform: translateY(0px);
+    padding: 40px;
+  }
+  .brand-name span:nth-child(2) {
+    transform: translateY(120px);
+    padding: 40px;
+  }
+  .brand-name span:nth-child(3) {
+    transform: translateY(20px);
+    padding: 40px;
+  }
+  .brand-name span:nth-child(4) {
+    transform: translateY(-60px);
+    padding: 40px;
+  }
+  .brand-name span:nth-child(5) {
+        transform: translateY(0px);
+        padding: 40px;
+  }
+  
+  .tagline {
+    margin-top: 20px;
+    font-size: 30px;
+    letter-spacing: 0.8em;
+    text-transform: capitalize;
+    color: #ccc;
+    font-weight: 400;
+  }
+  

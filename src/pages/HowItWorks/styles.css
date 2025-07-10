@@ -1,0 +1,79 @@
+.how-it-works {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    /* background-image: url('https://4kwallpapers.com/images/wallpapers/windows-11-dark-mode-abstract-background-black-background-1920x1080-8710.jpg');
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center; */
+    background-color: #000;
+  }
+  
+  .how-it-works h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .step-card {
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .step-card h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .step-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .product-card {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .product-code {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .product-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .product-type {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .product-details {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+  }
+  
+  @media (max-width: 600px) {
+    .how-it-works h1 {
+      font-size: 28px;
+    }
+    
+    .step-card h2 {
+      font-size: 20px;
+    }
+  }

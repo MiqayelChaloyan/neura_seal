@@ -1,0 +1,243 @@
+body {
+  /* margin: 0;
+  font-family: sans-serif;
+  background: #000; */
+  color: white;
+}
+
+.hamburger-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2001;
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.line {
+  height: 3px;
+  width: 40px;
+  background: white;
+  border-radius: 2px;
+  margin: 4px 0;
+}
+
+.fullscreen-menu {
+  position: fixed;
+  inset: 0;
+  background: #000407;
+  display: flex;
+  overflow: hidden;
+  z-index: 2000;
+  scroll-behavior: smooth;
+}
+
+.menu-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/robot.jpg') center center / cover no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+/* .close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+} */
+
+.menu-center {
+  flex: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  font-size: 1.2rem;
+  margin-top: 25rem;
+  list-style: none;
+  padding: 0;
+  height: 50vh;
+}
+
+.menu-items li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.menu-items li:hover {
+  color: #aaa;
+}
+
+.menu-sections {
+  /* flex: 1; */
+  /* display: flex;
+  flex-direction: column; */
+  width: 100%;
+}
+
+.menu-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  position: relative;
+}
+
+.section-content {
+  max-width: 1200px;
+  width: 100%;
+  /* height: 400px; */
+  /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.section-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-content-container div {
+  width: 50%;
+}
+
+.team-image {
+  width: 500px;
+  height: 500px;
+  /* object-fit: cover; */
+}
+
+
+.section-content h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.section-contentr h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  margin-bottom: 2rem;
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+  padding-bottom: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 1rem;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.3s;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.contact-form button:hover {
+  opacity: 0.8;
+}
+
+.contact-us-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  
+}
+.contact-us-container div {
+  width: 50%;
+}
+/* For the horizontal line in the image */
+/* hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 2rem 0;
+} */
+
+.right-panel {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.8rem;
+}
+.social-icons a {
+  color: white;
+  text-decoration: none;
+  transform: rotate(90deg);
+  transform-origin: left center;
+  width: 100px;
+  margin-left: 10px;
+  display: block;
+}
+.social-icons a:hover {
+  opacity: 0.7;
+}
