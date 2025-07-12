@@ -1,6 +1,6 @@
 .technology-container {
     position: relative;
-    height: 100vh; /* Full viewport height */
+    /* height: 100vh; Full viewport height */
     /* background-image: url('https://4kwallpapers.com/images/wallpapers/windows-11-dark-mode-abstract-background-black-background-1920x1080-8710.jpg');
     background-size: contain;
     background-position: center;
@@ -12,10 +12,3 @@
     background-color: #000;
 }
 
-.technology-container h1 {
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    /* margin-bottom: 2rem; */
-    padding-top: 20px;
-}
