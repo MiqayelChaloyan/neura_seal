@@ -18,6 +18,8 @@
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(0, 0%, 0%);
   --light-white-color: #f3f4f6;
+  --icon-color: #909193;
+  --icon-hover-color: #088D95;
 
   --bg-color-primary: #EDEDED;
   --first-color: #373d46;
@@ -58,7 +60,7 @@
   --large-font-size: 1.25rem;
   --share-link-span: 0.9869em;
   --input-font-size: 24px;
-  --text: 20px;
+  --text-font-size: 1.5rem;
 
   /*========== z index ==========*/
   --z-modal: 1000;
@@ -138,7 +140,7 @@ code {
   border-radius: 0.2rem;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: .5rem;
   height: .5rem;
 }
@@ -148,4 +150,4 @@ code {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #111827;
-}
+}  */
