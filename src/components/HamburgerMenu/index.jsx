@@ -1,45 +1,72 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
 import { motion, AnimatePresence } from 'framer-motion';
+
+import { Instagram, Linkedin, Youtube, Twitter, Facebook } from 'lucide-react';
+
+import AboutUs from '../AboutUs';
+import ContactUs from '../ContactUs';
+
+import { Pages } from '../../constants/pages';
+import { Hosts } from '../../constants/hosts';
+import { Titles } from '../../constants';
+
 import './styles.css';
-import { useNavigate } from 'react-router-dom';
-import F from '../../assets/55555.png';
+
 
 const menuVariants = {
-  hidden: {
-    opacity: 0,
-    y: '-100%',
-    transition: { duration: 0.5, ease: 'easeInOut' },
+  hidden: { opacity: 0, y: 40, transition: { duration: 0.7, ease: 'easeOut' } },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: 'easeOut' } },
+  exit: { opacity: 0, y: 40, transition: { duration: 0.5, ease: 'easeIn' } },
+};
+
+const listVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2, // delay between each item
+    },
   },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeInOut' },
-  },
-  exit: {
-    opacity: 0,
-    y: '-100%',
-    transition: { duration: 0.4, ease: 'easeInOut' },
+    transition: {
+      duration: 0.6,
+      ease: 'easeOut',
+    },
   },
 };
+
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+
   const navigate = useNavigate();
 
   const sectionRefs = [useRef(null), useRef(null), useRef(null)];
   const scrollContainerRef = useRef(null);
 
-  const toggleMenu = () => setIsOpen(prev => !prev);
-
+  const toggleMenu = () => {
+    setIsOpen(prev => !prev);
+  };
+  
   const scrollTo = (index) => {
     const ref = sectionRefs[index];
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
+    if (ref.current && scrollContainerRef.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActiveIndex(index);
     }
   };
+  
 
   useEffect(() => {
+    const container = scrollContainerRef.current;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -52,7 +79,7 @@ const HamburgerMenu = () => {
         });
       },
       {
-        root: scrollContainerRef.current,
+        root: container,
         threshold: 0.5,
       }
     );
@@ -67,6 +94,7 @@ const HamburgerMenu = () => {
       });
     };
   }, []);
+  
 
   return (
     <>
@@ -74,10 +102,12 @@ const HamburgerMenu = () => {
         <motion.span
           className="line"
           animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
         />
         <motion.span
           className="line"
           animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
         />
       </button>
 
@@ -89,87 +119,96 @@ const HamburgerMenu = () => {
             animate="visible"
             exit="exit"
             variants={menuVariants}
+            transition={{ duration: 0.5 }}
           >
-            {/* Background (optional image) */}
             <div className="menu-bg" />
 
-            {/* Top-left logo */}
             <div className="top-left">
-              <img src="https://yt3.googleusercontent.com/ytc/AIdro_lldtO065jRenSWpWuyx3Gx168SmqH6h1YZ8T6y3qBXQYY=s900-c-k-c0x00ffffff-no-rj" alt="Logo" className="logo" />
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/65f1f4c283c47475e7fc202f/6e60df43-e32e-4a08-b8e0-6b7f14417e6b/form+icon.png"
+                alt="Logo"
+                className="logo"
+              />
             </div>
 
-            {/* Center content */}
+            <div className="left-panel">
+              <div className="menu-dots">
+                {[0, 1, 2].map((idx) => (
+                  <button
+                    key={idx}
+                    className={`dot${activeIndex === idx ? ' active' : ''}`}
+                    onClick={() => scrollTo(idx)}
+                    aria-label={`Go to section ${idx + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+
             <div className="menu-center" ref={scrollContainerRef}>
               <div className="menu-content">
-                <ul className="menu-items">
-                  <li onClick={() => scrollTo(0)}>Who We are</li>
-                  <li onClick={() => {
-                    navigate('/technology');
-                    toggleMenu();
-                  }}>The Technology</li>
-                  <li onClick={() => scrollTo(2)}>Contact Us</li>
-                </ul>
+              <motion.ul
+  className="menu-items"
+  initial="hidden"
+  animate="visible"
+  variants={listVariants}
+>
+  <motion.li
+    className="menu-item"
+    variants={itemVariants}
+    onClick={() => scrollTo(0)}
+  >
+    {Titles.whoWeAre}
+  </motion.li>
+
+  <motion.li
+    className="menu-item"
+    variants={itemVariants}
+    onClick={() => {
+      navigate(Pages.TECHNOLOGY);
+      toggleMenu();
+    }}
+  >
+    {Titles.theTechnology}
+  </motion.li>
+
+  <motion.li
+    className="menu-item"
+    variants={itemVariants}
+    onClick={() => scrollTo(2)}
+  >
+    {Titles.contactUs}
+  </motion.li>
+</motion.ul>
+
 
                 <div className="menu-sections">
                   <section ref={sectionRefs[0]} className="menu-section">
-                    <div className="section-content">
-                    <h1>Who We Are</h1>
-
-                      <div className='section-content-container'>
-                      <div>
-                        <p>
-                          We're a team of engineers tackling one of the world's most damaging and overlooked threats: counterfeiting.<br /><br />
-                          We've built the next evolution in product and document security — an impenetrable, scalable authentication system redefining how the world proves authenticity. We don't just stop counterfeiting; we ensure it never happens again.
-                        </p>
-                      </div>
-
-                      <div>
-                        <img src={F} alt="Team" className='team-image' />
-                      </div>
-                      </div>
-                    </div>
+                    <AboutUs />
                   </section>
-
-                  {/* <section ref={sectionRefs[1]} className="menu-section">
-                    <div className="section-content">
-                      <h1>The Technology</h1>
-                      <p>
-                        [Technology content would go here]
-                      </p>
-                    </div>
-                  </section> */}
-
                   <section ref={sectionRefs[2]} className="menu-section">
-                    <div class="section-contentr">
-                    <h1>Contact Us</h1>
-
-                      <div className='contact-us-container'>
-                        <div class="contact-info">
-                          <p><strong>Address:</strong><br />Al-Duhail-North Road, P.O.Box: 5179</p>
-                          <p><strong>Email:</strong><br />info@neura.com</p>
-                          <p><strong>Phone:</strong><br />1-234-567-8910</p>
-                        </div>
-                        <div class="contact-form">
-                          <input type="text" placeholder="Name: Enter your full name" />
-                          <input type="email" placeholder="Email: Enter your mail" />
-                          <textarea placeholder="Details: Lorem ipsum dolor"></textarea>
-                          <button>Send Message</button>
-                        </div>
-                      </div>
-                    </div>
+                    <ContactUs />
                   </section>
                 </div>
               </div>
             </div>
 
-            {/* Right social icons - now part of scrolling content */}
             <div className="right-panel">
               <div className="social-icons">
-                <a href="#">I</a>
-                <a href="#">L</a>
-                <a href="#">Y</a>
-                <a href="#">T</a>
-                <a href="#">F</a>
+                <Link to={Hosts.INSTAGRAM}>
+                  <Instagram width={25} height={25} />
+                </Link>
+                <Link to={Hosts.LINKEDIN}>
+                  <Linkedin width={25} height={25} />
+                </Link>
+                <Link to={Hosts.YOUTUBE}>
+                  <Youtube width={25} height={25} />
+                </Link>
+                <Link to={Hosts.TWITTER}>
+                  <Twitter width={25} height={25} />
+                </Link>
+                <Link to={Hosts.FACEBOOK}>
+                  <Facebook width={25} height={25} />
+                </Link>
               </div>
             </div>
           </motion.div>
