@@ -1,0 +1,50 @@
+.phone-feature-container {
+  display: block;
+  background-color: #000407
+}
+
+.phone-feature-main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 8rem;
+  color: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.phone-feature-content {
+  flex: 1;
+  max-width: 50%;
+  padding: 6rem 8rem;
+}
+
+.phone-feature-content-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-align: right;
+  width: 100%;
+}
+
+.phone-feature-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.phone-feature-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-feature-visual img {
+  max-width: 100%;
+  width: 700px;
+  height: 600px;
+  object-fit: cover;
+}

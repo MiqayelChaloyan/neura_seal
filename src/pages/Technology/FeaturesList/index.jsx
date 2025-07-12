@@ -31,6 +31,8 @@ const features = [
 const FeaturesList = () => {
   return (
     <div className="features-wrapper">
+      <h1 className="features-title">The Technology</h1>
+
       {features.map(({ number, title, subtitle, description }) => (
         <div className="info-card">
           <div className="info-number">{number}</div>
