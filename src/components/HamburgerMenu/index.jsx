@@ -25,7 +25,7 @@ const listVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2, // delay between each item
+      staggerChildren: 0.2,
     },
   },
 };
@@ -55,7 +55,7 @@ const HamburgerMenu = () => {
   const toggleMenu = () => {
     setIsOpen(prev => !prev);
   };
-  
+
   const scrollTo = (index) => {
     const ref = sectionRefs[index];
     if (ref.current && scrollContainerRef.current) {
@@ -63,7 +63,7 @@ const HamburgerMenu = () => {
       setActiveIndex(index);
     }
   };
-  
+
 
   useEffect(() => {
     const container = scrollContainerRef.current;
@@ -94,7 +94,7 @@ const HamburgerMenu = () => {
       });
     };
   }, []);
-  
+
 
   return (
     <>
@@ -146,41 +146,39 @@ const HamburgerMenu = () => {
 
             <div className="menu-center" ref={scrollContainerRef}>
               <div className="menu-content">
-              <motion.ul
-  className="menu-items"
-  initial="hidden"
-  animate="visible"
-  variants={listVariants}
->
-  <motion.li
-    className="menu-item"
-    variants={itemVariants}
-    onClick={() => scrollTo(0)}
-  >
-    {Titles.whoWeAre}
-  </motion.li>
+                <motion.ul
+                  className="menu-items"
+                  initial="hidden"
+                  animate="visible"
+                  variants={listVariants}
+                >
+                  <motion.li
+                    className="menu-item"
+                    variants={itemVariants}
+                    onClick={() => scrollTo(0)}
+                  >
+                    {Titles.whoWeAre}
+                  </motion.li>
 
-  <motion.li
-    className="menu-item"
-    variants={itemVariants}
-    onClick={() => {
-      navigate(Pages.TECHNOLOGY);
-      toggleMenu();
-    }}
-  >
-    {Titles.theTechnology}
-  </motion.li>
+                  <motion.li
+                    className="menu-item"
+                    variants={itemVariants}
+                    onClick={() => {
+                      navigate(Pages.TECHNOLOGY);
+                      toggleMenu();
+                    }}
+                  >
+                    {Titles.theTechnology}
+                  </motion.li>
 
-  <motion.li
-    className="menu-item"
-    variants={itemVariants}
-    onClick={() => scrollTo(2)}
-  >
-    {Titles.contactUs}
-  </motion.li>
-</motion.ul>
-
-
+                  <motion.li
+                    className="menu-item"
+                    variants={itemVariants}
+                    onClick={() => scrollTo(2)}
+                  >
+                    {Titles.contactUs}
+                  </motion.li>
+                </motion.ul>
                 <div className="menu-sections">
                   <section ref={sectionRefs[0]} className="menu-section">
                     <AboutUs />
