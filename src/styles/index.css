@@ -18,8 +18,9 @@
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(0, 0%, 0%);
   --light-white-color: #f3f4f6;
-  --icon-color: #909193;
+  --icon-color: #9091938f;
   --icon-hover-color: #088D95;
+  --border-color: #9091938f;
 
   --bg-color-primary: #EDEDED;
   --first-color: #373d46;
@@ -31,7 +32,7 @@
   --text-color: #FFFFFF;
   --container-bg: #c7ad91;
   --btn-color: #ddc0a1;
-  --border-color: #EDEDED;
+  /* --border-color: #EDEDED; */
   --light-blue: #2ECDCD;
 
   --header-height: 5rem;
