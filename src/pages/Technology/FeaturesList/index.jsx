@@ -3,6 +3,12 @@ import './styles.css';
 
 const features = [
   {
+    number: '01',
+    title: 'DETECTION ENGINE:',
+    subtitle: 'NO MATCH? NO PASS',
+    description: "If it’s not a match, it doesn't pass. Period.",
+  },
+  {
     number: '02',
     title: 'DETECTION ENGINE:',
     subtitle: 'NO MATCH? NO PASS',
@@ -31,19 +37,18 @@ const features = [
 const FeaturesList = () => {
   return (
     <div className="features-wrapper">
-      <h1 className="features-title">The Technology</h1>
-
       {features.map(({ number, title, subtitle, description }) => (
-        <div className="info-card">
-          <div className="info-number">{number}</div>
-          <div className="info-content">
-            <h2 className="info-title">{title}</h2>
-            <p className="info-subtitle">{subtitle}</p>
+        <div className='feature-card-wrapper'>
+          {number === '01' && <h1 className="features-title">The Technology</h1>}
+          <div className="feature-card" key={number}>
+            <div className="feature-number">{number}</div>
+            <div className="feature-content">
+              <h2 className="feature-title">{title}</h2>
+              <p className="feature-subtitle">{subtitle}</p>
+            </div>
+            <div className="feature-description">{description}</div>
           </div>
-          <div className="info-description">{description}</div>
         </div>
-
-
       ))}
     </div>
   );

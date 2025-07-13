@@ -1,70 +1,159 @@
 .features-wrapper {
   background: #000407;
-  color: white;
-  padding: 20px 20px;
+  color: #fff;
+  padding: 0;
   overflow: hidden;
-
+  width: 80%;
+  margin: 0 auto;
 }
 
 .features-title {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 2rem;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
+  margin-top: 140px;
 }
 
-/* InfoCard.css */
-.info-card {
-  width: 1000px;
+.feature-card-wrapper {
+  border: 1px solid #222;
+}
+.feature-card {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* center vertically */
+  align-items: stretch;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 200px;
   background: #000407;
-  padding: 40px;
-  border: 1px solid #333;
-  font-family: 'Helvetica Neue', sans-serif;
-  margin: 0 auto;
+  padding: 0 0 0 4vw;
   position: relative;
+  overflow: visible;
 }
 
-.info-number {
-  font-size: 130px;
+.feature-number {
+  position: absolute;
+  left: 4vw;
+  bottom: -30px;
+  font-size: 120px;
   font-weight: 100;
-  color: white;
-  opacity: 0.1;
-  /* faint, just like background */
-  flex: 1;
+  line-height: 1.6; 
+  color: #fff;
+  letter-spacing: 0.02em;
+  z-index: 0;
   line-height: 1;
-  transform: translateY(59px);
+  pointer-events: none;
 }
 
-.info-content {
-  flex: 3;
+.feature-content {
+  flex: 1 1 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 50px;
+  justify-content: flex-end;
+  margin-left: 180px;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 20px;
 }
 
-.info-title {
-  font-size: 20px;
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 400;
   margin: 0;
-  color: white;
+  color: #fff;
+  letter-spacing: 0.02em;
 }
 
-.info-subtitle {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 5px 0 0;
-  color: white;
+.feature-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0.2em 0 0 0;
+  color: #fff;
 }
 
-.info-description {
-  flex: 3;
+.feature-description {
+  flex: 1 1 400px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   text-align: right;
-  font-size: 16px;
-  line-height: 1.5;
-  color: white;
+  font-size: 1.1rem;
+  color: #fff;
+  padding-right: 4vw;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .features-wrapper {
+    width: 98%;
+    padding: 0 1vw;
+  }
+  .feature-card {
+    width: 100%;
+    min-height: 120px;
+    padding: 0 0 0 2vw;
+  }
+  .feature-number {
+    font-size: 48px;
+    left: 2vw;
+    bottom: -12px;
+  }
+  .feature-content {
+    margin-left: 80px;
+    padding-bottom: 10px;
+  }
+  .feature-title {
+    font-size: 1.1rem;
+  }
+  .feature-subtitle {
+    font-size: 1rem;
+  }
+  .feature-description {
+    font-size: 0.95rem;
+    padding-right: 2vw;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .features-wrapper {
+    width: 100%;
+    padding: 0 1vw;
+  }
+  .features-title {
+    font-size: 1rem;
+    margin-top: 16px;
+    margin-bottom: 0.8rem;
+  }
+  .feature-card {
+    width: 100%;
+    min-height: 80px;
+    padding: 0 0 0 1vw;
+  }
+  .feature-number {
+    font-size: 28px;
+    left: 1vw;
+    bottom: -6px;
+  }
+  .feature-content {
+    margin-left: 48px;
+    padding-bottom: 4px;
+  }
+  .feature-title {
+    font-size: 0.95rem;
+  }
+  .feature-subtitle {
+    font-size: 0.85rem;
+  }
+  .feature-description {
+    font-size: 0.85rem;
+    padding-right: 1vw;
+    padding-bottom: 4px;
+  }
+  .feature-card-wrapper {
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+  }
 }

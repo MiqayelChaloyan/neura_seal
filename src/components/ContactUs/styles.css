@@ -120,3 +120,55 @@
     background: #fff;
     color: #000;
 }
+
+@media (max-width: 991px) {
+    .contact-container {
+        height: auto;
+        min-height: 100vh;
+        position: static;
+    }
+    .contact-content {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        height: auto;
+    }
+    .contact-left, .contact-right {
+        padding: 0;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .contact-left {
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+    .contact-right {
+        padding: 2rem 1rem;
+    }
+    .contact-right h2 {
+        font-size: 2rem;
+        text-align: left;
+    }
+    .contact-right button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .contact-right form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-content {
+        padding: 1rem 1rem;
+    }
+    .contact-right {
+        padding: 1rem 1rem;
+    }
+    .contact-right h2 {
+        font-size: 1.2rem;
+    }
+    .contact-left-h3, .contact-left-p, .contact-input, .contact-textarea, .contact-right button {
+        font-size: 0.95rem;
+    }
+}
