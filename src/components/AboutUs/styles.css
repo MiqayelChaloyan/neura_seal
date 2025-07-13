@@ -74,3 +74,57 @@
     color: #c8c8c8;
     max-width: 600px;
 }
+
+@media (max-width: 991px) {
+    .who-we-are {
+        flex-direction: column;
+        padding: 3rem 2rem;
+        min-height: unset;
+    }
+    .content, .visual {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .content h1 {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+    }
+    .content p {
+        font-size: 1rem;
+    }
+    .visual {
+        margin-top: 2rem;
+    }
+    .mission-vision-section {
+        padding: 3rem 2rem;
+    }
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .description {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .who-we-are, .mission-vision-section {
+        padding: 1.2rem 0.5rem;
+    }
+    .content h1 {
+        font-size: 1.3rem;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .description {
+        font-size: 0.95rem;
+    }
+}
