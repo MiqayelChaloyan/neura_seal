@@ -1,0 +1,197 @@
+/* Section container */
+.industries-section {
+    background: #000407;
+    color: #fff;
+    /* padding: 60px 0 0 0; */
+    min-height: 20vh;
+}
+
+
+/* Main container */
+.industries-section-container {
+    position: relative;
+    background: #000407;
+    height: 40vh;
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1px solid #222;
+    z-index: 1;
+    border-bottom: 1px solid #222;
+}
+
+.industries-section-container::before,
+.industries-section-container::after {
+    content: "";
+    position: absolute;
+    top: -350px;
+    bottom: 0;
+    width: 0.5px;
+    background-color: #222;
+    z-index: -1;
+}
+
+.industries-section-container::before {
+    left: 0;
+}
+
+.industries-section-container::after {
+    right: 0;
+}
+
+
+.industries-section-title {
+    padding: 50px 50px 100px 30px;
+}
+
+.industries-section-title h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+/* Section container */
+.industries-section {
+    background: #000407;
+    color: #fff;
+    padding: 60px 0 0 0;
+    min-height: 50vh;
+    position: relative;
+}
+
+/* Border wrapper spans full width for top and bottom borders */
+.industries-section-border-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/* Pseudo-elements for full-width top and bottom borders */
+.industries-section-border-wrapper::before,
+.industries-section-border-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #222;
+    z-index: 0;
+}
+
+.industries-section-border-wrapper::before {
+    top: 0;
+}
+
+.industries-section-border-wrapper::after {
+    bottom: 0;
+}
+
+/* Main container (still 80% width) */
+.industries-section-container {
+    background: #000407;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1; /* Above the borders */
+}
+
+.industries-section-title {
+    padding: 50px 50px 100px 30px;
+}
+
+.industries-section-title h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.industries-section-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+.industry-card {
+    flex: 1 1 30%;
+    background-color: #000407;
+    text-align: center;
+    padding: 100px 0px;
+    border: 1px solid #222;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.industry-card h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 20px 0 10px;
+    font-weight: 500;
+}
+
+.industry-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* SVG Icon styling */
+/* .industry-icon {
+    width: 60px;
+    height: 60px;
+    stroke: #00f6ff;
+    fill: none;
+    stroke-width: 2;
+    margin: 0 auto 10px;
+} */
+
+/* Hover Effect (highlight like first card) */
+.hover-highlight:hover {
+    background-color: #111418;
+    /* border-color: #00f6ff; */
+    /* box-shadow: 0 0 15px rgba(0, 246, 255, 0.3); */
+    /* transform: translateY(-5px); */
+}
+
+.hover-highlight:hover .industry-icon {
+    stroke: #00f6ff;
+}
+
+.hover-highlight:hover h3 {
+    color: #00f6ff;
+}
+
+@media (max-width: 768px) {
+  .industries-section-container {
+    width: 100%;
+    height: auto;
+    padding: 0 5px;
+  }
+  .industries-section-title {
+    padding: 30px 10px 40px 10px;
+  }
+  .industries-section-title h1 {
+    font-size: 2rem;
+    padding: 0 5px;
+  }
+  .industries-section-main {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .industry-card {
+    flex: 1 1 100%;
+    padding: 40px 10px;
+    margin-bottom: 10px;
+  }
+  .industry-card h3 {
+    font-size: 1rem;
+  }
+  .industry-card p {
+    font-size: 0.9rem;
+  }
+  .industries-section-border-wrapper {
+    width: 100%;
+  }
+}
