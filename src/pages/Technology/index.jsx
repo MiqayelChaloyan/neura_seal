@@ -1,6 +1,7 @@
 import FeaturesList from './FeaturesList';
 import CrisisSection from './CrisisSection';
 import IndustriesSection from './IndustriesSection';
+import HowItWorks from './HowItWorks';
 
 import './styles.css';
 
@@ -11,6 +12,7 @@ const Technology = () => {
             <CrisisSection />
             <FeaturesList />
             <IndustriesSection />
+            <HowItWorks />
         </div>
     );
 };  
