@@ -1,5 +1,6 @@
 import FeaturesList from './FeaturesList';
 import CrisisSection from './CrisisSection';
+import IndustriesSection from './IndustriesSection';
 
 import './styles.css';
 
@@ -9,6 +10,7 @@ const Technology = () => {
         <div className='technology-container'>
             <CrisisSection />
             <FeaturesList />
+            <IndustriesSection />
         </div>
     );
 };  
