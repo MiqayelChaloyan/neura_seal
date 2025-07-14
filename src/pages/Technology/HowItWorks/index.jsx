@@ -3,6 +3,7 @@ import './styles.css';
 import { Link } from 'react-router-dom';
 
 import how_it_work from '../../../assets/how_it_work.png'
+import { Pages } from "../../../constants/pages";
 // how_it_work.png
 
 export default function HowItWorks() {
@@ -17,7 +18,7 @@ export default function HowItWorks() {
                 Step 1: Counterfeiting drains trillions from the global economy,<br />
                 destabilizes industries, and destroys trust.
               </p>
-              <Link to="/technology" className="how-it-works-section-link">
+              <Link to={Pages.HOW_IT_WORKS} className="how-it-works-section-link">
                 <p className="how-it-works-section-link-text">
                   Learn more
                 </p>

@@ -13,6 +13,7 @@ const Technology = () => {
             <FeaturesList />
             <IndustriesSection />
             <HowItWorks />
+
         </div>
     );
 };  
