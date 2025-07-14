@@ -6,6 +6,8 @@
   width: 100%;
   position: relative;
   bottom: 0;
+  z-index: 1000;
+  background-color: #000407;
 }
 
 .footer-content {
