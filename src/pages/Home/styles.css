@@ -1,7 +1,7 @@
 .hero-section {
     position: relative;
     height: 100vh; /* Full viewport height */
-    background-image: url('https://img.freepik.com/premium-photo/robot-hand-with-word-ai-it_870833-134.jpg');
+    background-image: url('../../assets/bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,6 +55,22 @@
     color: #ccc;
     font-weight: 400;
   }
+
+  .arrow-container {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+  } 
+
+  .arrow-down {
+    width: 30px;
+    height: 30px;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    transform: rotate(45deg);
+  }
+  
 
 /* Responsive design - 900px breakpoint (tablet) */
 @media (max-width: 900px) {

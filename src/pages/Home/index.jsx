@@ -31,6 +31,10 @@ function Home() {
           Built to Know
         </motion.div>
       </div>
+
+      <div className="arrow-container">
+        <div className="arrow-down"></div>
+      </div>
     </section>
   );
 }
