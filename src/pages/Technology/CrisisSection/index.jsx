@@ -1,5 +1,6 @@
 import './styles.css';
 
+import crisisImage from '../../../assets/crisis_image.png';
 const CrisisSection = () => {
   return (
     <div className="crisis-section-outer">
@@ -17,7 +18,7 @@ const CrisisSection = () => {
         <div className="crisis-section-main">
           <div className="crisis-section-visual">
             <img
-              src="https://cdn.viberu.ru/articles/news/2025/05.2025/13.05/tehnologia-sensornogo-ekrana-ob-edinaet-sovremennyh-pol-zovatelei-mobil-nyh-telefonov-sozdannyh-iskusstvennym-intellektom_1170x669.jpg"
+              src={crisisImage}
               alt="Anti-counterfeit technology visual"
             />
           </div>
