@@ -13,6 +13,7 @@ import { Hosts } from '../../constants/hosts';
 import { Titles } from '../../constants';
 
 import './styles.css';
+import logo from '../../assets/logo.svg';
 
 
 const menuVariants = {
@@ -111,11 +112,13 @@ const HamburgerMenu = () => {
       {/* Fixed top header */}
       <header className="fixed-header">
         <div className="header-left">
+         <Link to="/" className='header-logo-link'>
           <img
-            src="https://images.squarespace-cdn.com/content/v1/65f1f4c283c47475e7fc202f/6e60df43-e32e-4a08-b8e0-6b7f14417e6b/form+icon.png"
+            src={logo}
             alt="Logo"
             className="header-logo"
           />
+         </Link>
         </div>
 
         <h1 className="header-title">{currentTitle}</h1>
