@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -42,12 +42,22 @@ const itemVariants = {
   },
 };
 
+const pageTitles = {
+  '/': '',
+  '/technology': 'Technology',
+  '/quality-policy': 'Quality Policy',
+  '/how-it-works': 'How It Works',
+};
+
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const currentTitle = pageTitles[location.pathname] || '';
 
   const sectionRefs = [useRef(null), useRef(null), useRef(null)];
   const scrollContainerRef = useRef(null);
@@ -98,18 +108,31 @@ const HamburgerMenu = () => {
 
   return (
     <>
-      <button className="hamburger-button" onClick={toggleMenu}>
-        <motion.span
-          className="line"
-          animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-          transition={{ duration: 0.4, ease: 'easeInOut' }}
-        />
-        <motion.span
-          className="line"
-          animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-          transition={{ duration: 0.4, ease: 'easeInOut' }}
-        />
-      </button>
+      {/* Fixed top header */}
+      <header className="fixed-header">
+        <div className="header-left">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/65f1f4c283c47475e7fc202f/6e60df43-e32e-4a08-b8e0-6b7f14417e6b/form+icon.png"
+            alt="Logo"
+            className="header-logo"
+          />
+        </div>
+
+        <h1 className="header-title">{currentTitle}</h1>
+
+        <button className="hamburger-button" onClick={toggleMenu}>
+          <motion.span
+            className="line"
+            animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
+          />
+          <motion.span
+            className="line"
+            animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
+          />
+        </button>
+      </header>
 
       <AnimatePresence>
         {isOpen && (
@@ -123,13 +146,13 @@ const HamburgerMenu = () => {
           >
             <div className="menu-bg" />
 
-            <div className="top-left">
+            {/* <div className="top-left">
               <img
                 src="https://images.squarespace-cdn.com/content/v1/65f1f4c283c47475e7fc202f/6e60df43-e32e-4a08-b8e0-6b7f14417e6b/form+icon.png"
                 alt="Logo"
                 className="logo"
               />
-            </div>
+            </div> */}
 
             <div className="left-panel">
               <div className="menu-dots">
