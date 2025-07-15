@@ -29,7 +29,7 @@
   .brand-name {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; /* center vertically so all letters share the same baseline */
     gap: 20px; /* Instead of margin on span for consistency */
     margin-bottom: 100px;
   }
@@ -41,29 +41,11 @@
     color: white;
     transition: transform 0.3s ease;
     font-family: 'Quicksand', 'Poppins', sans-serif;
+    /* Keep letters evenly spaced; motion handles transforms */
+    padding: 0 40px; /* wider initial spacing between letters */
   }
   
-  /* Diagonal arrangement using translateY instead of margin-top */
-  .brand-name span:nth-child(1) {
-    transform: translateY(0px);
-    padding: 40px;
-  }
-  .brand-name span:nth-child(2) {
-    transform: translateY(120px);
-    padding: 40px;
-  }
-  .brand-name span:nth-child(3) {
-    transform: translateY(20px);
-    padding: 40px;
-  }
-  .brand-name span:nth-child(4) {
-    transform: translateY(-60px);
-    padding: 40px;
-  }
-  .brand-name span:nth-child(5) {
-        transform: translateY(0px);
-        padding: 40px;
-  }
+  /* Removed fixed diagonal transforms – animation now handled by Framer Motion */
   
   .tagline {
     margin-top: 20px;
@@ -92,24 +74,10 @@
 
   .brand-name span {
     font-size: 70px;
-    padding: 25px;
+    padding: 0 30px; /* tablet spacing */
   }
 
-  .brand-name span:nth-child(1) {
-    transform: translateY(0px);
-  }
-  .brand-name span:nth-child(2) {
-    transform: translateY(80px);
-  }
-  .brand-name span:nth-child(3) {
-    transform: translateY(15px);
-  }
-  .brand-name span:nth-child(4) {
-    transform: translateY(-40px);
-  }
-  .brand-name span:nth-child(5) {
-    transform: translateY(0px);
-  }
+  /* Remove preset transforms – motion sets these dynamically */
 
   .tagline {
     font-size: 24px;
@@ -137,24 +105,10 @@
 
   .brand-name span {
     font-size: 50px;
-    padding: 15px;
+    padding: 0 20px; /* mobile spacing */
   }
 
-  .brand-name span:nth-child(1) {
-    transform: translateY(0px);
-  }
-  .brand-name span:nth-child(2) {
-    transform: translateY(40px);
-  }
-  .brand-name span:nth-child(3) {
-    transform: translateY(10px);
-  }
-  .brand-name span:nth-child(4) {
-    transform: translateY(-20px);
-  }
-  .brand-name span:nth-child(5) {
-    transform: translateY(0px);
-  }
+  /* Removed transform overrides for mobile */
 
   .tagline {
     font-size: 18px;
