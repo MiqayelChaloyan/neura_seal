@@ -1,0 +1,185 @@
+.contact-container {
+    /* width: 100vw; */
+    height: 100vh;
+    min-height: 100vh;
+    background: url('../../../assets/images/futuristic-office-building-architecture.png') no-repeat center center/cover;
+    background-color: #000407;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure no vertical lines in contact section */
+.contact-container::before,
+.contact-container::after {
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 60px; */
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 100px;
+}
+
+.contact-left-h3 {
+    font-weight: 400;
+    font-size: 16px;
+    padding: 12px;
+}
+
+.contact-left-p {
+    font-size: 14px;
+    color: #ccc;
+    padding: 12px;
+    height: 60px;
+
+}   
+
+.contact-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #000407c9;
+    padding: 100px;
+    width: 100%;
+}
+
+.contact-right h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-input {
+    padding: 0;
+    width: 100%;
+    background: transparent;
+    border: none;
+    height: 50px;
+    border-bottom: 1px solid #aaa;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact-textarea {
+    padding: 0;
+    width: 100%;
+    background: transparent;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    resize: vertical;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+    border-color: #fff;
+}
+
+.label {
+    font-size: 14px;
+    color: #fff;
+}
+
+.contact-right button {
+    width: 150px;
+    margin-top: 20px;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+    border-radius: 20px;
+}
+
+.contact-right button:hover {
+    background: #fff;
+    color: #000;
+}
+
+@media (max-width: 991px) {
+    .contact-container {
+        height: auto;
+        min-height: 100vh;
+        position: static;
+    }
+    .contact-content {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        height: auto;
+    }
+    .contact-left, .contact-right {
+        padding: 0;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .contact-left {
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+    .contact-right {
+        padding: 2rem 1rem;
+    }
+    .contact-right h2 {
+        font-size: 2rem;
+        text-align: left;
+    }
+    .contact-right button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .contact-right form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-content {
+        padding: 1rem 1rem;
+    }
+    .contact-right {
+        padding: 1rem 1rem;
+    }
+    .contact-right h2 {
+        font-size: 1.2rem;
+    }
+    .contact-left-h3, .contact-left-p, .contact-input, .contact-textarea, .contact-right button {
+        font-size: 0.95rem;
+    }
+}

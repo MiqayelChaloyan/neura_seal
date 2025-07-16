@@ -1,7 +1,6 @@
-import meshImage from '../assets/55555.png';
 
 const ImagePaths = {
-    meshImageURL: meshImage,
+    // meshImageURL: meshImage,
 };
 
 const Titles = {
