@@ -49,6 +49,17 @@
   --dark-blue-color: #000203;
   --bg-color-primary: #000407;
   --bg-color-secondary: #000407f0;
+  --first-color: #373d46;
+  --text-first-color: #FFFFFF;
+  --bg-first-color: #FFFFFF;
+  --modal-bg-color: #fff;
+  --text-input-bg: #FFFFFF;
+  --text-color: #FFFFFF;
+  --container-bg: #c7ad91;
+  --btn-color: #ddc0a1;
+  --light-blue: #2ECDCD;
+
+  --header-height: 5rem;
 
   /*========== Input ==========*/
   --normal-size: 126px;
@@ -283,3 +294,15 @@ a {
     color: black !important;
   }
 }
+
+/* ::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: #111827;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #111827;
+}  */
