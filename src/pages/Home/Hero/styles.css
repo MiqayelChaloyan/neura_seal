@@ -54,7 +54,7 @@
     padding: 0.5rem;
     transition: transform 0.3s ease;
     position: relative;
-    z-index: 100;
+    z-index: 50;
 }
 
 .arrow-button:hover {
@@ -103,4 +103,322 @@
 .line-hero:nth-child(3) {
     right: 15%;
     height: 420px;
+}
+
+/* Responsive Design - Large Desktop */
+@media (max-width: 1440px) {
+    .brand-name span {
+        font-size: 80px;
+        gap: 15px;
+    }
+    
+    .tagline {
+        font-size: 26px;
+        letter-spacing: 0.6em;
+    }
+    
+    .arrow-button svg {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Responsive Design - Desktop */
+@media (max-width: 1200px) {
+    .brand-name span {
+        font-size: 70px;
+        gap: 12px;
+    }
+    
+    .tagline {
+        font-size: 24px;
+        letter-spacing: 0.5em;
+    }
+    
+    .arrow-button svg {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .line-hero {
+        display: none;
+    }
+}
+
+/* Responsive Design - Tablet Large */
+@media (max-width: 1024px) {
+    .hero-content-wrapper {
+        padding: 1.5rem 0;
+    }
+    
+    .brand-name {
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+    
+    .brand-name span {
+        font-size: 60px;
+        padding: 0 8px;
+    }
+    
+    .tagline {
+        font-size: 20px;
+        letter-spacing: 0.4em;
+        margin-top: 15px;
+    }
+    
+    .arrow-button {
+        margin-bottom: 1.5rem;
+    }
+    
+    .arrow-button svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .line-hero:nth-child(1) {
+        right: 25%;
+        height: 180px;
+        top: 70px;
+    }
+    
+    .line-hero:nth-child(2) {
+        right: 18%;
+        height: 260px;
+        top: 45px;
+    }
+    
+    .line-hero:nth-child(3) {
+        right: 12%;
+        height: 380px;
+    }
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+    .hero-content-wrapper {
+        padding: 1rem 0;
+    }
+    
+    .brand-name {
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .brand-name span {
+        font-size: 45px;
+        padding: 0 6px;
+    }
+    
+    .tagline {
+        font-size: 16px;
+        letter-spacing: 0.3em;
+        margin-top: 12px;
+    }
+    
+    .arrow-button {
+        margin-bottom: 1rem;
+    }
+    
+    .arrow-button svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .line-hero:nth-child(1) {
+        right: 22%;
+        height: 160px;
+        top: 60px;
+    }
+    
+    .line-hero:nth-child(2) {
+        right: 15%;
+        height: 220px;
+        top: 40px;
+    }
+    
+    .line-hero:nth-child(3) {
+        right: 10%;
+        height: 320px;
+    }
+}
+
+/* Responsive Design - Mobile Large */
+@media (max-width: 480px) {
+    .hero-content-wrapper {
+        padding: 0.8rem 0;
+    }
+    
+    .brand-name {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+    
+    .brand-name span {
+        font-size: 32px;
+        padding: 0 4px;
+    }
+    
+    .tagline {
+        font-size: 14px;
+        letter-spacing: 0.2em;
+        margin-top: 10px;
+    }
+    
+    .arrow-button {
+        margin-bottom: 0.8rem;
+    }
+    
+    .arrow-button svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .line-hero:nth-child(1) {
+        right: 20%;
+        height: 140px;
+        top: 50px;
+    }
+    
+    .line-hero:nth-child(2) {
+        right: 12%;
+        height: 180px;
+        top: 35px;
+    }
+    
+    .line-hero:nth-child(3) {
+        right: 8%;
+        height: 260px;
+    }
+}
+
+/* Responsive Design - Mobile Medium */
+@media (max-width: 360px) {
+    .hero-content-wrapper {
+        padding: 0.6rem 0;
+    }
+    
+    .brand-name {
+        gap: 6px;
+        margin-bottom: 20px;
+    }
+    
+    .brand-name span {
+        font-size: 28px;
+        padding: 0 3px;
+    }
+    
+    .tagline {
+        font-size: 12px;
+        letter-spacing: 0.15em;
+        margin-top: 8px;
+    }
+    
+    .arrow-button {
+        margin-bottom: 0.6rem;
+    }
+    
+    .arrow-button svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .line-hero:nth-child(1) {
+        right: 18%;
+        height: 120px;
+        top: 40px;
+    }
+    
+    .line-hero:nth-child(2) {
+        right: 10%;
+        height: 160px;
+        top: 30px;
+    }
+    
+    .line-hero:nth-child(3) {
+        right: 6%;
+        height: 220px;
+    }
+}
+
+/* Responsive Design - Mobile Small */
+@media (max-width: 320px) {
+    .brand-name span {
+        font-size: 24px;
+        padding: 0 2px;
+    }
+    
+    .tagline {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+    }
+    
+    .arrow-button svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .line-hero:nth-child(1) {
+        right: 15%;
+        height: 100px;
+        top: 35px;
+    }
+    
+    .line-hero:nth-child(2) {
+        right: 8%;
+        height: 140px;
+        top: 25px;
+    }
+    
+    .line-hero:nth-child(3) {
+        right: 5%;
+        height: 180px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-content-wrapper {
+        padding: 0.5rem 0;
+    }
+    
+    .brand-name {
+        margin-bottom: 15px;
+    }
+    
+    .brand-name span {
+        font-size: 35px;
+    }
+    
+    .tagline {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    
+    .arrow-button {
+        margin-bottom: 0.5rem;
+    }
+    
+    .arrow-button svg {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .line-container-hero {
+        height: 150px;
+    }
+    
+    .line-hero:nth-child(1) {
+        height: 100px;
+        top: 30px;
+    }
+    
+    .line-hero:nth-child(2) {
+        height: 140px;
+        top: 20px;
+    }
+    
+    .line-hero:nth-child(3) {
+        height: 180px;
+    }
 }

@@ -152,4 +152,193 @@
   min-height: 100vh;
   position: relative;
   z-index: 90;
+  padding: 1rem;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+  .nav-dots {
+    left: 2rem;
+    gap: 0.8rem;
+  }
+  
+  .nav-dots .dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .social-icons {
+    right: 2rem;
+    gap: 1.2rem;
+  }
+  
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .social-icons a svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .menu-line-left {
+    left: 2.5rem;
+  }
+  
+  .menu-line-right {
+    right: 2.5rem;
+  }
+  
+  .section {
+    padding: 0.8rem;
+  }
+}
+
+/* Responsive Design - Mobile Large */
+@media (max-width: 768px) {
+  .nav-dots {
+    left: 1rem;
+    gap: 0.6rem;
+  }
+  
+  .nav-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-width: 1.5px;
+  }
+  
+  .social-icons {
+    right: 1rem;
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .social-icons a svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .menu-line-left {
+    left: 1.5rem;
+  }
+  
+  .menu-line-right {
+    right: 1.5rem;
+  }
+  
+  .section {
+    padding: 0.6rem;
+  }
+}
+
+/* Responsive Design - Mobile Medium */
+@media (max-width: 480px) {
+  .nav-dots {
+    left: 0.5rem;
+    gap: 0.5rem;
+  }
+  
+  .nav-dots .dot {
+    width: 6px;
+    height: 6px;
+    border-width: 1px;
+  }
+  
+  .social-icons {
+    right: 0.5rem;
+    gap: 0.8rem;
+  }
+  
+  .social-icons a {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .social-icons a svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .menu-line-left {
+    left: 1rem;
+  }
+  
+  .menu-line-right {
+    right: 1rem;
+  }
+  
+  .section {
+    padding: 0.4rem;
+  }
+}
+
+/* Responsive Design - Mobile Small */
+@media (max-width: 360px) {
+  .nav-dots {
+    left: 0.3rem;
+    gap: 0.4rem;
+  }
+  
+  .nav-dots .dot {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .social-icons {
+    right: 0.3rem;
+    gap: 0.6rem;
+  }
+  
+  .social-icons a {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .social-icons a svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .menu-line-left {
+    left: 0.8rem;
+  }
+  
+  .menu-line-right {
+    right: 0.8rem;
+  }
+  
+  .section {
+    padding: 0.3rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .nav-dots {
+    gap: 0.4rem;
+  }
+  
+  .nav-dots .dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .social-icons {
+    gap: 0.8rem;
+  }
+  
+  .social-icons a {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .social-icons a svg {
+    width: 16px;
+    height: 16px;
+  }
 }

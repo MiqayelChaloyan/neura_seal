@@ -147,6 +147,132 @@
         inset 1px 1px 0 0 #088d9526;
 }
 
+/* Responsive Design - Large Desktop */
+@media (max-width: 1440px) {
+    .contact-left {
+        padding-left: 80px;
+        gap: 25px;
+    }
+    
+    .contact-left-h3 {
+        font-size: 18px;
+    }
+    
+    .contact-left-p {
+        font-size: 15px;
+        height: 55px;
+    }
+    
+    .contact-right {
+        padding: 80px;
+    }
+    
+    .contact-right h2 {
+        font-size: 38px;
+        margin-bottom: 25px;
+    }
+    
+    .contact-input {
+        height: 45px;
+        font-size: 15px;
+    }
+    
+    .contact-textarea {
+        height: 45px;
+        font-size: 13px;
+    }
+    
+    .contact-right button {
+        width: 180px;
+        padding: 14px 28px;
+        font-size: 13px;
+    }
+}
+
+/* Responsive Design - Desktop */
+@media (max-width: 1200px) {
+    .contact-left {
+        padding-left: 60px;
+        gap: 20px;
+    }
+    
+    .contact-left-h3 {
+        font-size: 17px;
+    }
+    
+    .contact-left-p {
+        font-size: 14px;
+        height: 50px;
+    }
+    
+    .contact-right {
+        padding: 60px;
+    }
+    
+    .contact-right h2 {
+        font-size: 34px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-input {
+        height: 42px;
+        font-size: 14px;
+    }
+    
+    .contact-textarea {
+        height: 42px;
+        font-size: 12px;
+    }
+    
+    .contact-right button {
+        width: 160px;
+        padding: 12px 24px;
+        font-size: 12px;
+    }
+}
+
+/* Responsive Design - Tablet Large */
+@media (max-width: 1024px) {
+    .contact-left {
+        padding-left: 40px;
+        gap: 18px;
+    }
+    
+    .contact-left-h3 {
+        font-size: 16px;
+    }
+    
+    .contact-left-p {
+        font-size: 13px;
+        height: 45px;
+    }
+    
+    .contact-right {
+        padding: 40px;
+    }
+    
+    .contact-right h2 {
+        font-size: 30px;
+        margin-bottom: 18px;
+    }
+    
+    .contact-input {
+        height: 40px;
+        font-size: 13px;
+    }
+    
+    .contact-textarea {
+        height: 40px;
+        font-size: 11px;
+    }
+    
+    .contact-right button {
+        width: 140px;
+        padding: 10px 20px;
+        font-size: 11px;
+    }
+}
+
 @media (max-width: 991px) {
     .contact-container {
         height: auto;
@@ -184,6 +310,59 @@
     }
 }
 
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+    .contact-content {
+        padding: 1.5rem 0.8rem;
+    }
+    
+    .contact-left {
+        margin-bottom: 1.5rem;
+        gap: 15px;
+    }
+    
+    .contact-left-h3 {
+        font-size: 15px;
+        padding: 8px;
+    }
+    
+    .contact-left-p {
+        font-size: 12px;
+        height: 40px;
+        padding: 8px;
+    }
+    
+    .contact-right {
+        padding: 1.5rem 0.8rem;
+    }
+    
+    .contact-right h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-right form {
+        gap: 15px;
+    }
+    
+    .contact-input {
+        height: 38px;
+        font-size: 12px;
+    }
+    
+    .contact-textarea {
+        height: 38px;
+        font-size: 10px;
+    }
+    
+    .contact-right button {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        margin-top: 15px;
+    }
+}
+
+/* Responsive Design - Mobile Large */
 @media (max-width: 600px) {
     .contact-content {  
         padding: 1rem 1rem;
@@ -196,5 +375,188 @@
     }
     .contact-left-h3, .contact-left-p, .contact-input, .contact-textarea, .contact-right button {
         font-size: 0.95rem;
+    }
+    
+    .contact-left {
+        margin-bottom: 1rem;
+        gap: 12px;
+    }
+    
+    .contact-left-h3 {
+        padding: 6px;
+    }
+    
+    .contact-left-p {
+        height: 35px;
+        padding: 6px;
+    }
+    
+    .contact-input {
+        height: 35px;
+    }
+    
+    .contact-textarea {
+        height: 35px;
+    }
+    
+    .contact-right button {
+        padding: 10px 16px;
+        margin-top: 12px;
+    }
+}
+
+/* Responsive Design - Mobile Medium */
+@media (max-width: 480px) {
+    .contact-content {
+        padding: 0.8rem 0.5rem;
+    }
+    
+    .contact-left {
+        margin-bottom: 0.8rem;
+        gap: 10px;
+    }
+    
+    .contact-left-h3 {
+        font-size: 14px;
+        padding: 5px;
+    }
+    
+    .contact-left-p {
+        font-size: 11px;
+        height: 32px;
+        padding: 5px;
+    }
+    
+    .contact-right {
+        padding: 0.8rem 0.5rem;
+    }
+    
+    .contact-right h2 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    .contact-right form {
+        gap: 12px;
+    }
+    
+    .contact-input {
+        height: 32px;
+        font-size: 11px;
+    }
+    
+    .contact-textarea {
+        height: 32px;
+        font-size: 9px;
+    }
+    
+    .contact-right button {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+        margin-top: 10px;
+    }
+}
+
+/* Responsive Design - Mobile Small */
+@media (max-width: 360px) {
+    .contact-content {
+        padding: 0.6rem 0.3rem;
+    }
+    
+    .contact-left {
+        margin-bottom: 0.6rem;
+        gap: 8px;
+    }
+    
+    .contact-left-h3 {
+        font-size: 13px;
+        padding: 4px;
+    }
+    
+    .contact-left-p {
+        font-size: 10px;
+        height: 30px;
+        padding: 4px;
+    }
+    
+    .contact-right {
+        padding: 0.6rem 0.3rem;
+    }
+    
+    .contact-right h2 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    
+    .contact-right form {
+        gap: 10px;
+    }
+    
+    .contact-input {
+        height: 30px;
+        font-size: 10px;
+    }
+    
+    .contact-textarea {
+        height: 30px;
+        font-size: 8px;
+    }
+    
+    .contact-right button {
+        padding: 7px 12px;
+        font-size: 0.8rem;
+        margin-top: 8px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .contact-container {
+        min-height: 80vh;
+    }
+    
+    .contact-content {
+        padding: 1rem 2rem;
+    }
+    
+    .contact-left {
+        margin-bottom: 1rem;
+        gap: 12px;
+    }
+    
+    .contact-left-h3 {
+        font-size: 14px;
+        padding: 6px;
+    }
+    
+    .contact-left-p {
+        font-size: 12px;
+        height: 35px;
+        padding: 6px;
+    }
+    
+    .contact-right {
+        padding: 1rem 2rem;
+    }
+    
+    .contact-right h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-input {
+        height: 35px;
+        font-size: 12px;
+    }
+    
+    .contact-textarea {
+        height: 35px;
+        font-size: 10px;
+    }
+    
+    .contact-right button {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+        margin-top: 12px;
     }
 }
