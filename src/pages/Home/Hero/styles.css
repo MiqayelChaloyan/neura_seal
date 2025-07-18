@@ -53,6 +53,8 @@
     margin-bottom: 2rem;
     padding: 0.5rem;
     transition: transform 0.3s ease;
+    position: relative;
+    z-index: 100;
 }
 
 .arrow-button:hover {
@@ -65,11 +67,12 @@
 }
 
 .line-container-hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: auto;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    z-index: 40;
+    width: 100%;
+    height: 200px;
 }
 
 .line-hero {
@@ -81,22 +84,23 @@
     background-repeat: repeat-y;
     vertical-align: middle;
     position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 40;
+    bottom: 60;
+    opacity: 0.2;
 }
 
 .line-hero:nth-child(1) {
     right: 28%;
-    height: 120px;
+    height: 200px;
+    top: 80px;
 }
 
 .line-hero:nth-child(2) {
     right: 20%;
-    height: 150px;
+    height: 300px;
+    top: 50px;
 }
 
 .line-hero:nth-child(3) {
     right: 15%;
-    height: 220px;
+    height: 420px;
 }
