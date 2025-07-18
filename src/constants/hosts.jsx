@@ -4,12 +4,9 @@ const Hosts = {
     YOUTUBE: 'https://www.youtube.com/@neura_seal',
     LINKEDIN: 'https://www.linkedin.com/company/neura-seal',
     TWITTER: 'https://twitter.com/neura_seal',
-    
-    TELEGRAM: 'https://t.me/neura_seal',
-    GITHUB: 'https://github.com/neura-seal',
-    WEBSITE: 'https://neura-seal.com',
-    EMAIL: 'mailto:info@neura-seal.com',
-    PHONE: 'tel:+37491333333',
+    ADDRESS: 'Al-Duhail-North Road, P.O.Box: 5479',
+    EMAIL: 'info@neura.com',
+    PHONE: '1-234 567-8910',
 };
 
 export {
