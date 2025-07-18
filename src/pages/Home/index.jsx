@@ -15,13 +15,6 @@ import { SvgPaths } from "../../constants";
 import "./styles.css";
 
 
-const messageAnimation = {
-  initial: { y: -64 },
-  whileInView: { y: 0 },
-  viewport: { once: true },
-  transition: { type: "spring", duration: 0.5, bounce: 0 }
-};
-
 const Home = () => {
   const sections = [ContactUs];
   const sectionIds = ["contact-us"];
@@ -143,12 +136,12 @@ const Home = () => {
       <div className="menu-lines menu-line-left" />
       <div className="menu-lines menu-line-right" />
       <div className="scroll-down__wrapper">
-        <motion.div {...messageAnimation} className="scroll-down__message">
+        <div className="scroll-down__message">
           <Hero />
           <div id="about-us">
             <AboutUs />
           </div>
-        </motion.div>
+        </div>
       </div>
       <div className="motion__wrapper">
         {sections.map((SectionComp, idx) => (

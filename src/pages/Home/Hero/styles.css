@@ -31,7 +31,7 @@
     display: inline-block;
     color: var(--white-color);
     transition: transform 0.3s ease;
-    padding: 0 60px;
+    padding: 0 10px;
     font-family: 'Typo Round Regular Demo', sans-serif;
 }
 
