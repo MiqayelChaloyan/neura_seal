@@ -1,0 +1,137 @@
+.child-container {
+  background-color: var(--bg-color-primary);
+  position: relative;
+}
+
+/* Navigation dots */
+.nav-dots {
+  position: fixed;
+  left: 4.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 74;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+  height: 50vh;
+  background-color: var(--dark-blue-color);
+}
+
+.nav-dots.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-dots .dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--white-color);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.nav-dots .dot.active {
+  background-color: var(--white-color);
+}
+
+.nav-dots .dot:hover {
+  background: var(--gray-color);
+}
+
+/* Social icons */
+.social-icons {
+  position: fixed;
+  right: 3.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 74;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+  height: 50vh;
+  background-image: linear-gradient(to bottom, var(--bg-color-secondary), var(--bg-color-primary));
+}
+
+.social-icons.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.social-icons a {
+  color: var(--white-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icons a:hover {
+  color: var(--icon-hover-color);
+}
+
+.social-icons a svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  color: var(--icon-hover-color);
+}
+
+/* Menu lines */
+.menu-lines {
+  position: fixed;
+  top: 0;
+  width: 1px;
+  height: 100vh;
+  background: linear-gradient(to bottom, transparent, var(--gray-color), transparent);
+  z-index: 50; 
+  transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+  pointer-events: none;
+}
+
+.menu-lines.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-line-left {
+  left: 5rem
+}
+
+.menu-line-right {
+  right: 5rem;
+}
+
+.scroll-down__wrapper {
+  min-height: calc(100vh - 36px);
+}
+
+.motion__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 90;
+}

@@ -1,4 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Typo Round Regular Demo';
+  src: url('../utils/fonts/Typo_Round_Regular_Demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'D-DIN';
+  src: url('../utils/fonts/D-DIN.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cocomat';
+  src: url('../utils/fonts/Cocomat-Light-trial.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -20,13 +45,23 @@
   --icon-color: #9091938f;
   --icon-hover-color: #088D95;
   --border-color: #9091938f;
+  --gray-color: rgba(255, 255, 255, 0.5);
+  --dark-blue-color: #000203;
+  --bg-color-primary: #000407;
+  --bg-color-secondary: #000407f0;
 
-  --bg-color-primary: #EDEDED;
+
+
+
+
+
+
+  /* --bg-color-primary: #EDEDED; */
   --first-color: #373d46;
   --text-first-color: #FFFFFF;
   --bg-first-color: #FFFFFF;
   --modal-bg-color: #fff;
-  --bg-color: #414260;
+  /* --bg-color: #414260; */
   --text-input-bg: #FFFFFF;
   --text-color: #FFFFFF;
   --container-bg: #c7ad91;
@@ -140,6 +175,18 @@ code {
   color: #ff2200;
   padding: 0.1rem 0.3rem 0.2rem;
   border-radius: 0.2rem;
+}
+
+svg {
+  fill: currentColor;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* ::-webkit-scrollbar {

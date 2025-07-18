@@ -1,12 +1,12 @@
 import React from 'react';
+
 import './styles.css';
 
-import CrisisSection from './CrisisSection';
-
+import Test from './Test';
 const HowItWorks = () => {
   return (
     <div className="how-it-works">
-      <CrisisSection />
+      <Test />
     </div>
   );
 };
