@@ -10,13 +10,7 @@ import "./styles.css";
 const AboutUs = () => {
   return (
     <>
-      <motion.section
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="about-us-container"
-      >
+      <section className="about-us-container">
         <Container>
           <div className="who-we-are">
             <div className="who-we-are-content">
@@ -51,7 +45,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </motion.section>
+      </section>
     </>
   );
 };

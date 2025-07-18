@@ -25,13 +25,7 @@ const Hero = () => {
   };
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="hero-container"
-    >
+    <section className="hero-container">
       <Container>
         <div className="hero-content-wrapper">
           <div className="brand-name">
@@ -72,7 +66,7 @@ const Hero = () => {
           <div className="line-hero" />
         </div>
       </Container>
-    </motion.section>
+    </section>
   );
 };
 
