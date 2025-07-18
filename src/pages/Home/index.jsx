@@ -25,7 +25,7 @@ const messageAnimation = {
 const Home = () => {
   const sections = [ContactUs];
   const sectionIds = ["contact-us"];
-  const [activeSection, setActiveSection] = useState(0);
+  const [activeSection, setActiveSection] = useState(1);
 
   useEffect(() => {
     const handleCustomScroll = (e) => {
@@ -45,8 +45,20 @@ const Home = () => {
       const sections = document.querySelectorAll('.section');
 
       if (window.scrollY < window.innerHeight / 2) {
-        setActiveSection(-1);
+        setActiveSection(1); // Hero section
         return;
+      }
+
+      // Check if we're in the about-us section
+      const aboutUsElement = document.getElementById('about-us');
+      if (aboutUsElement) {
+        const aboutUsTop = aboutUsElement.offsetTop;
+        const aboutUsBottom = aboutUsTop + aboutUsElement.offsetHeight;
+        
+        if (scrollPosition >= aboutUsTop && scrollPosition < aboutUsBottom) {
+          setActiveSection(2); // About-us section
+          return;
+        }
       }
 
       sections.forEach((section, index) => {
@@ -54,13 +66,9 @@ const Home = () => {
         const sectionBottom = sectionTop + section.offsetHeight;
 
         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-          setActiveSection(index);
+          setActiveSection(3); // Contact-us section (index + 3)
         }
       });
-
-      if (window.scrollY < window.innerHeight / 2) {
-        setActiveSection(-1);
-      }
     };
 
     window.addEventListener("scrollToSection", handleCustomScroll);
@@ -73,19 +81,32 @@ const Home = () => {
   }, []);
 
   const scrollToSection = (index) => {
-    const targetId = sectionIds[index];
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-      setActiveSection(index);
+    if (index === 1) {
+      // Hero section
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection(1);
+    } else if (index === 2) {
+      // About-us section
+      const aboutUsElement = document.getElementById('about-us');
+      if (aboutUsElement) {
+        aboutUsElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setActiveSection(2);
+      }
+    } else if (index === 3) {
+      // Contact-us section
+      const targetId = sectionIds[0]; // contact-us
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+        setActiveSection(3);
+      }
     }
   };
 
-  const isHeroActive = activeSection === -1;
+  const isHeroActive = activeSection === 1;
 
   return (
     <Container className="child-container">
@@ -93,26 +114,24 @@ const Home = () => {
         <li>
           <button
             className={`dot ${isHeroActive ? 'active' : ''}`}
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => scrollToSection(1)}
             aria-label="Go to hero section"
           />
         </li>
         <li>
           <button
-            className={`dot ${activeSection === 0 ? 'active' : ''}`}
-            onClick={() => document.getElementById('about-us').scrollIntoView({ behavior: 'smooth', block: 'start' })}
+            className={`dot ${activeSection === 2 ? 'active' : ''}`}
+            onClick={() => scrollToSection(2)}
             aria-label="Go to about us section"
           />
         </li>
-        {sections.map((_, idx) => (
-          <li key={idx}>
-            <button
-              className={`dot ${activeSection === idx + 1 ? 'active' : ''}`}
-              onClick={() => scrollToSection(idx)}
-              aria-label={`Go to section ${idx + 2}`}
-            />
-          </li>
-        ))}
+        <li>
+          <button
+            className={`dot ${activeSection === 3 ? 'active' : ''}`}
+            onClick={() => scrollToSection(3)}
+            aria-label="Go to contact us section"
+          />
+        </li>
       </ul>
       <ul className="social-icons">
         <li><Link to={Hosts.LINKEDIN} aria-label="LinkedIn"><SvgPaths.linkedinIcon /></Link></li>
