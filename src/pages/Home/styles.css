@@ -19,7 +19,6 @@
   gap: 1rem;
   transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
   height: 50vh;
-  background-color: var(--dark-blue-color);
 }
 
 .nav-dots.hidden {
@@ -61,7 +60,6 @@
   gap: 1.5rem;
   transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
   height: 50vh;
-  background-image: linear-gradient(to bottom, var(--bg-color-secondary), var(--bg-color-primary));
 }
 
 .social-icons.hidden {
@@ -112,11 +110,31 @@
 }
 
 .menu-line-left {
-  left: 5rem
+  left: 5rem;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 30%,
+    0 25%,
+    0 70%,
+    100% 75%,
+    100% 100%,
+    0 100%
+  );
 }
 
 .menu-line-right {
   right: 5rem;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 30%,
+    0 25%,
+    0 70%,
+    100% 75%,
+    100% 100%,
+    0 100%
+  );
 }
 
 .scroll-down__wrapper {
