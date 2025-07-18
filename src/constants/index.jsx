@@ -8,14 +8,10 @@ import LinkedInIcon from "../assets/svg/LinkedInIcon.jsx";
 
 
 // Images
-import missionImg from "../assets/images/mission.png";
-import visionImg from "../assets/images/vision.png";
 import visualImg from "../assets/images/visual.png";
 
 
 const ImagePaths = {
-    missionImg: missionImg,
-    visionImg: visionImg,
     visualImg: visualImg,
 };
 
