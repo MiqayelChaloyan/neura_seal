@@ -5,6 +5,7 @@ import YoutubeIcon from "../assets/svg/YoutubeIcon.jsx";
 import TwitterIcon from "../assets/svg/TwitterIcon.jsx";
 import InstagramIcon from "../assets/svg/InstagramIcon.jsx";
 import LinkedInIcon from "../assets/svg/LinkedInIcon.jsx";
+import LogoIcon from "../assets/svg/LogoIcon.jsx";
 
 
 // Images
@@ -22,6 +23,7 @@ const SvgPaths = {
     twitterIcon: TwitterIcon,
     instagramIcon: InstagramIcon,
     linkedinIcon: LinkedInIcon,
+    logoIcon: LogoIcon,
 };
 
 const Titles = {

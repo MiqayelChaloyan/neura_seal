@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../../assets/logo.svg';
 
-import { Titles } from '../../constants';
+import { Titles, SvgPaths } from '../../constants';
 
 import './styles.css';
 
@@ -98,7 +97,7 @@ const HamburgerMenu = () => {
       <header className="fixed-header">
         <div className="header-left">
           <Link to="/" className='header-logo-link'>
-            <img src={logo} alt="Logo" className="header-logo" />
+            <SvgPaths.logoIcon />
           </Link>
         </div>
 
