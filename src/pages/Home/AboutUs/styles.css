@@ -114,6 +114,95 @@
   -webkit-box-orient: vertical;
 }
 
+/* Responsive Design - Large Desktop */
+@media (max-width: 1440px) {
+  .who-we-are {
+    padding: 5rem 6rem;
+  }
+  
+  .who-we-are-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .who-we-are-content p {
+    font-size: 1.2rem;
+    width: 75%;
+  }
+  
+  .mission-vision-title h2 {
+    font-size: 8rem;
+  }
+  
+  .mission-vision-section {
+    padding: 5rem 6rem;
+  }
+  
+  .mission-vision-description {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Design - Desktop */
+@media (max-width: 1200px) {
+  .who-we-are {
+    padding: 4rem 5rem;
+  }
+  
+  .who-we-are-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .who-we-are-content p {
+    font-size: 1.1rem;
+    width: 80%;
+  }
+  
+  .mission-vision-title h2 {
+    font-size: 7rem;
+  }
+  
+  .mission-vision-section {
+    padding: 4rem 5rem;
+  }
+  
+  .mission-vision-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsive Design - Tablet Large */
+@media (max-width: 1024px) {
+  .who-we-are {
+    padding: 3.5rem 4rem;
+  }
+  
+  .who-we-are-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .who-we-are-content p {
+    font-size: 1rem;
+    width: 85%;
+  }
+  
+  .mission-vision-title h2 {
+    font-size: 6rem;
+  }
+  
+  .mission-vision-section {
+    padding: 3.5rem 4rem;
+  }
+  
+  .mission-vision-description {
+    font-size: 0.9rem;
+  }
+  
+  .mission-vision-title-vision {
+    margin-left: 100px;
+  }
+}
+
 @media (max-width: 991px) {
   .who-we-are {
       flex-direction: column;
@@ -131,9 +220,11 @@
   }
   .who-we-are-content p {
       font-size: 1rem;
+      width: 100%;
   }
   .who-we-are-visual {
       margin-top: 2rem;
+      height: 60vh;
   }
   .mission-vision-section {
       padding: 3rem 2rem;
@@ -142,17 +233,56 @@
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 2rem;
+      height: auto;
   }
-  .mission-vision-title {
-      font-size: 2.5rem;
+  .mission-vision-title h2 {
+      font-size: 4rem;
       margin-bottom: 0.5rem;
   }
   .mission-vision-description {
       font-size: 1rem;
       max-width: 100%;
+      -webkit-line-clamp: unset;
+  }
+  .mission-vision-title-vision {
+    margin-left: 0;
   }
 }
 
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+  .who-we-are {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .who-we-are-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .who-we-are-content p {
+    font-size: 0.95rem;
+  }
+  
+  .who-we-are-visual {
+    height: 50vh;
+    margin-top: 1.5rem;
+  }
+  
+  .mission-vision-section {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .mission-vision-title h2 {
+    font-size: 3.5rem;
+  }
+  
+  .mission-vision-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive Design - Mobile Large */
 @media (max-width: 600px) {
   .who-we-are, .mission-vision-section {
       padding: 1.2rem 0.5rem;
@@ -160,10 +290,124 @@
   .who-we-are-content h1 {
       font-size: 1.3rem;
   }
-  .mission-vision-title {
-      font-size: 1.5rem;
+  .who-we-are-content p {
+    font-size: 0.9rem;
+  }
+  .mission-vision-title h2 {
+      font-size: 2.5rem;
+      text-align: center;
   }
   .mission-vision-description {
-      font-size: 0.95rem;
+      font-size: 0.85rem;
+  }
+  .who-we-are-visual {
+    height: 40vh;
+    margin-top: 1rem;
+  }
+  
+  .about-us-container {
+    padding: 1rem;
+  }
+}
+
+/* Responsive Design - Mobile Medium */
+@media (max-width: 480px) {
+  .who-we-are, .mission-vision-section {
+    padding: 1rem 0.3rem;
+  }
+  
+  .who-we-are-content h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .who-we-are-content p {
+    font-size: 0.85rem;
+  }
+  
+  .who-we-are-visual {
+    height: 35vh;
+    margin-top: 0.8rem;
+  }
+  
+  .mission-vision-title h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .mission-vision-description {
+    font-size: 0.8rem;
+  }
+  
+  .about-us-container {
+    padding: 0.8rem;
+  }
+}
+
+/* Responsive Design - Mobile Small */
+@media (max-width: 360px) {
+  .who-we-are, .mission-vision-section {
+    padding: 0.8rem 0.2rem;
+  }
+  
+  .who-we-are-content h1 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .who-we-are-content p {
+    font-size: 0.8rem;
+  }
+  
+  .who-we-are-visual {
+    height: 30vh;
+    margin-top: 0.6rem;
+  }
+  
+  .mission-vision-title h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .mission-vision-description {
+    font-size: 0.75rem;
+  }
+  
+  .about-us-container {
+    padding: 0.6rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .who-we-are {
+    padding: 2rem 3rem;
+    min-height: 80vh;
+  }
+  
+  .who-we-are-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .who-we-are-content p {
+    font-size: 0.9rem;
+  }
+  
+  .who-we-are-visual {
+    height: 45vh;
+    margin-top: 1rem;
+  }
+  
+  .mission-vision-section {
+    padding: 2rem 3rem;
+  }
+  
+  .mission-vision-title h2 {
+    font-size: 3rem;
+  }
+  
+  .mission-vision-description {
+    font-size: 0.85rem;
   }
 }

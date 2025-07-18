@@ -118,6 +118,7 @@
 body {
   font-family: 'SF Pro Display';
   background-color: white;
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
 }
 
 img {
@@ -187,6 +188,121 @@ li {
 
 a {
   text-decoration: none;
+}
+
+/* Layout container styles */
+.layout-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-container > *:nth-child(2) {
+  flex: 1;
+}
+
+/* Ensure proper z-index stacking */
+.hamburger-button {
+  z-index: 2001;
+}
+
+.fullscreen-menu {
+  z-index: 1999;
+}
+
+.menu-overlay {
+  z-index: 1998;
+}
+
+.footer {
+  z-index: 1000;
+}
+
+/* Responsive utility classes */
+.hidden-mobile {
+  display: block;
+}
+
+.hidden-tablet {
+  display: block;
+}
+
+.hidden-desktop {
+  display: none;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+  
+  .visible-mobile {
+    display: block !important;
+  }
+}
+
+/* Tablet breakpoint */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hidden-tablet {
+    display: none !important;
+  }
+  
+  .visible-tablet {
+    display: block !important;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1025px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+  
+  .visible-desktop {
+    display: block !important;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch targets on mobile */
+  button, a, input, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Reduce hover effects on touch devices */
+  *:hover {
+    transform: none !important;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure crisp rendering on retina displays */
+  img, svg {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print styles */
+@media print {
+  .nav-dots,
+  .social-icons,
+  .menu-lines,
+  .arrow-button,
+  .hamburger-button,
+  .fullscreen-menu {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
 }
 
 /* ::-webkit-scrollbar {
