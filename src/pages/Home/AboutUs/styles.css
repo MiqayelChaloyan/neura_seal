@@ -50,14 +50,17 @@
 .mission-vision-title h2 {
   font-size: 10rem;
   color: var(--white-color);
-  font-weight: 400;
+  font-weight: 100 !important;
   font-family: 'Cocomat', sans-serif;
   word-wrap: break-word;
   display: flex;
   align-items: flex-start;
   line-height: 1;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  overflow: hidden;
+  height: 0.7em;
+  width: 100%;
 }
 
 .mission-vision-description {
@@ -66,6 +69,10 @@
   color: var(--white-color);
   font-weight: 400;
   font-family: 'D-DIN', sans-serif;
+}
+
+.mission-vision-title-vision {
+  margin-left: 143px;
 }
 
 .who-we-are-visual {
@@ -83,21 +90,15 @@
 .mission-vision-section {
   color: var(--gray-color);
   padding: 6rem 8rem;
+  overflow: hidden;
 }
 
 .mission-vision-row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  height: 30vh;
-}
-
-.mission-vision-title {
-  font-size: 6rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  flex: 1;
-  color: var(--white-color);
+  height: 20vh;
+  overflow: hidden;
 }
 
 .mission-vision-description {
@@ -107,6 +108,10 @@
   color: var(--white-color);
   max-width: 600px;
   margin-top: 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 @media (max-width: 991px) {

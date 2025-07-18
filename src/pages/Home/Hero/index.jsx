@@ -59,13 +59,13 @@ const Hero = () => {
             <SvgPaths.arrowIcon />
           </motion.button>
         </div>
-
-        <div className="line-container-hero">
-          <div className="line-hero" />
-          <div className="line-hero" />
-          <div className="line-hero" />
-        </div>
       </Container>
+
+      <div className="line-container-hero">
+        <div className="line-hero" />
+        <div className="line-hero" />
+        <div className="line-hero" />
+      </div>
     </section>
   );
 };

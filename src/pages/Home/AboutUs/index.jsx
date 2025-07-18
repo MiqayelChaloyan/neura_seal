@@ -36,7 +36,7 @@ const AboutUs = () => {
           </div>
           <div className="mission-vision-row">
             <div className="mission-vision-title">
-              <h2>Vision</h2>
+              <h2 className="mission-vision-title-vision">Vision</h2>
             </div>
             <div className="mission-vision-description-container">
               <p className="mission-vision-description">

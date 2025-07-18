@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { motion } from "framer-motion";
-
-// import "normalize.css";
 import Hero from "./Hero";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
