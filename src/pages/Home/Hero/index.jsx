@@ -8,7 +8,14 @@ import "./styles.css";
 
 const Hero = () => {
   const letters = ["n", "e", "u", "r", "a"];
-  const initialY = [0, 170, 70, -80, 10];
+
+  const initialPositions = [
+    { x: -100, y: -70 },    // n - left
+    { x: -50, y: 100 },   // e - top-left  
+    { x: 0, y: -20 },    // u - bottom-right
+    { x: 20, y: -150 },  // r - center
+    { x: 80, y: 0 }       // a - right
+  ];
 
   const scrollToAbout = () => {
     const event = new CustomEvent('scrollToSection', {
@@ -31,9 +38,9 @@ const Hero = () => {
             {letters.map((letter, idx) => (
               <motion.span
                 key={idx}
-                initial={{ y: initialY[idx] }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.9, ease: "easeOut", delay: idx * 0.1 }}
+                initial={{ x: initialPositions[idx].x, y: initialPositions[idx].y }}
+                animate={{ x: 0, y: 0 }}
+                transition={{ duration: 2, ease: "easeOut", delay: idx * 0.1 }}
               >
                 {letter}
               </motion.span>

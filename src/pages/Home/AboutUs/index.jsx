@@ -31,7 +31,6 @@ const AboutUs = () => {
         </Container>
         <div className="mission-vision-section">
           <div className="mission-vision-row">
-            {/* <img className="mission-vision-image" src={ImagePaths.missionImg} alt="mission" /> */}
             <div className="mission-vision-title">
               <h2>Mission</h2>
             </div>
@@ -42,7 +41,6 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="mission-vision-row">
-            {/* <img className="mission-vision-image" src={ImagePaths.visionImg} alt="vision" /> */}
             <div className="mission-vision-title">
               <h2>Vision</h2>
             </div>
