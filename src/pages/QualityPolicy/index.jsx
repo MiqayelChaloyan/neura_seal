@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
 import './styles.css';
 
+
 const QualityPolicy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="quality-policy-root">
       <div className="quality-policy-container">
@@ -36,31 +42,36 @@ const QualityPolicy = () => {
           </ul>
         </div>
         <div className="quality-policy-section">
-          <h2 className="quality-policy-section-title">4. Compliance and Ethical Standards</h2>
-          <p className="quality-policy-section-desc">We maintain transparency and respect for legal and cultural expectations:</p>
+          <h2 className="quality-policy-section-title">4. Accessibility, Performance, and Usability</h2>
+          <p className="quality-policy-section-desc">We strive for a seamless, inclusive, and responsive digital experience:</p>
           <ul className="quality-policy-list">
-            <li>Full alignment with policies set by the Saudi Communications, Space & Technology Commission (CST).</li>
-            <li>Culturally appropriate content, messaging, and visuals.</li>
-            <li>Transparent disclosures regarding AI capabilities and limitations.</li>
+            <li>Optimized for speed, mobile responsiveness, and cross-platform functionality.</li>
+            <li>Full accessibility compliance with WCAG standards.</li>
+            <li>Bilingual support in Arabic and English to serve all users effectively.</li>
           </ul>
         </div>
         <div className="quality-policy-section">
-          <h2 className="quality-policy-section-title">5. Compliance and Ethical Standards</h2>
-          <p className="quality-policy-section-desc">We maintain transparency and respect for legal and cultural expectations:</p>
+          <h2 className="quality-policy-section-title">5. Continuous Improvement</h2>
+          <p className="quality-policy-section-desc">Our digital presence evolves alongside our technology:</p>
           <ul className="quality-policy-list">
-            <li>Full alignment with policies set by the Saudi Communications, Space & Technology Commission (CST).</li>
-            <li>Culturally appropriate content, messaging, and visuals.</li>
-            <li>Transparent disclosures regarding AI capabilities and limitations.</li>
+            <li>Client and user feedback loops embedded in our content development.</li>
+            <li>Frequent updates to reflect product advancements and regulatory changes.</li>
+            <li>Use of analytics and AI to improve the user journey and interface design.</li>
           </ul>
         </div>
         <div className="quality-policy-section">
-          <h2 className="quality-policy-section-title">6. Compliance and Ethical Standards</h2>
-          <p className="quality-policy-section-desc">We maintain transparency and respect for legal and cultural expectations:</p>
+          <h2 className="quality-policy-section-title">6. Trust and Transparency</h2>
+          <p className="quality-policy-section-desc">Trust is foundational to anti-counterfeiting. We reflect this through:</p>
           <ul className="quality-policy-list">
-            <li>Full alignment with policies set by the Saudi Communications, Space & Technology Commission (CST).</li>
-            <li>Culturally appropriate content, messaging, and visuals.</li>
-            <li>Transparent disclosures regarding AI capabilities and limitations.</li>
+            <li>Verified case studies, proof-of-performance data, and key partnerships.</li>
+            <li>Secure, authenticated processes for demo requests and contact forms.</li>
+            <li>Real customer testimonials and quantifiable success metrics.</li>
           </ul>
+        </div>
+        <div className="quality-policy-section">
+          <p className="quality-policy-section-desc">
+            This policy is reviewed regularly to remain aligned with technological developments, user needs, and the Kingdom's evolving digital vision.
+          </p>
         </div>
       </div>
     </div>
