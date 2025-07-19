@@ -30,6 +30,7 @@
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
+  margin-right: 100px;
 }
 
 .footer-link:hover {
@@ -129,6 +130,11 @@
     text-align: center;
     gap: 16px;
   }
+
+  .footer-link {
+    margin-right: 0;
+  }
+  
   .footer {
     font-size: 15px;
     padding: 20px 0 10px 0;

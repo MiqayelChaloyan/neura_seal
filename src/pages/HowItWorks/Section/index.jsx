@@ -8,7 +8,7 @@ import SectionImage from './components/SectionImage';
 import map1 from '../../../assets/images/Screenshot from 2025-07-18 18-04-23_PhotoGrid.png';
 
 
-const Test = () => {
+const Section = () => {
   const [currentStep, setCurrentStep] = useState(1); // Start with step 1 for regular section
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -124,6 +124,6 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Section;
 
 

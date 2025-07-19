@@ -1,12 +1,13 @@
 import React from 'react';
+import Section from './Section';
 
 import './styles.css';
 
-import Test from './Test';
+
 const HowItWorks = () => {
   return (
     <div className="how-it-works">
-      <Test />
+      <Section />
     </div>
   );
 };
