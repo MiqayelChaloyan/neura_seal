@@ -1,10 +1,8 @@
-/* Outer wrapper for positioning */
 .crisis-section-outer {
   position: relative;
   width: 100%;
 }
 
-/* Main container */
 .crisis-section-container {
   position: relative;
   background: #000407;
@@ -15,7 +13,6 @@
   z-index: 1;
 }
 
-/* Extended left/right borders */
 .crisis-section-container::before,
 .crisis-section-container::after {
   content: "";
@@ -35,7 +32,6 @@
   right: 0;
 }
 
-/* Vertical line outside (extends beyond container) */
 .vertical-line-wrapper {
   position: absolute;
   top: -140px;
@@ -48,7 +44,6 @@
   align-items: center;
 }
 
-/* Long vertical line */
 .vertical-divider {
   flex: 1;
   width: 0.5px;
@@ -56,7 +51,6 @@
   z-index: 1;
 }
 
-/* Vertical line inside container */
 .vertical-divider-center {
   position: absolute;
   top: 0;
@@ -68,7 +62,6 @@
   z-index: 10;
 }
 
-/* Dots */
 .crisis-dot {
   width: 8px;
   height: 8px;
@@ -87,7 +80,6 @@
   transform: translateY(50%);
 }
 
-/* Main content layout */
 .crisis-section-main {
   position: relative;
   height: 100%;
@@ -95,7 +87,6 @@
   z-index: 2;
 }
 
-/* Left visual area */
 .crisis-section-visual {
   flex: 1;
   display: flex;
@@ -111,7 +102,6 @@
   height: 100%;
 }
 
-/* Right text content */
 .crisis-section-content {
   flex: 1;
   display: flex;
@@ -124,7 +114,9 @@
   font-size: 3rem;
   margin-bottom: 20px;
   text-align: right;
-  padding-right: 40px; 
+  padding-right: 100px; 
+  font-family: 'D-DIN', sans-serif;
+  font-weight: 400;
 }
 
 .crisis-section-description {
@@ -132,15 +124,90 @@
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: right;
-  padding-right: 40px; 
+  padding-right: 100px; 
+  font-family: 'D-DIN', sans-serif;
+  font-weight: 400;
 }
 
 .crisis-section-bold {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 1.5rem;
   color: #f5f5f5;
   text-align: right;
-  padding-right: 40px; 
+  padding-right: 100px; 
+  font-family: 'D-DIN', sans-serif;
+}
+
+/* Responsive Design - Large Desktop */
+@media (max-width: 1440px) {
+  .crisis-section-container {
+    width: 90%;
+    height: 65vh;
+    border-top: 1px solid #222;
+  }
+  
+  .crisis-section-title {
+    font-size: 2.8rem;
+    padding-right: 80px;
+  }
+  
+  .crisis-section-description {
+    font-size: 1.1rem;
+    padding-right: 80px;
+  }
+  
+  .crisis-section-bold {
+    font-size: 1.4rem;
+    padding-right: 80px;
+  }
+}
+
+/* Responsive Design - Desktop */
+@media (max-width: 1200px) {
+  .crisis-section-container {
+    width: 92%;
+    height: 60vh;
+    border-top: 1px solid #222;
+  }
+  
+  .crisis-section-title {
+    font-size: 2.5rem;
+    padding-right: 60px;
+  }
+  
+  .crisis-section-description {
+    font-size: 1rem;
+    padding-right: 60px;
+  }
+  
+  .crisis-section-bold {
+    font-size: 1.3rem;
+    padding-right: 60px;
+  }
+}
+
+/* Responsive Design - Tablet Large */
+@media (max-width: 1024px) {
+  .crisis-section-container {
+    width: 94%;
+    height: 55vh;
+    border-top: 1px solid #222;
+  }
+  
+  .crisis-section-title {
+    font-size: 2.2rem;
+    padding-right: 40px;
+  }
+  
+  .crisis-section-description {
+    font-size: 0.95rem;
+    padding-right: 40px;
+  }
+  
+  .crisis-section-bold {
+    font-size: 1.2rem;
+    padding-right: 40px;
+  }
 }
 
 /* Responsive design - 900px breakpoint (tablet) */
@@ -149,6 +216,7 @@
     width: 90%;
     height: auto;
     min-height: 60vh;
+    border-top: 1px solid #222;
   }
   
 
@@ -183,6 +251,10 @@
     text-align: center;
   }
 
+  .vertical-divider-center{
+    display: none;
+  }
+
   .crisis-section-description {
     font-size: 1.1rem;
     padding-right: 20px;
@@ -198,6 +270,41 @@
   .vertical-line-wrapper {
     top: -100px;
     bottom: -30px;
+  }
+
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+  .crisis-section-container {
+    width: 92%;
+    height: auto;
+    min-height: 55vh;
+    border-top: 1px solid #222;
+  }
+  
+  .crisis-section-main {
+    padding: 30px 0;
+  }
+  
+  .crisis-section-visual {
+    height: 250px;
+    margin-bottom: 15px;
+  }
+  
+  .crisis-section-title {
+    font-size: 2.2rem;
+    padding-right: 15px;
+  }
+  
+  .crisis-section-description {
+    font-size: 1rem;
+    padding-right: 15px;
+  }
+  
+  .crisis-section-bold {
+    font-size: 1.2rem;
+    padding-right: 15px;
   }
 }
 
@@ -279,5 +386,117 @@
   .vertical-divider-center {
     display: none;
   }
+}
+
+/* Responsive Design - Mobile Medium */
+@media (max-width: 480px) {
+  .crisis-section-container {
+    width: 98%;
+    min-height: 45vh;
+    border-top: 1px solid #222;
+  }
   
+  .crisis-section-main {
+    padding: 15px 0;
+  }
+  
+  .crisis-section-visual {
+    height: 180px;
+    margin-bottom: 10px;
+  }
+  
+  .crisis-section-content {
+    padding: 20px 0;
+  }
+  
+  .crisis-section-title {
+    font-size: 1.8rem;
+    padding-right: 5px;
+    margin-bottom: 12px;
+  }
+  
+  .crisis-section-description {
+    font-size: 0.9rem;
+    padding-right: 5px;
+    margin-bottom: 12px;
+  }
+  
+  .crisis-section-bold {
+    font-size: 1rem;
+    padding-right: 5px;
+  }
+}
+
+/* Responsive Design - Mobile Small */
+@media (max-width: 360px) {
+  .crisis-section-container {
+    width: 100%;
+    min-height: 40vh;
+    border-top: 1px solid #222;
+  }
+  
+  .crisis-section-main {
+    padding: 10px 0;
+  }
+  
+  .crisis-section-visual {
+    height: 160px;
+    margin-bottom: 8px;
+  }
+  
+  .crisis-section-content {
+    padding: 15px 0;
+  }
+  
+  .crisis-section-title {
+    font-size: 1.6rem;
+    padding-right: 3px;
+    margin-bottom: 10px;
+  }
+  
+  .crisis-section-description {
+    font-size: 0.85rem;
+    padding-right: 3px;
+    margin-bottom: 10px;
+  }
+  
+  .crisis-section-bold {
+    font-size: 0.95rem;
+    padding-right: 3px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .crisis-section-container {
+    min-height: 70vh;
+    border-top: 1px solid #222;
+  }
+  
+  .crisis-section-main {
+    padding: 20px 0;
+  }
+  
+  .crisis-section-visual {
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .crisis-section-content {
+    padding: 15px 0;
+  }
+  
+  .crisis-section-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .crisis-section-description {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .crisis-section-bold {
+    font-size: 1rem;
+  }
 }

@@ -2,5 +2,63 @@
     position: relative;
     background-color: #000407;
     padding-top: 290px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Design - Large Desktop */
+@media (max-width: 1440px) {
+    .technology-container {
+        padding-top: 250px;
+    }
+}
+
+/* Responsive Design - Desktop */
+@media (max-width: 1200px) {
+    .technology-container {
+        padding-top: 220px;
+    }
+}
+
+/* Responsive Design - Tablet Large */
+@media (max-width: 1024px) {
+    .technology-container {
+        padding-top: 200px;
+    }
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+    .technology-container {
+        padding-top: 180px;
+    }
+}
+
+/* Responsive Design - Mobile Large */
+@media (max-width: 600px) {
+    .technology-container {
+        padding-top: 150px;
+    }
+}
+
+/* Responsive Design - Mobile Medium */
+@media (max-width: 480px) {
+    .technology-container {
+        padding-top: 120px;
+    }
+}
+
+/* Responsive Design - Mobile Small */
+@media (max-width: 360px) {
+    .technology-container {
+        padding-top: 100px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .technology-container {
+        padding-top: 80px;
+    }
 }
 

@@ -10,10 +10,21 @@ import LogoIcon from "../assets/svg/LogoIcon.jsx";
 
 // Images
 import visualImg from "../assets/images/visual.png";
+import crisis_image from "../assets/images/crisis_image.png";
+import how_it_work from "../assets/images/how_it_work.png";
+import who_neural_seal from "../assets/images/who_neural_seal.png";
+import features_bg from "../assets/images/features_bg.png";
+
+// Constants
+import HowItWorksConstants from "./howItWorks.jsx";
 
 
 const ImagePaths = {
     visualImg: visualImg,
+    crisis_image: crisis_image,
+    how_it_work: how_it_work,
+    who_neural_seal: who_neural_seal,
+    features_bg: features_bg,
 };
 
 const SvgPaths = {
@@ -30,6 +41,7 @@ const Titles = {
     whoWeAre: 'Who We Are',
     theTechnology: 'The Technology',
     contactUs: 'Contact Us',
+    theCrisis: 'The Crisis',
 };
 
 const Texts = {
@@ -39,6 +51,10 @@ const Texts = {
     visionText: 'To establish the global standard for product and document authenticity - a secure, open protocol that anyone, anywhere can adopt to eliminate counterfeiting at its source. This is the new foundation for trust in the global marketplace.',
     qualityPolicy: 'Quality Policy',
     copyright: '© Copyright 2025. All Rights Reserved',
+    counterfeitingText: 'Counterfeiting drains trillions from the global economy,<br />destabilizes industries, and destroys trust.',
+    counterfeitingTextLine1: 'Counterfeiting drains trillions from the global economy,',
+    counterfeitingTextLine2: 'destabilizes industries, and destroys trust.',
+    weBuiltTheTechnologyToEndIt: 'We built the technology to end it.',
 };
 
 const Buttons = {
@@ -60,4 +76,5 @@ export {
     Buttons,
     Labels,
     SvgPaths,
+    HowItWorksConstants,
 };
