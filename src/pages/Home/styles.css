@@ -152,7 +152,7 @@
   min-height: 100vh;
   position: relative;
   z-index: 90;
-  padding: 1rem;
+  padding: 0;
 }
 
 /* Responsive Design - Tablet */
