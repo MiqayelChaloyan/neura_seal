@@ -58,6 +58,18 @@ const HamburgerMenu = () => {
     window.dispatchEvent(event);
   };
 
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    
+    // If not on home page, navigate to home
+    if (location.pathname !== '/') {
+      navigate('/');
+    }
+    
+    // Scroll to top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleMenuItemClick = (target) => {
     // Close menu immediately for better UX
     setIsOpen(false);
@@ -96,7 +108,7 @@ const HamburgerMenu = () => {
     <>
       <header className="fixed-header">
         <div className="header-left">
-          <Link to="/" className='header-logo-link'>
+          <Link to="/" className='header-logo-link' onClick={handleLogoClick}>
             <SvgPaths.logoIcon />
           </Link>
         </div>
