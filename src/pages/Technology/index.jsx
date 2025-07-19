@@ -3,7 +3,6 @@ import CrisisSection from './CrisisSection';
 import IndustriesSection from './IndustriesSection';
 import HowItWorks from './HowItWorks';
 import AboutUs from './AboutUs';
-import Test from '../HowItWorks/Test';
 
 import './styles.css';
 
@@ -16,7 +15,6 @@ const Technology = () => {
             <IndustriesSection />
             <HowItWorks />
             <AboutUs />
-            {/* <Test /> */}
         </div>
     );
 };  

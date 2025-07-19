@@ -1,46 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import { ImagePaths } from '../../../constants';
+
+import features from './features';
+
 import './styles.css';
 
-const features = [
-  {
-    number: '01',
-    title: 'DETECTION ENGINE:',
-    subtitle: 'NO MATCH? NO PASS',
-    description: "If it’s not a match, it doesn't pass. Period.",
-  },
-  {
-    number: '02',
-    title: 'DETECTION ENGINE:',
-    subtitle: 'NO MATCH? NO PASS',
-    description: "If it’s not a match, it doesn't pass. Period.",
-  },
-  {
-    number: '03',
-    title: 'GETS SMARTER',
-    subtitle: 'WITH EVERY ATTEMPT',
-    description: 'It evolves faster than counterfeiting tactics, learning and adapting with every attempt.',
-  },
-  {
-    number: '04',
-    title: 'LIVE INTELLIGENCE',
-    subtitle: 'DASHBOARD',
-    description: 'Real-Time map of where counterfeits hit,\ntheir frequency, and financial impact.',
-  },
-  {
-    number: '05',
-    title: 'SEAMLESS INTEGRATION.',
-    subtitle: 'ZERO DISRUPTION.',
-    description: 'Works with your\nexisting systems - no changes needed.',
-  },
-];
 
 const FeaturesList = () => {
+  const [visibleFeatures, setVisibleFeatures] = useState([]);
+
+  useEffect(() => {
+    const animateFeatures = () => {
+      features.forEach((_, index) => {
+        setTimeout(() => {
+          setVisibleFeatures(prev => [...prev, index]);
+        }, index * 300);
+      });
+    };
+
+    const timer = setTimeout(animateFeatures, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="features-wrapper">
-      {features.map(({ number, title, subtitle, description }) => (
-        <div className='feature-card-wrapper'>
+      {features.map(({ number, title, subtitle, description }, index) => (
+        <div 
+          className={`feature-card-wrapper ${visibleFeatures.includes(index) ? 'feature-visible' : 'feature-hidden'}`}
+          key={number}
+        >
           {number === '01' && <h1 className="features-title">The Technology</h1>}
-          <div className="feature-card" key={number}>
+          <div 
+            className="feature-card"
+            style={{ 
+              ...(number === '01' ? {
+                backgroundImage: `url(${ImagePaths.features_bg})`,
+                backgroundSize: 'fill',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'left bottom',
+                backgroundColor: '#000407'
+              } : number === '02' ? {
+                backgroundImage: `url(${ImagePaths.features_bg})`,
+                backgroundSize: 'fill',
+                backgroundRepeat: 'repeat-y',
+                backgroundColor: '#000407',
+                backgroundPosition: 'left'
+              } : number === '03' ? {
+                backgroundImage: `url(${ImagePaths.features_bg})`,
+                backgroundSize: 'fill',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'left top',
+                backgroundColor: '#000407'
+              } : {})
+            }}
+          >
             <div className="feature-number">{number}</div>
             <div className="feature-content">
               <h2 className="feature-title">{title}</h2>
