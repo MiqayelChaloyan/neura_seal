@@ -618,7 +618,7 @@
 /* Small Mobile - 320px to 479px */
 @media (max-width: 479px) {
 	.analytics-section-outer {
-		margin-top: 120px;
+		margin-top: 80px;
 	}
 	
 	.analytics-section-container {
@@ -656,10 +656,10 @@
 	
 	.full-video {
 		width: 100%;
-		height: auto;
-		max-height: 180px;
-		object-fit: contain;
-		padding-top: 10px;
+		max-height: 60vh;
+		height: 60vh;
+		object-fit: cover;
+		padding-top: 160px;
 		background-color: #000407;
 	}
 	

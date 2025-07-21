@@ -2,5 +2,11 @@
   position: relative;
   background-color: #000407;
   padding-top: 200px;
+}
+
+
+@media (max-width: 480px) {
+  .how-it-works {
+    padding-top: 0;
   }
- 
+}

@@ -192,6 +192,16 @@ a {
   flex: 1;
 }
 
+@media (max-width: 480px) {
+  .layout-container {
+    min-height: 100vh;
+  }
+
+  .layout-container > *:nth-child(2) {
+    flex: none;
+  }
+}
+
 /* Ensure proper z-index stacking */
 .hamburger-button {
   z-index: 2001;
