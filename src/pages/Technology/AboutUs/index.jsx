@@ -12,7 +12,7 @@ const AboutUs = () => {
                     <div className='about-us-content'>
                         <h1>Why Neural Seal?</h1>
                     </div>
-                    <img src={ImagePaths.who_neural_seal} alt='about-us-image' />
+                    <img src={ImagePaths.who_neural_seal} alt='about-us-image' loading="lazy" />
                 </div>
             </div>
         </div>

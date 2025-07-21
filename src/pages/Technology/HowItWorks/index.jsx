@@ -33,6 +33,7 @@ const HowItWorks = () => {
               <img
                 src={ImagePaths.how_it_work}
                 alt={HowItWorksConstants.imageAlt}
+                loading="lazy"
               />
             </div>
           </div>
