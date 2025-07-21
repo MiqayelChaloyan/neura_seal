@@ -18,6 +18,7 @@ const CrisisSection = () => {
             <img
               src={ImagePaths.crisis_image}
               alt="Anti-counterfeit technology visual"
+              loading="lazy"
             />
           </div>
           <div className="crisis-section-content">
