@@ -503,6 +503,11 @@
     height: 70vh !important;
   }
 
+  .header-logo-link svg {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
   .hamburger-button {
     right: 20px;
     top: 10px;
@@ -538,6 +543,15 @@
   .nav-dots {
     display: none !important;
   }
+
+  .menu-line-left, 
+  .menu-line-right {
+    display: none !important;
+  }
+/* 
+  .menu-items {
+    display: none !important;
+  } */
 }
 
 /* Responsive Design - Mobile Medium */
@@ -549,8 +563,13 @@
     padding: 4px;
   }
 
-  .menu-lines {
-    display: none;
+  /* .menu-lines {
+    display: none !important;
+  } */
+
+  .menu-line-left, 
+  .menu-line-right {
+    display: none !important;
   }
 
   .top-left {
