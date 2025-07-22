@@ -277,6 +277,21 @@ a {
   *:hover {
     transform: none !important;
   }
+  
+  /* Prevent text selection on interactive elements */
+  button, a, .menu-item, .hamburger-button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Improve touch response */
+  .hamburger-button, .menu-item, .dot {
+    touch-action: manipulation;
+  }
 }
 
 /* High DPI displays */
