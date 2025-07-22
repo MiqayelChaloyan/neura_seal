@@ -1,13 +1,9 @@
-/* Test Component Styles - Main Container and Layout */
-
-/* Outer wrapper for positioning */
 .analytics-section-outer {
 	position: relative;
 	width: 100%;
 	margin-top: 150px;
   }
   
-  /* Main container */
   .analytics-section-container {
 	position: relative;
 	background: #000407;
@@ -18,7 +14,6 @@
 	z-index: 1;
   }
 
-  /* Extended left/right borders */
   .analytics-section-container::before,
   .analytics-section-container::after {
 	content: "";
@@ -38,7 +33,6 @@
 	right: 0;
   }
   
-  /* Vertical line outside (extends beyond container) */
   .vertical-line-wrapper {
 	position: absolute;
 	top: -140px;
@@ -51,7 +45,6 @@
 	align-items: center;
   }
   
-  /* Long vertical line */
   .vertical-divider {
 	flex: 1;
 	width: 0.5px;
@@ -59,7 +52,6 @@
 	z-index: 1;
   }
   
-  /* Vertical line inside container */
   .vertical-divider-center {
 	position: absolute;
 	top: 0;
@@ -71,7 +63,6 @@
 	z-index: 10;
   }
   
-  /* Dots */
   .analytics-dot {
 	width: 8px;
 	height: 8px;
@@ -90,7 +81,6 @@
 	transform: translateY(50%);
   }
   
-  /* Main content layout */
   .analytics-section-main {
 	position: relative;
 	height: 100%;
@@ -98,7 +88,6 @@
 	z-index: 2;
   }
   
-  /* Left visual area */
   .analytics-section-visual {
 	flex: 1;
 	display: flex;
@@ -125,16 +114,14 @@
 	object-fit: contain;
   }
 
-  .full-video {
+.full-video {
     width: 99%;
     height: 100%;
     object-fit: cover;
 	padding-top: 10px;
 	background-color: #000407;
-	/* background-color: #000; */
   }
 
-/* Large image styles for final step */
 .analytics-section-visual.large-image {
 	flex: 1;
 	width: 100%;
@@ -142,7 +129,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	perspective: 1200px;  /* Adding perspective to create depth */
+	perspective: 1200px;
 	transform-style: preserve-3d;
 	object-fit: contain;
   }
@@ -156,39 +143,9 @@
 	border-radius: 12px;
 	transform-style: preserve-3d;
 	backface-visibility: hidden;
-	/* Optional: can add a subtle shadow to make it pop */
 	box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
   }
   
-/* 
-  .large-image-content {
-    max-width: 95%;
-    max-height: 95%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-  } */
-
-  /* Remove the CSS animation since we're using Framer Motion for the growing effect */
-  /* .analytics-section-visual.large-image .large-image-content {
-    animation: imageSlideIn 1.5s ease-out 0.3s both;
-  }
-
-  @keyframes imageSlideIn {
-    0% {
-      transform: translateX(-100px) translateY(-50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0) translateY(0);
-      opacity: 1;
-    }
-  } */
-
-  /* Navigation button */
   .step-navigation-btn {
 	position: absolute;
 	bottom: 30px;
@@ -211,7 +168,6 @@
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
   
-  /* Right text content */
   .analytics-section-content {
 	flex: 1;
 	display: flex;
@@ -327,98 +283,96 @@
   /* Responsive design - 600px breakpoint (mobile) */
   @media (max-width: 600px) {
 	.analytics-section-container {
-	  width: 95%;
-	  height: auto;
-	  min-height: 50vh;
-	  border-top: 1px solid #222;
+		width: 95%;
+		height: auto;
+		min-height: 50vh;
+		border-top: 1px solid #222;
 	}
-   
-	.analytics-section-content {
-	  padding: 0 20px;
-	  font-family: 'D-DIN', sans-serif;
-	}
-   
+	
 	.analytics-section-container::before,
 	.analytics-section-container::after {
-	  top: -100px;
+		top: -100px;
 	}
-   
+	
 	.analytics-section-main {
-	  flex-direction: column;
-	  height: auto;
-	  min-height: 50vh;
-	  padding: 20px 0;
+		flex-direction: column;
+		height: auto;
+		min-height: 50vh;
+		padding: 20px 0;
+		display: flex;
 	}
-   
+	
 	.analytics-section-visual {
-	  order: 1;
-	  flex: none;
-	  height: 200px;
-	  margin-bottom: 15px;
+		order: 1;
+		flex: none;
+		height: 200px;
+		margin-bottom: 15px;
+		width: 100%;
 	}
-   
+	
 	.analytics-section-visual img {
-	  width: 100%;
-	  height: auto;
-	  max-height: 240px;
-	  object-fit: cover;
+		width: 100%;
+		height: auto;
+		max-height: 240px;
+		object-fit: cover;
 	}
-   
+	
 	.analytics-section-content {
-	  order: 2;
-	  flex: none;
-	  padding: 30px 0;
+		order: 2;
+		flex: none;
+		padding: 30px 0;
+		width: 100%;
+		font-family: 'D-DIN', sans-serif;
 	}
-   
+	
 	.analytics-section-title {
-	  font-size: 2rem;
-	  padding-left: 10px;
-	  text-align: left;
-	  margin-bottom: 15px;
-	  font-weight: 400;
-	  font-family: 'D-DIN', sans-serif;
+		font-size: 2rem;
+		padding-left: 10px;
+		text-align: left;
+		margin-bottom: 15px;
+		font-weight: 400;
+		font-family: 'D-DIN', sans-serif;
 	}
-   
+	
 	.analytics-section-description {
-	  font-size: 1rem;
-	  padding-left: 10px;
-	  text-align: left;
-	  margin-bottom: 15px;
-	  line-height: 1.5;
-	  font-weight: 400;
-	  font-family: 'D-DIN', sans-serif;
+		font-size: 1rem;
+		padding-left: 10px;
+		text-align: left;
+		margin-bottom: 15px;
+		line-height: 1.5;
+		font-weight: 400;
+		font-family: 'D-DIN', sans-serif;
 	}
-   
+	
 	.analytics-section-description br {
-	  display: none;
+		display: none;
 	}
-   
+	
 	.analytics-section-bold {
-	  font-size: 1rem;
-	  padding-left: 10px;
-	  text-align: left;
-	  font-weight: 400;
-	  font-family: 'D-DIN', sans-serif;
+		font-size: 1rem;
+		padding-left: 10px;
+		text-align: left;
+		font-weight: 400;
+		font-family: 'D-DIN', sans-serif;
 	}
-   
+	
 	.vertical-line-wrapper {
-	  top: -50px;
-	  bottom: -20px;
+		top: -50px;
+		bottom: -20px;
 	}
-   
+	
 	.vertical-divider-center {
-	  display: none;
+		display: none;
 	}
 
 	.step-navigation-btn {
-	  bottom: 15px;
-	  right: 15px;
-	  padding: 8px 16px;
-	  font-size: 12px;
+		bottom: 15px;
+		right: 15px;
+		padding: 8px 16px;
+		font-size: 12px;
 	}
-	
-  }
-  
+}
+
 /* Large Mobile - 600px to 767px */
 @media (max-width: 767px) and (min-width: 600px) {
 	.analytics-section-container {
@@ -438,6 +392,7 @@
 		height: auto;
 		min-height: 55vh;
 		padding: 20px 0;
+		display: flex;
 	}
 	
 	.analytics-section-visual {
@@ -445,6 +400,7 @@
 		flex: none;
 		height: 250px;
 		margin-bottom: 15px;
+		width: 100%;
 	}
 	
 	.analytics-section-visual img {
@@ -467,6 +423,7 @@
 		order: 2;
 		flex: none;
 		padding: 20px 0;
+		width: 100%;
 	}
 	
 	.analytics-section-title {
@@ -533,6 +490,7 @@
 		height: auto;
 		min-height: 50vh;
 		padding: 15px 0;
+		display: flex;
 	}
 	
 	.analytics-section-visual {
@@ -540,6 +498,7 @@
 		flex: none;
 		height: 200px;
 		margin-bottom: 15px;
+		width: 100%;
 	}
 	
 	.analytics-section-visual img {
@@ -562,6 +521,7 @@
 		order: 2;
 		flex: none;
 		padding: 15px 0;
+		width: 100%;
 	}
 	
 	.analytics-section-title {
@@ -614,7 +574,7 @@
 	.analytics-section-container {
 		width: 100%;
 		height: auto;
-		min-height: 45vh;
+		min-height: 70vh;
 		border-top: 1px solid #222;
 	}
 	
@@ -624,10 +584,11 @@
 	}
 	
 	.analytics-section-main {
-		flex-direction: column;
+		flex-direction: none;
 		height: auto;
-		min-height: 45vh;
+		min-height: 70vh;
 		padding: 10px 0;
+		display: grid;
 	}
 	
 	.analytics-section-visual {
@@ -635,6 +596,7 @@
 		flex: none;
 		height: 180px;
 		margin-bottom: 10px;
+		width: 100%;
 	}
 	
 	.analytics-section-visual img {
@@ -657,6 +619,7 @@
 		order: 2;
 		flex: none;
 		padding: 10px 0;
+		width: 100%;
 	}
 	
 	.analytics-section-title {
@@ -723,10 +686,11 @@
 	}
 	
 	.analytics-section-main {
-		flex-direction: column;
+		flex-direction: none;
 		height: auto;
 		min-height: 40vh;
 		padding: 8px 0;
+		display: grid;
 	}
 	
 	.analytics-section-visual {
@@ -734,6 +698,7 @@
 		flex: none;
 		height: 150px;
 		margin-bottom: 8px;
+		width: 100%;
 	}
 	
 	.analytics-section-visual img {
@@ -756,6 +721,7 @@
 		order: 2;
 		flex: none;
 		padding: 8px 0;
+		width: 100%;
 	}
 	
 	.analytics-section-title {

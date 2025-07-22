@@ -1,4 +1,3 @@
-import './styles.css';
 import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -6,6 +5,8 @@ import SectionContent from './components/SectionContent';
 import SectionImage from './components/SectionImage';
 
 import map1 from '../../../assets/images/Screenshot from 2025-07-18 18-04-23_PhotoGrid.png';
+
+import './styles.css';
 
 
 const Section = () => {
