@@ -18,16 +18,6 @@
 	z-index: 1;
   }
 
-  /* No borders state for large image */
-  .analytics-section-container.no-borders {
-	/* Keep top border and side borders, only hide center divider */
-  }
-
-  .analytics-section-container.no-borders::before,
-  .analytics-section-container.no-borders::after {
-	/* Keep side borders visible */
-  }
-  
   /* Extended left/right borders */
   .analytics-section-container::before,
   .analytics-section-container::after {
