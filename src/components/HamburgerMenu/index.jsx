@@ -47,7 +47,13 @@ const HamburgerMenu = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
+    // Only prevent default for click events, not touch events
+    if (e && e.type === 'click') {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
     const newState = !isOpen;
     setIsOpen(newState);
     
@@ -115,7 +121,11 @@ const HamburgerMenu = () => {
 
         <h1 className="header-title">{pageTitles[location.pathname] || ''}</h1>
 
-        <button className="hamburger-button" onClick={toggleMenu}>
+        <button 
+          className="hamburger-button" 
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+        >
           <motion.span
             className="line"
             animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}

@@ -12,10 +12,21 @@
   padding: 8px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
 }
 
 .hamburger-button:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hamburger-button:active {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .line {
@@ -25,6 +36,7 @@
   border-radius: 2px;
   margin: 4px 0;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .menu-center {
@@ -518,7 +530,10 @@
     right: 20px;
     top: 10px;
     margin-top: 10px;
-    padding: 5px;
+    padding: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    z-index: 2002;
   }
 
   .top-left {
@@ -566,7 +581,10 @@
     right: 15px;
     top: 8px;
     margin-top: 8px;
-    padding: 4px;
+    padding: 6px;
+    min-width: 40px;
+    min-height: 40px;
+    z-index: 2002;
   }
 
   /* .menu-lines {
@@ -608,26 +626,70 @@
   }
 }
 
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  .fixed-header {
+    padding: 0 15px;
+  }
+  
+  .fixed-header .hamburger-button {
+    position: static;
+    margin-top: 0;
+    margin-left: auto;
+    z-index: 2002;
+  }
+  
+  .fullscreen-menu {
+    z-index: 2001;
+  }
+  
+  .menu-overlay {
+    z-index: 2000;
+  }
+}
+
 /* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
   .hamburger-button {
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 12px;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+  .hamburger-button:active {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(0.95);
   }
   
   .menu-item {
-    min-height: 44px;
+    min-height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+  .menu-item:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(0.98);
   }
   
   .dot {
-    min-width: 44px;
-    min-height: 44px;
+    min-width: 48px;
+    min-height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  
+  .menu-overlay {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
   }
 }
 
@@ -694,6 +756,8 @@
   will-change: opacity;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .menu-overlay.active {
