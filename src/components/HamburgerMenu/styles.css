@@ -521,6 +521,14 @@
     height: 70vh !important;
   }
 
+  .hamburger-button {
+    padding: 20px 0;
+  }
+
+  .header-title {
+    font-size: 0.7rem;
+  }
+
   .header-logo-link svg {
     width: 40px !important;
     height: 40px !important;
@@ -587,10 +595,6 @@
     z-index: 2002;
   }
 
-  /* .menu-lines {
-    display: none !important;
-  } */
-
   .menu-line-left, 
   .menu-line-right {
     display: none !important;
@@ -629,7 +633,15 @@
 /* Additional mobile optimizations */
 @media (max-width: 480px) {
   .fixed-header {
-    padding: 0 15px;
+    padding: 0 15px !important;
+  }
+
+  .hamburger-button {
+    padding: 20px 0;
+  }
+
+  .header-title {
+    display: none;
   }
   
   .fixed-header .hamburger-button {
