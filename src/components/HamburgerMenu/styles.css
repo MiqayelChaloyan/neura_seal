@@ -46,8 +46,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 98;
+  z-index: 1999;
   overflow: hidden;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .menu-items {
@@ -73,6 +76,9 @@
   padding: 8px 16px;
   border-radius: 4px;
   user-select: none;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .menu-item:hover {
@@ -681,10 +687,13 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 97;
+  z-index: 1998;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+  will-change: opacity;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .menu-overlay.active {
