@@ -35,24 +35,18 @@ const FeaturesList = () => {
             className="feature-card"
             style={{ 
               ...(number === '01' ? {
-                backgroundImage: `url(${ImagePaths.features_bg})`,
-                backgroundSize: 'fill',
+                backgroundImage: `url(${ImagePaths.features_bg_2})`,
+                backgroundSize: '50%',
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'left bottom',
-                backgroundColor: '#000407'
+                backgroundPosition: 'center left',
+                backgroundColor: '#000407',
               } : number === '02' ? {
                 backgroundImage: `url(${ImagePaths.features_bg})`,
                 backgroundSize: 'fill',
-                backgroundRepeat: 'repeat-y',
-                backgroundColor: '#000407',
-                backgroundPosition: 'left'
-              } : number === '03' ? {
-                backgroundImage: `url(${ImagePaths.features_bg})`,
-                backgroundSize: 'fill',
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'left top',
-                backgroundColor: '#000407'
-              } : {})
+                backgroundColor: '#000407',
+                backgroundPosition: 'top left',
+              }: {})
             }}
           >
             <div className="feature-number">{number}</div>
