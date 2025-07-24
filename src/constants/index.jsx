@@ -14,6 +14,7 @@ import crisis_image from "../assets/images/crisis_image.png";
 import how_it_work from "../assets/images/how_it_work.png";
 import who_neural_seal from "../assets/images/who_neural_seal.png";
 import features_bg from "../assets/images/features_bg.png";
+import features_bg_2 from "../assets/images/features_bg_2.png";
 
 // Constants
 import HowItWorksConstants from "./howItWorks.jsx";
@@ -25,6 +26,7 @@ const ImagePaths = {
     how_it_work: how_it_work,
     who_neural_seal: who_neural_seal,
     features_bg: features_bg,
+    features_bg_2: features_bg_2,
 };
 
 const SvgPaths = {

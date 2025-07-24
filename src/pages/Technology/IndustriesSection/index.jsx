@@ -1,7 +1,10 @@
 import React from "react";
 import './styles.css';
 
-import { Gem , HeartPulse, Handshake } from 'lucide-react';
+import { Gem, HeartPulse, Handshake } from 'lucide-react';
+import LuxuryIcon from "../../../assets/svg/LuxuryIcon";
+import FinancialIcon from "../../../assets/svg/FinancialIcon";
+import IntersectionIcon from "../../../assets/svg/IntersectionIcon";
 
 export default function IndustriesSection() {
   return (
@@ -14,17 +17,17 @@ export default function IndustriesSection() {
           <div className="industries-section-container">
             <div className="industries-section-main">
               <div className="industry-card hover-highlight">
-              <Gem />
+                <LuxuryIcon />
                 <h3>LUXURY GOODS & FASHION</h3>
                 <p>Protecting high-value brands from counterfeit infiltration.</p>
               </div>
               <div className="industry-card hover-highlight">
-              <Handshake />
+                <IntersectionIcon />
                 <h3>PHARMACEUTICALS & HEALTHCARE</h3>
                 <p>Ensuring drug authenticity and preventing life-threatening fraud.</p>
               </div>
               <div className="industry-card hover-highlight">
-              <HeartPulse />
+                <FinancialIcon />
                 <h3>FINANCIAL INSTITUTIONS</h3>
                 <p>Securing financial documents such as cheques, banknotes, and certificates against forgery</p>
               </div>
