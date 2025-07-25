@@ -3,6 +3,53 @@
 	width: 100%;
 	margin-top: 150px;
   }
+
+  /* Step indicator styles */
+  .step-indicator {
+	position: absolute;
+	top: -120px;
+	right: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	z-index: 10;
+  }
+
+  .step-counter {
+	color: #fff;
+	font-family: 'D-DIN', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+  }
+
+  .step-dots {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+  }
+
+  .step-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #444;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: 2px solid transparent;
+  }
+
+  .step-dot:hover {
+	background-color: #666;
+	transform: scale(1.1);
+  }
+
+  .step-dot.active {
+	background-color: #fff;
+	border-color: #fff;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
   
   .analytics-section-container {
 	position: relative;
@@ -103,7 +150,7 @@
   .analytics-section-visual img {
 	max-width: 100%;
 	height: auto;
-	object-fit: contain;
+	object-fit: cover;
 	width: 99.5%;
 	height: 100%;
   }
@@ -216,6 +263,19 @@
 	  min-height: 60vh;
 	}
 	
+	.step-indicator {
+	  top: -100px;
+	  right: 15px;
+	}
+	
+	.step-counter {
+	  font-size: 12px;
+	}
+	
+	.step-dot {
+	  width: 10px;
+	  height: 10px;
+	}
    
 	.analytics-section-container::before,
 	.analytics-section-container::after {
@@ -287,6 +347,20 @@
 		height: auto;
 		min-height: 50vh;
 		border-top: 1px solid #222;
+	}
+	
+	.step-indicator {
+	  top: -80px;
+	  right: 10px;
+	}
+	
+	.step-counter {
+	  font-size: 11px;
+	}
+	
+	.step-dot {
+	  width: 8px;
+	  height: 8px;
 	}
 	
 	.analytics-section-container::before,
