@@ -123,13 +123,13 @@ const Home = () => {
           />
         </li>
       </ul>
-      <ul className="social-icons">
+      {/* <ul className="social-icons">
         <li><Link to={Hosts.LINKEDIN} aria-label="LinkedIn"><SvgPaths.linkedinIcon /></Link></li>
         <li><Link to={Hosts.INSTAGRAM} aria-label="Instagram"><SvgPaths.instagramIcon /></Link></li>
         <li><Link to={Hosts.YOUTUBE} aria-label="YouTube"><SvgPaths.youtubeIcon /></Link></li>
         <li><Link to={Hosts.TWITTER} aria-label="Twitter"><SvgPaths.twitterIcon /></Link></li>
         <li><Link to={Hosts.FACEBOOK} aria-label="Facebook"><SvgPaths.facebookIcon /></Link></li>
-      </ul>
+      </ul> */}
       <div className="menu-lines menu-line-left" />
       <div className="menu-lines menu-line-right" />
       <div className="scroll-down__wrapper">

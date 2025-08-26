@@ -145,7 +145,7 @@
 /* Responsive Design - Desktop */
 @media (max-width: 1200px) {
   .who-we-are {
-    padding: 4rem 5rem;
+    padding: 4rem 6rem;
   }
   
   .who-we-are-content h1 {
@@ -162,7 +162,7 @@
   }
   
   .mission-vision-section {
-    padding: 4rem 5rem;
+    padding: 4rem 6rem;
   }
   
   .mission-vision-description {
@@ -206,7 +206,7 @@
 @media (max-width: 991px) {
   .who-we-are {
       flex-direction: column;
-      padding: 3rem 2rem;
+      padding: 3rem 4rem;
       min-height: unset;
   }
   .who-we-are-content, .who-we-are-visual {
@@ -227,7 +227,7 @@
       height: 60vh;
   }
   .mission-vision-section {
-      padding: 3rem 2rem;
+      padding: 3rem 4rem;
   }
   .mission-vision-row {
       flex-direction: column;
@@ -252,7 +252,7 @@
 /* Responsive Design - Tablet */
 @media (max-width: 768px) {
   .who-we-are {
-    padding: 2.5rem 1.5rem;
+    padding: 2.5rem 2rem;
   }
   
   .who-we-are-content h1 {
@@ -270,7 +270,7 @@
   }
   
   .mission-vision-section {
-    padding: 2.5rem 1.5rem;
+    padding: 2.5rem 2rem;
   }
   
   .mission-vision-title h2 {
