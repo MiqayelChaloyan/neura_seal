@@ -4,11 +4,11 @@ import { AnimatePresence } from 'framer-motion';
 import SectionContent from './components/SectionContent';
 import SectionImage from './components/SectionImage';
 
-// import map1 from '../../../assets/images/Screenshot from 2025-07-18 18-04-23_PhotoGrid.png';
-import step1Image from '../../../assets/gif/step_1.gif';
-import step2Image from '../../../assets/gif/step_2.gif';
-import step3Image from '../../../assets/gif/step_3.gif';
-import step4Image from '../../../assets/images/Screenshot from 2025-07-18 18-04-23_PhotoGrid.png';
+// import map1 from '../../../assets/images/Screenshot from 2025-07-18 18-04-23_PhotoGrid.webp';
+import step1Image from '../../../assets/gif/step_1_processed_by_imagy.gif';
+import step2Image from '../../../assets/gif/step_2_processed_by_imagy.gif';
+import step3Image from '../../../assets/gif/step_3_processed_by_imagy.gif';
+import step4Image from '../../../assets/images/Screenshot from 2025-07-18 18-04-23_PhotoGrid.webp';
 
 import './styles.css';
 
