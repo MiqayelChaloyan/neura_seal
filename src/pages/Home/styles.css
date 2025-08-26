@@ -123,7 +123,7 @@
   );
 }
 
-.menu-line-right {
+/* .menu-line-right {
   right: 5rem;
   clip-path: polygon(
     0 0,
@@ -132,6 +132,20 @@
     0 25%,
     0 70%,
     100% 75%,
+    100% 100%,
+    0 100%
+  );
+} */
+
+.menu-line-right {
+  right: 5rem;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 100%,
+    100% 100%,
     100% 100%,
     0 100%
   );
