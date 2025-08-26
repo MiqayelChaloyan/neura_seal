@@ -9,12 +9,12 @@ import LogoIcon from "../assets/svg/LogoIcon.jsx";
 
 
 // Images
-import visualImg from "../assets/images/visual.png";
-import crisis_image from "../assets/images/crisis_image.png";
-import how_it_work from "../assets/images/how_it_work.png";
-import who_neural_seal from "../assets/images/who_neural_seal.png";
-import features_bg from "../assets/images/features_bg.png";
-import features_bg_2 from "../assets/images/features_bg_2.png";
+import visualImg from "../assets/images/visual.webp";
+import crisis_image from "../assets/images/crisis_image.webp";
+import how_it_work from "../assets/images/how_it_work.webp";
+import who_neural_seal from "../assets/images/who_neural_seal.webp";
+import features_bg from "../assets/images/features_bg.webp";
+import features_bg_2 from "../assets/images/features_bg_2.webp";
 
 // Constants
 import HowItWorksConstants from "./howItWorks.jsx";
