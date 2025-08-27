@@ -55,10 +55,13 @@ const ContactUs = () => {
               <h3 className='contact-left-h3'>{Labels.email}:</h3>
               <p className='contact-left-p'>{Hosts.EMAIL}</p>
             </div>
+            <div />
+            <div />
+            <div />
           </div>
 
           <div className="contact-right">
-              <h2>{Titles.contactUs}</h2>
+            <h2>{Titles.contactUs}</h2>
             <form onSubmit={handleSubmit}>
               <label htmlFor="name">{Labels.name}</label>
               <input
