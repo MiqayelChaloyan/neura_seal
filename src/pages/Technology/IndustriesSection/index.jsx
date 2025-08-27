@@ -17,17 +17,17 @@ const settings = {
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 1,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 3000,
   pauseOnHover: true,
-  arrows: true,
+  arrows: false,
   responsive: [
     {
       breakpoint: 1440,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         dots: false,
       }
     },
@@ -36,7 +36,7 @@ const settings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         dots: false,
       }
     },
@@ -45,7 +45,7 @@ const settings = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         dots: false,
       }
     },
@@ -54,9 +54,10 @@ const settings = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         dots: true,
         centerMode: false,
+        autoplay: false,
       }
     },
     {
@@ -64,9 +65,10 @@ const settings = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         dots: true,
         centerMode: false,
+        autoplay: false,
       }
     },
     {
@@ -78,6 +80,7 @@ const settings = {
         dots: true,
         centerMode: false,
         swipeToSlide: true,
+        autoplay: false,
       }
     },
     {
@@ -90,6 +93,7 @@ const settings = {
         centerMode: false,
         swipeToSlide: true,
         touchMove: true,
+        autoplay: false,
       }
     }
   ]
