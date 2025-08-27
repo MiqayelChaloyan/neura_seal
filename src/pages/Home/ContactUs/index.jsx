@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 import Container from "../../../components/Container";
 
@@ -56,14 +55,10 @@ const ContactUs = () => {
               <h3 className='contact-left-h3'>{Labels.email}:</h3>
               <p className='contact-left-p'>{Hosts.EMAIL}</p>
             </div>
-            <div>
-              <h3 className='contact-left-h3'>{Labels.phone}:</h3>
-              <p className='contact-left-p'>{Hosts.PHONE}</p>
-            </div>
           </div>
 
           <div className="contact-right">
-            <h2>{Titles.contactUs}</h2>
+              <h2>{Titles.contactUs}</h2>
             <form onSubmit={handleSubmit}>
               <label htmlFor="name">{Labels.name}</label>
               <input
@@ -85,7 +80,7 @@ const ContactUs = () => {
               <textarea
                 name="message"
                 className="contact-textarea"
-                placeholder="Lorem ipsum dolor"
+                placeholder="Enter your message"
                 rows="4"
                 value={formData.message}
                 onChange={handleChange}

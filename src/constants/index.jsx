@@ -67,7 +67,6 @@ const Labels = {
     name: 'Name',
     address: 'Address',
     email: 'Email',
-    phone: 'Phone',
     message: 'Message',
 };
 

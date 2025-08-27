@@ -18,12 +18,15 @@ const Footer = () => {
             {Texts.qualityPolicy}
           </Link>
         </div>
-        <div className="social-icons-footer">
-          {/* <li><Link to={Hosts.LINKEDIN} aria-label="LinkedIn"><SvgPaths.linkedinIcon /></Link></li>
+        {/* <div className="social-icons-footer">
+          <li><Link to={Hosts.LINKEDIN} aria-label="LinkedIn"><SvgPaths.linkedinIcon /></Link></li>
           <li><Link to={Hosts.INSTAGRAM} aria-label="Instagram"><SvgPaths.instagramIcon /></Link></li>
           <li><Link to={Hosts.YOUTUBE} aria-label="YouTube"><SvgPaths.youtubeIcon /></Link></li>
           <li><Link to={Hosts.TWITTER} aria-label="Twitter"><SvgPaths.twitterIcon /></Link></li>
-          <li><Link to={Hosts.FACEBOOK} aria-label="Facebook"><SvgPaths.facebookIcon /></Link></li> */}
+          <li><Link to={Hosts.FACEBOOK} aria-label="Facebook"><SvgPaths.facebookIcon /></Link></li>
+        </div> */}
+        <div className="footer-born-in-neura">
+          <p>Born in Neura</p>
         </div>
         <div className="footer-copyright">
           <p>{Texts.copyright}</p>
