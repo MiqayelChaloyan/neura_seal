@@ -44,7 +44,7 @@
 .how-it-works-section-container::after {
   content: "";
   position: absolute;
-  top: -350px;
+  top: 0;
   bottom: 0;
   width: 0.5px;
   background-color: #222;
@@ -148,7 +148,6 @@
   background-color: #222;
   margin-left: 5px;
 }
-
 /* Responsive Design - Large Desktop */
 @media (max-width: 1440px) {
   .how-it-works-section {
@@ -162,7 +161,7 @@
 
   .how-it-works-section-container::before,
   .how-it-works-section-container::after {
-    top: -300px;
+    top: 0;
   }
 
   .how-it-works-section-title {
@@ -200,7 +199,7 @@
 
   .how-it-works-section-container::before,
   .how-it-works-section-container::after {
-    top: -280px;
+    top: 0;
   }
 
   .how-it-works-section-title {
@@ -238,7 +237,7 @@
 
   .how-it-works-section-container::before,
   .how-it-works-section-container::after {
-    top: -260px;
+    top: 0;
   }
 
   .how-it-works-section-title {
@@ -396,7 +395,7 @@
     width: 95%;
     height: auto;
     min-height: 50vh;
-    border-top: 1px solid #222;
+    border-top: none;
     border-bottom: 1px solid #222;
   }
 

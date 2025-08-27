@@ -44,6 +44,13 @@
   font-family: 'D-DIN', sans-serif;
 }
 
+.footer-born-in-neura p {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: 'D-DIN', sans-serif;
+}
+/* 
 .social-icons-footer {
     display: flex;
     gap: 20px;
@@ -71,7 +78,7 @@
 
 .social-icons-footer a:hover svg {
   color: var(--icon-hover-color);
-}
+} */
 
 /* Footer positioning when menu is open */
 .footer.menu-open {
@@ -85,10 +92,11 @@
   .footer-content {
     max-width: 92%;
   }
-  
+
+  /*   
   .social-icons-footer {
     margin-left: 40px;
-  }
+  } */
 }
 
 /* Responsive Design - Desktop */
@@ -96,11 +104,11 @@
   .footer-content {
     max-width: 94%;
   }
-  
-  .social-icons-footer {
+
+  /* .social-icons-footer {
     margin-left: 30px;
     gap: 18px;
-  }
+  } */
 }
 
 /* Responsive Design - Tablet Large */
@@ -110,12 +118,13 @@
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  
+
+  /*   
   .social-icons-footer {
     margin-left: 20px;
     gap: 16px;
-  }
-  
+  } */
+
   .footer {
     padding: 20px 0 10px 0;
   }
@@ -134,16 +143,16 @@
   .footer-link {
     margin-right: 0;
   }
-  
+
   .footer {
     font-size: 15px;
     padding: 20px 0 10px 0;
   }
-  
-  .social-icons-footer {
+
+  /* .social-icons-footer {
     margin-left: 0;
     margin-top: 8px;
-  }
+  } */
 }
 
 /* Responsive Design - Tablet */
@@ -153,12 +162,13 @@
     padding-bottom: 20px;
     gap: 14px;
   }
-  
+
   .footer {
     font-size: 14px;
     padding: 16px 0 8px 0;
   }
-  
+
+  /*   
   .social-icons-footer {
     gap: 14px;
   }
@@ -171,7 +181,7 @@
   .social-icons-footer a svg {
     width: 22px;
     height: 22px;
-  }
+  } */
 }
 
 /* Responsive Design - Mobile Large */
@@ -181,16 +191,19 @@
     padding-bottom: 16px;
     gap: 12px;
   }
+
   .footer {
     font-size: 14px;
     padding: 12px 0 6px 0;
   }
+
   .footer-link {
     font-size: 16px;
     padding: 8px 0;
     display: block;
   }
-  .social-icons-footer {
+
+  /* .social-icons-footer {
     gap: 12px;
   }
   
@@ -202,7 +215,7 @@
   .social-icons-footer a svg {
     width: 20px;
     height: 20px;
-  }
+  } */
 }
 
 /* Responsive Design - Mobile Medium */
@@ -212,18 +225,18 @@
     padding-bottom: 14px;
     gap: 10px;
   }
-  
+
   .footer {
     font-size: 13px;
     padding: 10px 0 5px 0;
   }
-  
+
   .footer-link {
     font-size: 15px;
     padding: 6px 0;
   }
-  
-  .social-icons-footer {
+
+  /* .social-icons-footer {
     gap: 10px;
   }
   
@@ -235,7 +248,7 @@
   .social-icons-footer a svg {
     width: 18px;
     height: 18px;
-  }
+  } */
 }
 
 /* Responsive Design - Mobile Small */
@@ -245,18 +258,18 @@
     padding-bottom: 12px;
     gap: 8px;
   }
-  
+
   .footer {
     font-size: 12px;
     padding: 8px 0 4px 0;
   }
-  
+
   .footer-link {
     font-size: 14px;
     padding: 5px 0;
   }
-  
-  .social-icons-footer {
+
+  /* .social-icons-footer {
     gap: 8px;
   }
   
@@ -268,7 +281,7 @@
   .social-icons-footer a svg {
     width: 16px;
     height: 16px;
-  }
+  } */
 }
 
 /* Landscape orientation adjustments */
@@ -276,14 +289,14 @@
   .footer {
     padding: 16px 0 8px 0;
   }
-  
+
   .footer-content {
     padding-top: 16px;
     padding-bottom: 16px;
     gap: 12px;
   }
-  
-  .social-icons-footer {
+
+  /* .social-icons-footer {
     gap: 12px;
-  }
+  } */
 }
