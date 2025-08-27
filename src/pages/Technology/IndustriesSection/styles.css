@@ -632,6 +632,10 @@
     min-height: 25vh;
   }
 
+  .industries-section-border-wrapper {
+    height: 270px;
+  }
+
   .industries-section-container {
     width: 98%;
     min-height: 40vh;

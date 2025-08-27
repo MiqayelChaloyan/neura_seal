@@ -17,7 +17,6 @@ const Section = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isLoaded, setIsLoaded] = useState(false);
   const sectionRef = useRef(null);
-  const lastScrollTop = useRef(0);
 
   // Set loaded state after component mounts
   useEffect(() => {
