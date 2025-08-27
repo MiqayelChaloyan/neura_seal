@@ -15,7 +15,7 @@ const settings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 1, // Changed from 3 to 1 as default
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
@@ -85,6 +85,19 @@ const settings = {
     },
     {
       breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        centerMode: false,
+        swipeToSlide: true,
+        touchMove: true,
+        autoplay: false,
+      }
+    },
+    {
+      breakpoint: 360,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
