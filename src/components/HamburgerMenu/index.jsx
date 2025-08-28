@@ -64,6 +64,15 @@ const pageTitles = {
   const handleLanguageChange = (language) => {
     i18n.changeLanguage(language);
     
+    // Close the menu
+    setIsOpen(false);
+    
+    // Dispatch menu state change event
+    const event = new CustomEvent('menuStateChange', {
+      detail: { isOpen: false }
+    });
+    window.dispatchEvent(event);
+    
     // Get current path without language prefix
     const currentPath = location.pathname;
     const pathSegments = currentPath.split('/');
@@ -81,6 +90,12 @@ const pageTitles = {
     
     // Navigate to new language route
     navigate(newPath);
+  };
+
+  // Function to determine if a language is currently active
+  const isActiveLanguage = (language) => {
+    const currentLang = i18n.language;
+    return currentLang === language;
   };
 
   const toggleMenu = (e) => {
@@ -234,13 +249,13 @@ const pageTitles = {
                   variants={itemVariants}
                 >
                   <button 
-                    className="lang-btn"
+                    className={`lang-btn ${isActiveLanguage('en') ? 'active' : ''}`}
                     onClick={() => handleLanguageChange('en')}
                   >
                     EN
                   </button>
                   <button 
-                    className="lang-btn"
+                    className={`lang-btn ${isActiveLanguage('ar') ? 'active' : ''}`}
                     onClick={() => handleLanguageChange('ar')}
                   >
                     AR

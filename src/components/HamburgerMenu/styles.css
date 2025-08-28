@@ -805,6 +805,12 @@
   color: #888;
 }
 
+.lang-btn.active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 6px;
+}
+
 /* Responsive adjustments for language switcher */
 @media (max-width: 991px) {
   .language-switcher {
