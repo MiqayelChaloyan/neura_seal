@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Slider from "react-slick";
 
@@ -11,91 +11,179 @@ import SubtractionIcon from "../../../assets/svg/SubtractionIcon";
 import './styles.css';
 
 
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  pauseOnHover: true,
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        autoplay: true,
-      }
-    },
-    {
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        centerMode: false,
-        autoplay: false,
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        centerMode: false,
-        autoplay: false,
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        centerMode: false,
-        swipeToSlide: true,
-        autoplay: false,
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        centerMode: false,
-        swipeToSlide: true,
-        touchMove: true,
-        autoplay: false,
-      }
-    },
-    {
-      breakpoint: 360,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        centerMode: false,
-        swipeToSlide: true,
-        touchMove: true,
-        autoplay: false,
-      }
-    }
-  ]
-};
-
 export default function IndustriesSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 900);
+    };
+    
+    // Check on initial load
+    checkMobile();
+    
+    // Add resize listener
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const settings = {
+    // Mobile-first approach: default to mobile settings
+    slidesToShow: isMobile ? 1 : 3,
+    slidesToScroll: 1,
+    infinite: true,
+    speed: 500,
+    autoplay: isMobile ? false : true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    arrows: false,
+    dots: isMobile ? true : false,
+    touchMove: true,
+    centerMode: isMobile ? false : false,
+    swipeToSlide: isMobile ? true : false,
+    responsive: [
+      {
+        // Large Desktop
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          speed: 500,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          pauseOnHover: true,
+          arrows: false,
+          dots: false,
+        }
+      },
+      {
+        // Desktop
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          speed: 500,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          pauseOnHover: true,
+          arrows: false,
+          dots: false,
+        }
+      },
+      {
+        // Laptop
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          speed: 500,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          pauseOnHover: true,
+          arrows: false,
+          dots: false,
+        }
+      },
+      {
+        // Tablet Landscape
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          speed: 500,
+          autoplay: false,
+          arrows: false,
+          dots: true,
+          centerMode: false,
+          useCSS: true,
+        }
+      },
+      {
+        // Tablet Portrait
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          speed: 500,
+          autoplay: false,
+          arrows: false,
+          dots: true,
+          centerMode: false,
+          swipeToSlide: true,
+        }
+      },
+      {
+        // Mobile Landscape
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          speed: 500,
+          autoplay: false,
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          swipeToSlide: true,
+          touchMove: true,
+        }
+      },
+      {
+        // Mobile Portrait
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          speed: 500,
+          autoplay: false,
+          arrows: false,
+          dots: true,
+          centerMode: false,
+          swipeToSlide: true,
+          touchMove: true,
+        }
+      },
+      {
+        // Small Mobile
+        breakpoint: 360,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          speed: 500,
+          autoplay: false,
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          swipeToSlide: true,
+          touchMove: true,
+        }
+      },
+      {
+        // Extra Small Mobile
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          speed: 300,
+          autoplay: false,
+          arrows: false,
+          dots: true,
+          centerMode: false,
+          swipeToSlide: true,
+          touchMove: true,
+        }
+      }
+    ]
+  };
   return (
     <section className="industries-section">
       <div className="crisis-section-outer">
@@ -108,7 +196,7 @@ export default function IndustriesSection() {
 
               <div className="slider-container">
 
-                <Slider {...settings}>
+                <Slider {...settings} key={isMobile ? 'mobile-slider' : 'desktop-slider'}>
 
                   <div className="industry-card hover-highlight">
                     <LuxuryIcon />
