@@ -262,6 +262,16 @@
     right: 70px;
   }
   
+  .header-right {
+    gap: 18px;
+  }
+  
+  .lang-btn-header {
+    padding: 7px 10px;
+    font-size: 0.85rem;
+    min-width: 55px;
+  }
+  
   .line {
     width: 40px;
   }
@@ -284,6 +294,16 @@
 @media (max-width: 1200px) {
   .hamburger-button {
     right: 60px;
+  }
+  
+  .header-right {
+    gap: 16px;
+  }
+  
+  .lang-btn-header {
+    padding: 6px 9px;
+    font-size: 0.8rem;
+    min-width: 50px;
   }
   
   .line {
@@ -310,6 +330,21 @@
     right: 50px;
     top: 15px;
     margin-top: 20px;
+  }
+  
+  .header-right {
+    gap: 14px;
+  }
+  
+  .lang-btn-header {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+    min-width: 48px;
+    gap: 4px;
+  }
+  
+  .flag-emoji {
+    font-size: 1em;
   }
   
   .line {
@@ -341,6 +376,17 @@
     right: 40px;
     top: 15px;
     margin-top: 15px;
+  }
+  
+  .header-right {
+    gap: 12px;
+  }
+  
+  .lang-btn-header {
+    padding: 5px 7px;
+    font-size: 0.7rem;
+    min-width: 45px;
+    gap: 3px;
   }
 
   .line {
@@ -425,6 +471,26 @@
     margin-top: 12px;
     padding: 6px;
   }
+  
+  .header-right {
+    gap: 10px;
+  }
+  
+  .language-switcher-header {
+    gap: 6px;
+  }
+  
+  .lang-btn-header {
+    padding: 4px 6px;
+    font-size: 0.65rem;
+    min-width: 40px;
+    gap: 2px;
+    border-radius: 6px;
+  }
+  
+  .flag-emoji {
+    font-size: 0.9em;
+  }
 
   .line {
     width: 28px;
@@ -481,6 +547,16 @@
   .fixed-header {
     padding: 0 20px;
   }
+  
+  .header-right {
+    gap: 8px;
+  }
+  
+  .lang-btn-header {
+    padding: 4px 5px;
+    font-size: 0.6rem;
+    min-width: 35px;
+  }
 
   .fullscreen-menu {
     background-image: linear-gradient(to bottom, #000407, #000407);
@@ -527,6 +603,26 @@
 
   .header-title {
     font-size: 0.7rem;
+  }
+  
+  .header-right {
+    gap: 6px;
+  }
+  
+  .language-switcher-header {
+    gap: 4px;
+  }
+  
+  .lang-btn-header {
+    padding: 3px 4px;
+    font-size: 0.55rem;
+    min-width: 32px;
+    gap: 1px;
+    border-radius: 4px;
+  }
+  
+  .flag-emoji {
+    font-size: 0.8em;
   }
 
   .header-logo-link svg {
@@ -594,7 +690,26 @@
     min-height: 40px;
     z-index: 2002;
   }
-
+  
+  .header-right {
+    gap: 4px;
+  }
+  
+  .language-switcher-header {
+    gap: 3px;
+  }
+  
+  .lang-btn-header {
+    padding: 2px 3px;
+    font-size: 0.5rem;
+    min-width: 28px;
+    border-radius: 3px;
+  }
+  
+  .flag-emoji {
+    font-size: 0.7em;
+  }
+  
   .menu-line-left, 
   .menu-line-right {
     display: none !important;
@@ -754,6 +869,62 @@
   transition: all 0.3s ease;
 }
 
+/* Language Switcher in Header */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.language-switcher-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.lang-btn-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  padding: 5px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  min-width: 50px;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.lang-btn-header:hover {
+  background: rgba(73, 26, 26, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.lang-btn-header:active {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(0);
+}
+
+.lang-btn-header.active {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.flag-emoji {
+  font-size: 1.4em;
+  display: inline-block;
+}
+
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -784,7 +955,7 @@
   align-items: center;
   margin-top: 3rem;
 }
-
+/* 
 .lang-btn {
   background: none;
   border: none;
@@ -809,10 +980,10 @@
   color: #fff;
   border-bottom: 2px solid #fff;
   padding-bottom: 6px;
-}
+} */
 
 /* Responsive adjustments for language switcher */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .language-switcher {
     margin-top: 2rem;
     gap: 1.5rem;
@@ -848,4 +1019,4 @@
   }
 }
 
-
+ */

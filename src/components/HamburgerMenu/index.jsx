@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
-import i18n from '../../i18n';
 import { useLanguageSync } from '../../hooks/useLanguageSync';
 
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { Titles, SvgPaths } from '../../constants';
+import { SvgPaths } from '../../constants';
 
 import './styles.css';
 
@@ -187,11 +186,29 @@ const pageTitles = {
 
         <h1 className="header-title">{pageTitles[location.pathname] ? t(pageTitles[location.pathname]) : ''}</h1>
 
-        <button 
-          className="hamburger-button" 
-          onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
-        >
+        <div className="header-right">
+          <div className="language-switcher-header">
+            <button 
+              className={`lang-btn-header ${isActiveLanguage('en') ? 'active' : ''}`}
+              onClick={() => handleLanguageChange('en')}
+              aria-label="Switch to English"
+            >
+              <span className="flag-emoji">🇺🇸</span>
+            </button>
+            <button 
+              className={`lang-btn-header ${isActiveLanguage('ar') ? 'active' : ''}`}
+              onClick={() => handleLanguageChange('ar')}
+              aria-label="Switch to Arabic"
+            >
+              <span className="flag-emoji">🇸🇦</span>
+            </button>
+          </div>
+
+          <button 
+            className="hamburger-button" 
+            onClick={toggleMenu}
+            aria-label="Toggle navigation menu"
+          >
           <motion.span
             className="line"
             animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
@@ -203,6 +220,7 @@ const pageTitles = {
             transition={{ duration: 0.4, ease: 'easeInOut' }}
           />
         </button>
+        </div>
       </header>
 
       <AnimatePresence>
@@ -253,7 +271,7 @@ const pageTitles = {
                   </motion.li>
                 </motion.ul>
 
-                <motion.div 
+                {/* <motion.div 
                   className="language-switcher"
                   variants={itemVariants}
                 >
@@ -269,7 +287,7 @@ const pageTitles = {
                   >
                     AR
                   </button>
-                </motion.div>
+                </motion.div> */}
               </div>
             </motion.div>
           </>
