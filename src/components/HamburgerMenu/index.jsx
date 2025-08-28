@@ -4,6 +4,8 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLanguageSync } from '../../hooks/useLanguageSync';
 
+import i18n from '../../i18n';
+
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { SvgPaths } from '../../constants';
