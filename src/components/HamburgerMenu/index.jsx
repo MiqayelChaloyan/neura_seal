@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
+import { useLanguageSync } from '../../hooks/useLanguageSync';
 
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -44,6 +45,9 @@ const HamburgerMenu = () => {
   const location = useLocation();
 
   const { t, i18n } = useTranslation();
+  
+  // Use the language sync hook
+  useLanguageSync();
 
 
 const pageTitles = {
@@ -62,9 +66,7 @@ const pageTitles = {
 };
 
   const handleLanguageChange = (language) => {
-    i18n.changeLanguage(language);
-    
-    // Close the menu
+    // Close the menu first
     setIsOpen(false);
     
     // Dispatch menu state change event
@@ -88,14 +90,21 @@ const pageTitles = {
     // Construct new path with new language
     const newPath = `/${language}${routePath ? `/${routePath}` : ''}`;
     
-    // Navigate to new language route
+    // Change i18n language first
+    i18n.changeLanguage(language);
+    
+    // Then navigate to new language route
     navigate(newPath);
   };
 
   // Function to determine if a language is currently active
   const isActiveLanguage = (language) => {
+    // Check both i18n language and URL language
     const currentLang = i18n.language;
-    return currentLang === language;
+    const pathSegments = location.pathname.split('/');
+    const urlLang = pathSegments[1];
+    
+    return currentLang === language && urlLang === language;
   };
 
   const toggleMenu = (e) => {

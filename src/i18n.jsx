@@ -14,7 +14,7 @@ const detectLanguage = () => {
     return urlLang;
   }
   
-  // Check localStorage
+  // If no language in URL, check localStorage
   const storedLang = localStorage.getItem('i18nextLng');
   if (storedLang === 'ar' || storedLang === 'en') {
     return storedLang;
@@ -32,6 +32,9 @@ const detectLanguage = () => {
 
 // Initialize language
 const initialLanguage = detectLanguage();
+
+// Ensure localStorage is updated with the detected language
+localStorage.setItem('i18nextLng', initialLanguage);
 
 i18n
   .use(initReactI18next)
@@ -56,5 +59,21 @@ i18n
 i18n.on('languageChanged', (language) => {
   localStorage.setItem('i18nextLng', language);
 });
+
+// Additional sync after initialization to catch any race conditions
+setTimeout(() => {
+  const currentLang = i18n.language;
+  const storedLang = localStorage.getItem('i18nextLng');
+  const urlLang = window.location.pathname.split('/')[1];
+  
+  if (urlLang === 'ar' || urlLang === 'en') {
+    if (currentLang !== urlLang) {
+      console.log(`[i18n] Post-init sync: changing language from ${currentLang} to ${urlLang}`);
+      i18n.changeLanguage(urlLang);
+    }
+  } else if (storedLang && storedLang !== currentLang) {
+    i18n.changeLanguage(storedLang);
+  }
+}, 100);
 
 export default i18n;
