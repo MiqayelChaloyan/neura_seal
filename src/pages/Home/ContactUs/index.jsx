@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import Container from "../../../components/Container";
 
@@ -9,6 +10,7 @@ import "./styles.css";
 
 
 const ContactUs = () => {
+  const { t } = useTranslation();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -30,13 +32,13 @@ const ContactUs = () => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
-      setFormStatus('Please fill in all fields.');
+      setFormStatus(t('formStatus.pleaseFillInAllFields'));
       return;
     }
 
     console.log('Form submitted:', formData);
 
-    setFormStatus('Thank you! Your message has been sent.');
+    setFormStatus(t('formStatus.thankYou'));
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -48,12 +50,12 @@ const ContactUs = () => {
         <div className="contact-content">
           <div className="contact-left">
             <div>
-              <h3 className='contact-left-h3'>{Labels.address}:</h3>
-              <p className='contact-left-p'>{Hosts.ADDRESS}</p>
+              <h3 className='contact-left-h3'>{t('labels.address')}:</h3>
+              <p className='contact-left-p'>{t('address')}</p>
             </div>
             <div>
-              <h3 className='contact-left-h3'>{Labels.email}:</h3>
-              <p className='contact-left-p'>{Hosts.EMAIL}</p>
+              <h3 className='contact-left-h3'>{t('labels.email')}:</h3>
+              <p className='contact-left-p'>{t('email')}</p>
             </div>
             <div />
             <div />
@@ -61,35 +63,35 @@ const ContactUs = () => {
           </div>
 
           <div className="contact-right">
-            <h2>{Titles.contactUs}</h2>
+            <h2>{t('titles.contactUs')}</h2>
             <form onSubmit={handleSubmit}>
-              <label htmlFor="name">{Labels.name}</label>
+              <label htmlFor="name">{t('labels.name')}</label>
               <input
                 name="name"
                 className="contact-input"
-                placeholder="Enter your full name"
+                placeholder={t('placeholders.name')}
                 value={formData.name}
                 onChange={handleChange}
               />
-              <label htmlFor="email">{Labels.email}</label>
+              <label htmlFor="email">{t('labels.email')}</label>
               <input
                 name="email"
                 className="contact-input"
-                placeholder="Enter your mail"
+                placeholder={t('placeholders.email')}
                 value={formData.email}
                 onChange={handleChange}
               />
-              <label htmlFor="message">{Labels.message}</label>
+              <label htmlFor="message">{t('labels.message')}</label>
               <textarea
                 name="message"
                 className="contact-textarea"
-                placeholder="Enter your message"
+                placeholder={t('placeholders.message')}
                 rows="4"
                 value={formData.message}
                 onChange={handleChange}
               />
               <button type="submit">
-                {Buttons.sendMessage}
+                {t('buttons.sendMessage')}
               </button>
               {formStatus && <p className="form-status">{formStatus}</p>}
             </form>

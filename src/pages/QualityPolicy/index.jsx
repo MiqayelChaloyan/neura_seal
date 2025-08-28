@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import './styles.css';
 
 
 const QualityPolicy = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -11,66 +14,66 @@ const QualityPolicy = () => {
   return (
     <div className="quality-policy-root">
       <div className="quality-policy-container">
-        <h1 className="quality-policy-title">Quality Policy Statement</h1>
+        <h1 className="quality-policy-title">{t('qualityPolicy.title')}</h1>
         <p className="quality-policy-description">
-          At Neura, we are committed to providing a secure, reliable, and user-focused online experience that reflects the innovation, precision, and trust at the core of our AI-powered authentication and anti-counterfeiting technologies. Our platform aligns fully with Saudi Arabia's digital standards and legal frameworks, while upholding international best practices.
+          {t('qualityPolicy.description')}
         </p>
         <div className="quality-policy-section">
-          <h2 className="quality-policy-section-title">1. Commitment to Innovation and Accuracy</h2>
-          <p className="quality-policy-section-desc">Our website is an extension of our secure technology stack:</p>
+          <h2 className="quality-policy-section-title">{t('qualityPolicy.section1.title')}</h2>
+          <p className="quality-policy-section-desc">{t('qualityPolicy.section1.description')}</p>
           <ul className="quality-policy-list">
-            <li>End-to-end encryption and secure storage for all user interactions.</li>
-            <li>Compliance with Saudi Data Privacy Law and relevant global frameworks such as GDPR.</li>
-            <li>Continuous monitoring and implementation of cybersecurity best practices.</li>
+            <li>{t('qualityPolicy.section1.list.0')}</li>
+            <li>{t('qualityPolicy.section1.list.1')}</li>
+            <li>{t('qualityPolicy.section1.list.2')}</li>
           </ul>
         </div>
         <div className="quality-policy-section">
-          <h2 className="quality-policy-section-title">2. Security and Data Protection</h2>
-          <p className="quality-policy-section-desc">Our website is an extension of our secure technology stack:</p>
+          <h2 className="quality-policy-section-title">{t('qualityPolicy.section2.title')}</h2>
+          <p className="quality-policy-section-desc">{t('qualityPolicy.section2.description')}</p>
           <ul className="quality-policy-list">
-            <li>End-to-end encryption and secure storage for all user interactions.</li>
-            <li>Compliance with Saudi Data Privacy Law and relevant global frameworks such as GDPR.</li>
+            <li>{t('qualityPolicy.section2.list.0')}</li>
+            <li>{t('qualityPolicy.section2.list.1')}</li>
           </ul>
         </div>
         <div className="quality-policy-section">
-          <h2 className="quality-policy-section-title">3. Compliance and Ethical Standards</h2>
-          <p className="quality-policy-section-desc">We maintain transparency and respect for legal and cultural expectations:</p>
+          <h2 className="quality-policy-section-title">{t('qualityPolicy.section3.title')}</h2>
+          <p className="quality-policy-section-desc">{t('qualityPolicy.section3.description')}</p>
           <ul className="quality-policy-list">
-            <li>Full alignment with policies set by the Saudi Communications, Space & Technology Commission (CST).</li>
-            <li>Culturally appropriate content, messaging, and visuals.</li>
-            <li>Transparent disclosures regarding AI capabilities and limitations.</li>
+            <li>{t('qualityPolicy.section3.list.0')}</li>
+            <li>{t('qualityPolicy.section3.list.1')}</li>
+            <li>{t('qualityPolicy.section3.list.2')}</li>
           </ul>
         </div>
         <div className="quality-policy-section">
-          <h2 className="quality-policy-section-title">4. Accessibility, Performance, and Usability</h2>
-          <p className="quality-policy-section-desc">We strive for a seamless, inclusive, and responsive digital experience:</p>
+          <h2 className="quality-policy-section-title">{t('qualityPolicy.section4.title')}</h2>
+          <p className="quality-policy-section-desc">{t('qualityPolicy.section4.description')}</p>
           <ul className="quality-policy-list">
-            <li>Optimized for speed, mobile responsiveness, and cross-platform functionality.</li>
-            <li>Full accessibility compliance with WCAG standards.</li>
-            <li>Bilingual support in Arabic and English to serve all users effectively.</li>
+            <li>{t('qualityPolicy.section4.list.0')}</li>
+            <li>{t('qualityPolicy.section4.list.1')}</li>
+            <li>{t('qualityPolicy.section4.list.2')}</li>
           </ul>
         </div>
         <div className="quality-policy-section">
-          <h2 className="quality-policy-section-title">5. Continuous Improvement</h2>
-          <p className="quality-policy-section-desc">Our digital presence evolves alongside our technology:</p>
+          <h2 className="quality-policy-section-title">{t('qualityPolicy.section5.title')}</h2>
+          <p className="quality-policy-section-desc">{t('qualityPolicy.section5.description')}</p>
           <ul className="quality-policy-list">
-            <li>Client and user feedback loops embedded in our content development.</li>
-            <li>Frequent updates to reflect product advancements and regulatory changes.</li>
-            <li>Use of analytics and AI to improve the user journey and interface design.</li>
+            <li>{t('qualityPolicy.section5.list.0')}</li>
+            <li>{t('qualityPolicy.section5.list.1')}</li>
+            <li>{t('qualityPolicy.section5.list.2')}</li>
           </ul>
         </div>
         <div className="quality-policy-section">
-          <h2 className="quality-policy-section-title">6. Trust and Transparency</h2>
-          <p className="quality-policy-section-desc">Trust is foundational to anti-counterfeiting. We reflect this through:</p>
+          <h2 className="quality-policy-section-title">{t('qualityPolicy.section6.title')}</h2>
+          <p className="quality-policy-section-desc">{t('qualityPolicy.section6.description')}</p>
           <ul className="quality-policy-list">
-            <li>Verified case studies, proof-of-performance data, and key partnerships.</li>
-            <li>Secure, authenticated processes for demo requests and contact forms.</li>
-            <li>Real customer testimonials and quantifiable success metrics.</li>
+            <li>{t('qualityPolicy.section6.list.0')}</li>
+            <li>{t('qualityPolicy.section6.list.1')}</li>
+            <li>{t('qualityPolicy.section6.list.2')}</li>
           </ul>
         </div>
         <div className="quality-policy-section">
           <p className="quality-policy-section-desc">
-            This policy is reviewed regularly to remain aligned with technological developments, user needs, and the Kingdom's evolving digital vision.
+            {t('qualityPolicy.final.description')}
           </p>
         </div>
       </div>

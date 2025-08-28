@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
+import { useTranslation } from 'react-i18next';
+
 import SectionContent from './components/SectionContent';
 import SectionImage from './components/SectionImage';
 
@@ -17,6 +19,8 @@ const Section = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isLoaded, setIsLoaded] = useState(false);
   const sectionRef = useRef(null);
+
+  const { t } = useTranslation();
 
   // Set loaded state after component mounts
   useEffect(() => {
@@ -92,27 +96,27 @@ const Section = () => {
     switch (currentStep) {
       case 1:
         return {
-          title: "Step 1: Seal Detection",
-          description: "Advanced AI-powered scanning technology detects and analyzes security seals in real-time.",
-          boldText: "Our neural network identifies counterfeit patterns, tampering attempts, and authentication markers with unprecedented accuracy across your entire supply chain.",
+          title: t('howItWorks.step1.title'),
+          description: t('howItWorks.step1.description'),
+          boldText: t('howItWorks.step1.boldText'),
           image: step1Image,
           showText: true,
           isLargeImage: false
         };
       case 2:
         return {
-          title: "Step 2: Advanced Authentication",
-          description: "Multi-layered verification process ensures only genuine products pass through your system.",
-          boldText: "Combines blockchain verification, cryptographic signatures, and machine learning to authenticate every seal with 99.9% accuracy.",
+          title: t('howItWorks.step2.title'),
+          description: t('howItWorks.step2.description'),
+          boldText: t('howItWorks.step2.boldText'),
           image: step2Image,
           showText: true,
           isLargeImage: false
         };
       case 3:
         return {
-          title: "Step 3: Real-Time Analytics & Threat Intelligence",
-          description: "Live dashboard provides comprehensive insights into your supply chain security.",
-          boldText: "Track detection rates, scan volumes, authentication percentages, and estimated financial losses prevented — giving your organization unmatched visibility and control.",
+          title: t('howItWorks.step3.title'),
+          description: t('howItWorks.step3.description'),
+          boldText: t('howItWorks.step3.boldText'),
           image: step3Image,
           showText: true,
           isLargeImage: false
@@ -128,9 +132,9 @@ const Section = () => {
         };
       default:
         return {
-          title: "Step 1: Seal Detection",
-          description: "Advanced AI-powered scanning technology detects and analyzes security seals in real-time.",
-          boldText: "Our neural network identifies counterfeit patterns, tampering attempts, and authentication markers with unprecedented accuracy across your entire supply chain.",
+          title: t('howItWorks.step4.title'),
+          description: t('howItWorks.step4.description'),
+          boldText: t('howItWorks.step4.boldText'),
           image: step1Image,
           showText: true,
           isLargeImage: false

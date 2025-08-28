@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import Slider from "react-slick";
 
@@ -15,7 +16,7 @@ const settings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 1, // Changed from 3 to 1 as default
+  slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
@@ -113,11 +114,13 @@ const settings = {
 };
 
 export default function IndustriesSection() {
+  const { t } = useTranslation();
+
   return (
     <section className="industries-section">
       <div className="crisis-section-outer">
         <div className="industries-section-title">
-          <h1>Industry's We Serve</h1>
+          <h1>{t('industriesSection.title')}</h1>
         </div>
         <div className="industries-section-border-wrapper">
           <div className="industries-section-container">
@@ -129,32 +132,32 @@ export default function IndustriesSection() {
 
                   <div className="industry-card hover-highlight">
                     <LuxuryIcon />
-                    <h3>LUXURY GOODS & FASHION</h3>
-                    <p>Protecting high-value brands from counterfeit infiltration.</p>
+                    <h3>{t('industriesSection.luxuryGoodsFashion.title')}</h3>
+                    <p>{t('industriesSection.luxuryGoodsFashion.description')}</p>
                   </div>
 
                   <div className="industry-card hover-highlight">
                     <IntersectionIcon />
-                    <h3>PHARMACEUTICALS & HEALTHCARE</h3>
-                    <p>Ensuring drug authenticity and preventing life-threatening fraud.</p>
+                    <h3>{t('industriesSection.pharmaceuticalsHealthcare.title')}</h3>
+                    <p>{t('industriesSection.pharmaceuticalsHealthcare.description')}</p>
                   </div>
 
                   <div className="industry-card hover-highlight">
                     <FinancialIcon />
-                    <h3>FINANCIAL INSTITUTIONS</h3>
-                    <p>Securing financial documents such as cheques, banknotes, and certificates against forgery</p>
+                    <h3>{t('industriesSection.financialInstitutions.title')}</h3>
+                    <p>{t('industriesSection.financialInstitutions.description')}</p>
                   </div>
 
                   <div className="industry-card hover-highlight">
                     <SubtractionIcon />
-                    <h3>GOVERNMENT ENTITIES</h3>
-                    <p>Protecting official documents, IDs, passports, and other official records</p>
+                    <h3>{t('industriesSection.governmentEntities.title')}</h3>
+                    <p>{t('industriesSection.governmentEntities.description')}</p>
                   </div>
 
                   <div className="industry-card hover-highlight">
                     <StampIcon />
-                    <h3>TAX STAMPS & EXCISE TRACKING</h3>
-                    <p>AI-verified tax stamps prevent counterfeiting and ensure proper tax collection on regulated products.</p>
+                    <h3>{t('industriesSection.taxStampsExcessTracking.title')}</h3>
+                    <p>{t('industriesSection.taxStampsExcessTracking.description')}</p>
                   </div>
 
                 </Slider>

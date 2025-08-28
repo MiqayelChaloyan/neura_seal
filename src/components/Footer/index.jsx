@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { Link } from 'react-router-dom';
 
@@ -10,12 +11,14 @@ import './styles.css';
 
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer-content">
         <div>
           <Link to={Pages.QUALITY_POLICY} className="footer-link">
-            {Texts.qualityPolicy}
+            {t('footer.qualityPolicy')}
           </Link>
         </div>
         {/* <div className="social-icons-footer">
@@ -26,10 +29,10 @@ const Footer = () => {
           <li><Link to={Hosts.FACEBOOK} aria-label="Facebook"><SvgPaths.facebookIcon /></Link></li>
         </div> */}
         <div className="footer-born-in-neura">
-          <p>Born in Neura</p>
+          <p>{t('footer.bornInNeura')}</p>
         </div>
         <div className="footer-copyright">
-          <p>{Texts.copyright}</p>
+          <p>{t('texts.copyright')}</p>
         </div>
       </div>
     </footer>

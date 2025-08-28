@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
 import Container from "../../../components/Container";
@@ -7,6 +8,7 @@ import "./styles.css";
 
 
 const Hero = () => {
+  const { t } = useTranslation();
   const letters = ["n", "e", "u", "r", "a"];
 
   const initialPositions = [
@@ -46,7 +48,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: letters.length * 0.1 + 0.5, duration: 0.6 }}
           >
-            {Texts.builtToKnow}
+            {t('texts.builtToKnow')}
           </motion.div>
           <motion.button
             className="arrow-button"

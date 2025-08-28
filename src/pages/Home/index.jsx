@@ -6,8 +6,8 @@ import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import Container from "../../components/Container";
 
-import { Hosts } from "../../constants/hosts";
-import { SvgPaths } from "../../constants";
+// import { Hosts } from "../../constants/hosts";
+// import { SvgPaths } from "../../constants";
 
 import "./styles.css";
 

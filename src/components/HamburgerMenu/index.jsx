@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
+
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { Titles, SvgPaths } from '../../constants';
@@ -35,17 +38,50 @@ const itemVariants = {
   },
 };
 
-const pageTitles = {
-  '/': '',
-  '/technology': 'Technology',
-  '/quality-policy': 'Quality Policy',
-  '/how-it-works': 'How It Works',
-};
-
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const { t, i18n } = useTranslation();
+
+
+const pageTitles = {
+  '/': '',
+  '/en': '',
+  '/ar': '',
+  '/technology': 'titles.theTechnology',
+  '/en/technology': 'titles.theTechnology',
+  '/ar/technology': 'titles.theTechnology',
+  '/quality-policy': 'titles.qualityPolicy',
+  '/en/quality-policy': 'titles.qualityPolicy',
+  '/ar/quality-policy': 'titles.qualityPolicy',
+  '/how-it-works': 'titles.howItWorks',
+  '/en/how-it-works': 'titles.howItWorks',
+  '/ar/how-it-works': 'titles.howItWorks',
+};
+
+  const handleLanguageChange = (language) => {
+    i18n.changeLanguage(language);
+    
+    // Get current path without language prefix
+    const currentPath = location.pathname;
+    const pathSegments = currentPath.split('/');
+    
+    // Remove language prefix if it exists
+    let routePath = '';
+    if (pathSegments[1] === 'en' || pathSegments[1] === 'ar') {
+      routePath = pathSegments.slice(2).join('/');
+    } else {
+      routePath = pathSegments.slice(1).join('/');
+    }
+    
+    // Construct new path with new language
+    const newPath = `/${language}${routePath ? `/${routePath}` : ''}`;
+    
+    // Navigate to new language route
+    navigate(newPath);
+  };
 
   const toggleMenu = (e) => {
     // Only prevent default for click events, not touch events
@@ -67,9 +103,12 @@ const HamburgerMenu = () => {
   const handleLogoClick = (e) => {
     e.preventDefault();
     
-    // If not on home page, navigate to home
-    if (location.pathname !== '/') {
-      navigate('/');
+    // Get current language from URL or i18n
+    const currentLang = i18n.language;
+    
+    // If not on home page, navigate to home in current language
+    if (location.pathname !== `/${currentLang}` && location.pathname !== '/') {
+      navigate(`/${currentLang}`);
     }
     
     // Scroll to top of the page
@@ -86,11 +125,14 @@ const HamburgerMenu = () => {
     });
     window.dispatchEvent(event);
 
+    // Get current language from URL or i18n
+    const currentLang = i18n.language;
+
     if (target === 'technology') {
-      navigate('/technology');
+      navigate(`/${currentLang}/technology`);
     } else {
-      if (location.pathname !== '/') {
-        navigate('/');
+      if (location.pathname !== `/${currentLang}`) {
+        navigate(`/${currentLang}`);
         // Wait for route change then scroll
         setTimeout(() => {
           scrollToSection(target);
@@ -119,7 +161,7 @@ const HamburgerMenu = () => {
           </Link>
         </div>
 
-        <h1 className="header-title">{pageTitles[location.pathname] || ''}</h1>
+        <h1 className="header-title">{pageTitles[location.pathname] ? t(pageTitles[location.pathname]) : ''}</h1>
 
         <button 
           className="hamburger-button" 
@@ -169,23 +211,41 @@ const HamburgerMenu = () => {
                     variants={itemVariants}
                     onClick={() => handleMenuItemClick('about-us')}
                   >
-                    {Titles.whoWeAre}
+                    {t('navigation.whoWeAre')}
                   </motion.li>
                   <motion.li
                     className="menu-item"
                     variants={itemVariants}
                     onClick={() => handleMenuItemClick('technology')}
                   >
-                    {Titles.theTechnology}
+                    {t('navigation.technology')}
                   </motion.li>
                   <motion.li
                     className="menu-item"
                     variants={itemVariants}
                     onClick={() => handleMenuItemClick('contact-us')}
                   >
-                    {Titles.contactUs}
+                    {t('navigation.contactUs')}
                   </motion.li>
                 </motion.ul>
+
+                <motion.div 
+                  className="language-switcher"
+                  variants={itemVariants}
+                >
+                  <button 
+                    className="lang-btn"
+                    onClick={() => handleLanguageChange('en')}
+                  >
+                    EN
+                  </button>
+                  <button 
+                    className="lang-btn"
+                    onClick={() => handleLanguageChange('ar')}
+                  >
+                    AR
+                  </button>
+                </motion.div>
               </div>
             </motion.div>
           </>

@@ -1,0 +1,234 @@
+{
+  "titles": {
+    "whoWeAre": "Who We Are",
+    "theTechnology": "The Technology",
+    "contactUs": "Contact Us",
+    "theCrisis": "The Crisis",
+    "mission": "Mission",
+    "vision": "Vision",
+    "qualityPolicy": "Quality Policy",
+    "howItWorks": "How It Works"
+  },
+  "howItWork": {
+    "title": "How It Works",
+    "step1": {
+      "title": "Step 1: Seal Detection",
+      "description": "Advanced AI-powered scanning technology detects and analyzes security seals in real-time.",
+      "boldText": "Our neural network identifies counterfeit patterns, tampering attempts, and authentication markers with unprecedented accuracy across your entire supply chain.",
+      "viewMoreText": "View More"
+    }
+  },
+  "aboutUs": {
+    "title": "Why Neural Seal?"
+  },
+  "crisisSection": {
+    "boldText": "We built the technology to end it.",
+    "counterfeitingText": "Counterfeiting drains trillions from the global economy,<br />destabilizes industries, and destroys trust."
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "step1": {
+      "title": "Step 1: Seal Detection",
+      "description": "Advanced AI-powered scanning technology detects and analyzes security seals in real-time.",
+      "boldText": "Our neural network identifies counterfeit patterns, tampering attempts, and authentication markers with unprecedented accuracy across your entire supply chain."
+    },
+    "step2": {
+      "title": "Step 2: Advanced Authentication",
+      "description": "Multi-layered verification process ensures only genuine products pass through your system.",
+      "boldText": "Combines blockchain verification, cryptographic signatures, and machine learning to authenticate every seal with 99.9% accuracy."
+    },
+    "step3": {
+      "title": "Step 3: Real-Time Analytics & Threat Intelligence",
+      "description": "Live dashboard provides comprehensive insights into your supply chain security.",
+      "boldText": "Track detection rates, scan volumes, authentication percentages, and estimated financial losses prevented — giving your organization unmatched visibility and control."
+    }
+  },
+  "qualityPolicy": {
+    "title": "Quality Policy Statement",
+    "description": "At Neura, we are committed to providing a secure, reliable, and user-focused online experience that reflects the innovation, precision, and trust at the core of our AI-powered authentication and anti-counterfeiting technologies. Our platform aligns fully with Saudi Arabia's digital standards and legal frameworks, while upholding international best practices.",
+    "section1": {
+      "title": "1. Commitment to Innovation and Accuracy",
+      "description": "Our website is an extension of our secure technology stack:",
+      "list": [
+        "End-to-end encryption and secure storage for all user interactions.",
+        "Compliance with Saudi Data Privacy Law and relevant global frameworks such as GDPR.",
+        "Continuous monitoring and implementation of cybersecurity best practices."
+      ]
+    },
+    "section2": {
+      "title": "2. Security and Data Protection",   
+      "description": "Our website is an extension of our secure technology stack:",
+      "list": [
+        "End-to-end encryption and secure storage for all user interactions.",
+        "Compliance with Saudi Data Privacy Law and relevant global frameworks such as GDPR."
+      ]
+    },
+    "section3": {
+      "title": "3. Compliance and Ethical Standards",
+      "description": "We maintain transparency and respect for legal and cultural expectations:",
+      "list": [
+        "Full alignment with policies set by the Saudi Communications, Space & Technology Commission (CST).",
+        "Culturally appropriate content, messaging, and visuals.",
+        "Transparent disclosures regarding AI capabilities and limitations."
+      ]
+    },
+    "section4": {
+      "title": "4. Accessibility, Performance, and Usability",
+      "description": "We strive for a seamless, inclusive, and responsive digital experience:",
+      "list": [
+        "Optimized for speed, mobile responsiveness, and cross-platform functionality.",
+        "Full accessibility compliance with WCAG standards.",
+        "Bilingual support in Arabic and English to serve all users effectively."
+      ]
+    },
+    "section5": {
+      "title": "5. Continuous Improvement",
+      "description": "Our digital presence evolves alongside our technology:",
+      "list": [
+        "Client and user feedback loops embedded in our content development.",
+        "Frequent updates to reflect product advancements and regulatory changes."
+      ]
+    },
+    "section6": {
+      "title": "6. Trust and Transparency",
+      "description": "Trust is foundational to anti-counterfeiting. We reflect this through:",
+      "list": [
+        "Verified case studies, proof-of-performance data, and key partnerships.",
+        "Secure, authenticated processes for demo requests and contact forms.",
+        "Real customer testimonials and quantifiable success metrics."
+      ]
+    },
+    "final": {
+      "description": "This policy is reviewed regularly to remain aligned with technological developments, user needs, and the Kingdom's evolving digital vision."
+    }
+  },
+  "texts": {
+    "builtToKnow": "Built to Know",
+    "whoWeAreText": "We're a team of engineers tackling one of the world's most damaging and overlooked threats: counterfeiting. We've built the next evolution in product and document security — an impenetrable, scalable authentication system redefining how the world proves authenticity. We don't just stop counterfeiting; we ensure it never happens again.",
+    "missionText": "We exist to make counterfeiting obsolete - empowering anyone to prove authenticity instantly, globally, and without compromise.",
+    "visionText": "To establish the global standard for product and document authenticity - a secure, open protocol that anyone, anywhere can adopt to eliminate counterfeiting at its source. This is the new foundation for trust in the global marketplace.",
+    "qualityPolicy": "Quality Policy",
+    "copyright": "© Copyright 2025. All Rights Reserved",
+    "counterfeitingText": "Counterfeiting drains trillions from the global economy,<br />destabilizes industries, and destroys trust.",
+    "counterfeitingTextLine1": "Counterfeiting drains trillions from the global economy,",
+    "counterfeitingTextLine2": "destabilizes industries, and destroys trust.",
+    "weBuiltTheTechnologyToEndIt": "We built the technology to end it."
+  },
+  "features": {
+    "feature1": {
+      "title": "UNCLONABLE.",
+      "subtitle": "LIKE A FINGERPRINT.",
+      "description": "One of one. Can't be replicated or forged."
+    },
+    "feature2": {
+      "title": "DETECTION ENGINE:",
+      "subtitle": "NO MATCH? NO PASS",
+      "description": "If it's not a match, it doesn't pass. Period."
+    },
+    "feature3": {
+      "title": "GETS SMARTER",
+      "subtitle": "WITH EVERY ATTEMPT",
+      "description": "It evolves faster than counterfeiting tactics, learning and adapting with every attempt."
+    },
+    "feature4": {
+      "title": "LIVE INTELLIGENCE",
+      "subtitle": "DASHBOARD",
+      "description": "Real-Time map of where counterfeits hit, their frequency, and financial impact."
+    },
+    "feature5": {
+      "title": "SEAMLESS INTEGRATION.",
+      "subtitle": "ZERO DISRUPTION.",
+      "description": "Works with your existing systems - no changes needed."
+    },
+    "feature6": {
+      "title": "ENTERPRISE-GRADE",
+      "subtitle": "BY DESIGN",
+      "description": "Scalable. Secure. Engineered to operate at Industrial scale."
+    },
+    "feature7": {
+      "title": "PATENTED",
+      "subtitle": "TECHNOLOGY",
+      "description": "Proven, trusted, and industry-leading innovation."
+    }
+  },
+  "buttons": {
+    "sendMessage": "Send Message"
+  },
+  "labels": {
+    "name": "Name",
+    "address": "Address",
+    "email": "Email",
+    "message": "Message"
+  },
+  "steps": {
+    "step1": {
+      "title": "Step 1: Seal Discovery",
+      "description": "Advanced AI-powered scanning technology detects and analyzes security seals in real-time.",
+      "boldText": "Our neural network identifies counterfeit patterns, tampering attempts, and authentication markers with unprecedented accuracy across the entire supply chain."
+    },
+    "step2": {
+      "title": "Step 2: Advanced Authentication",
+      "description": "Multi-layered verification process ensures only authentic products pass through your system.",
+      "boldText": "Combines blockchain verification, cryptographic signatures, and machine learning to authenticate every seal with 99.9% accuracy."
+    },
+    "step3": {
+      "title": "Step 3: Real-time Analytics & Threat Intelligence",
+      "description": "Live dashboard provides comprehensive insights into your supply chain security.",
+      "boldText": "Track detection rates, scan volumes, authentication ratios, and estimated financial losses prevented — giving your organization unparalleled visibility and control."
+    }
+  },
+  "industriesSection": {
+    "title": "Industry's We Serve",
+    "luxuryGoodsFashion": {
+      "title": "LUXURY GOODS & FASHION",
+      "description": "Protecting high-value brands from counterfeit infiltration."
+    },
+    "pharmaceuticalsHealthcare": {
+      "title": "PHARMACEUTICALS & HEALTHCARE",
+      "description": "Ensuring drug authenticity and preventing life-threatening fraud."
+    },
+    "financialInstitutions": {
+      "title": "FINANCIAL INSTITUTIONS",
+      "description": "Securing financial documents such as cheques, banknotes, and certificates against forgery"
+    },
+    "governmentEntities": {
+      "title": "GOVERNMENT ENTITIES",
+      "description": "Protecting official documents, IDs, passports, and other official records"
+    },
+    "taxStampsExcessTracking": {
+      "title": "TAX STAMPS & EXCISE TRACKING",
+      "description": "AI-verified tax stamps prevent counterfeiting and ensure proper tax collection on regulated products."
+    }
+  },
+  "footer": {
+    "qualityPolicy": "Quality Policy",
+    "bornInNeura": "Born in Neura",
+    "copyright": "© Copyright 2025. All Rights Reserved"
+  },
+  "navigation": {
+    "home": "Home",
+    "technology": "Technology",
+    "qualityPolicy": "Quality Policy",
+    "howItWorks": "How It Works",
+    "whoWeAre": "Who We Are",
+    "contactUs": "Contact Us"
+  },
+  "contact": {
+    "contactInfo": "Contact Info",
+    "sendUsMessage": "Send Us Message",
+    "nameRequired": "Name Required",
+    "emailRequired": "Email Required",
+    "messageRequired": "Message Required"
+  },
+  "placeholders": {
+    "name": "Enter your full name",
+    "email": "Enter your mail",
+    "message": "Enter your message"
+  },
+  "formStatus": {
+    "thankYou": "Thank you! Your message has been sent.",
+    "pleaseFillInAllFields": "Please fill in all fields."
+  },
+  "address": "Riyadh, Saudi Arabia",
+  "email": "info@neura.com"
+}

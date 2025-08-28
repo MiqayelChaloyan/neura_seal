@@ -1,9 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import { ImagePaths, Texts, Titles } from '../../../constants';
 
 import './styles.css';
 
 
 const CrisisSection = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="crisis-section-outer">
       <div className="vertical-line-wrapper">
@@ -22,12 +25,12 @@ const CrisisSection = () => {
             />
           </div>
           <div className="crisis-section-content">
-            <h1 className="crisis-section-title">{Titles.theCrisis}</h1>
+            <h1 className="crisis-section-title">{t('titles.theCrisis')}</h1>
             <p className="crisis-section-description"
-               dangerouslySetInnerHTML={{ __html: Texts.counterfeitingText }}>
+               dangerouslySetInnerHTML={{ __html: t('crisisSection.counterfeitingText') }}>
             </p>
             <p className="crisis-section-bold">
-              {Texts.weBuiltTheTechnologyToEndIt}
+              {t('crisisSection.boldText')}
             </p>
           </div>
         </div>

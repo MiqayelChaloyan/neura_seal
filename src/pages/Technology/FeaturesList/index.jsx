@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { ImagePaths } from '../../../constants';
 
@@ -8,6 +9,7 @@ import './styles.css';
 
 
 const FeaturesList = () => {
+  const { t } = useTranslation();
   const [visibleFeatures, setVisibleFeatures] = useState([]);
 
   useEffect(() => {
@@ -30,7 +32,7 @@ const FeaturesList = () => {
           className={`feature-card-wrapper ${visibleFeatures.includes(index) ? 'feature-visible' : 'feature-hidden'}`}
           key={number}
         >
-          {number === '01' && <h1 className="features-title">The Technology</h1>}
+          {number === '01' && <h1 className="features-title">{t('titles.theTechnology')}</h1>}
           <div 
             className="feature-card"
             style={{ 
@@ -51,10 +53,10 @@ const FeaturesList = () => {
           >
             <div className="feature-number">{number}</div>
             <div className="feature-content">
-              <h2 className="feature-title">{title}</h2>
-              <p className="feature-subtitle">{subtitle}</p>
+              <h2 className="feature-title">{t(title)}</h2>
+              <p className="feature-subtitle">{t(subtitle)}</p>
             </div>
-            <div className="feature-description">{description}</div>
+            <div className="feature-description">{t(description)}</div>
           </div>
         </div>
       ))}
