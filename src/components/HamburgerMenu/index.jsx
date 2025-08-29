@@ -257,7 +257,7 @@ const pageTitles = {
                       className="language-dropdown-item"
                       onClick={() => handleLanguageChange(lang.code)}
                       aria-label={`Switch to ${lang.label}`}
-                      title={lang.label}
+                      title=''
                     >
                       <span className="flag-icon">{lang.flagEmoji}</span>
                     </button>
