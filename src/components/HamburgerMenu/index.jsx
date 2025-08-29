@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 import { useTranslation } from 'react-i18next';
 import { useLanguageSync } from '../../hooks/useLanguageSync';
@@ -42,6 +43,8 @@ const itemVariants = {
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -49,6 +52,20 @@ const HamburgerMenu = () => {
   
   // Use the language sync hook
   useLanguageSync();
+
+  // Handle clicks outside dropdown to close it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsLanguageDropdownOpen(false);
+      }
+    };
+
+    if (isLanguageDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [isLanguageDropdownOpen]);
 
 
 const pageTitles = {
@@ -67,8 +84,9 @@ const pageTitles = {
 };
 
   const handleLanguageChange = (language) => {
-    // Close the menu first
+    // Close both menus first
     setIsOpen(false);
+    setIsLanguageDropdownOpen(false);
     
     // Dispatch menu state change event
     const event = new CustomEvent('menuStateChange', {
@@ -106,6 +124,33 @@ const pageTitles = {
     const urlLang = pathSegments[1];
     
     return currentLang === language && urlLang === language;
+  };
+
+  // Function to toggle language dropdown
+  const toggleLanguageDropdown = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsLanguageDropdownOpen(!isLanguageDropdownOpen);
+  };
+
+  // Function to get current language info
+  const getCurrentLanguage = () => {
+    const currentLang = i18n.language;
+    return {
+      code: currentLang,
+      flag: currentLang === 'en' ? 'EN' : 'AR',
+      flagEmoji: currentLang === 'en' ? '🇺🇸' : '🇸🇦',
+      label: currentLang === 'en' ? 'English' : 'العربية'
+    };
+  };
+
+  // Function to get available languages
+  const getAvailableLanguages = () => {
+    const currentLang = i18n.language;
+    return [
+      { code: 'en', flag: 'EN', flagEmoji: '🇺🇸', label: 'English' },
+      { code: 'ar', flag: 'AR', flagEmoji: '🇸🇦', label: 'العربية' }
+    ].filter(lang => lang.code !== currentLang);
   };
 
   const toggleMenu = (e) => {
@@ -190,20 +235,36 @@ const pageTitles = {
 
         <div className="header-right">
           <div className="language-switcher-header">
-            <button 
-              className={`lang-btn-header ${isActiveLanguage('en') ? 'active' : ''}`}
-              onClick={() => handleLanguageChange('en')}
-              aria-label="Switch to English"
-            >
-              <span className="flag-emoji">🇺🇸</span>
-            </button>
-            <button 
-              className={`lang-btn-header ${isActiveLanguage('ar') ? 'active' : ''}`}
-              onClick={() => handleLanguageChange('ar')}
-              aria-label="Switch to Arabic"
-            >
-              <span className="flag-emoji">🇸🇦</span>
-            </button>
+            <div className="language-dropdown" ref={dropdownRef}>
+              <button 
+                className="language-dropdown-toggle"
+                onClick={toggleLanguageDropdown}
+                aria-label="Select language"
+              >
+                <span className="flag-icon">{getCurrentLanguage().flagEmoji}</span>
+                {isLanguageDropdownOpen ? (
+                  <ChevronUp size={16} className="dropdown-arrow" />
+                ) : (
+                  <ChevronDown size={16} className="dropdown-arrow" />
+                )}
+              </button>
+              
+              {isLanguageDropdownOpen && (
+                <div className="language-dropdown-menu">
+                  {getAvailableLanguages().map((lang) => (
+                    <button
+                      key={lang.code}
+                      className="language-dropdown-item"
+                      onClick={() => handleLanguageChange(lang.code)}
+                      aria-label={`Switch to ${lang.label}`}
+                      title={lang.label}
+                    >
+                      <span className="flag-icon">{lang.flagEmoji}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           <button 
