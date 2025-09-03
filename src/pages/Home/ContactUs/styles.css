@@ -139,13 +139,14 @@
 }
 
 .contact-right button:hover {
-    background: #088d9526;
+    background: #0df1fe17; /* #0DF1FE at 10% opacity */
     color: var(--icon-hover-color);
     transform: translateY(-1px);
     box-shadow: 
         -1px -1px 0 0 var(--icon-hover-color),
-        inset 1px 1px 0 0 #088d9526;
+        inset 1px 1px 0 0 #0df1fe17;
 }
+
 
 /* Responsive Design - Large Desktop */
 @media (max-width: 1440px) {

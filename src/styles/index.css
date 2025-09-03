@@ -105,6 +105,10 @@
 }
 
 /*=============== BASE ===============*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'SF Pro Display';
   background-color: white;
