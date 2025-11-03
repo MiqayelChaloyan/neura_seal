@@ -16,6 +16,7 @@ import features_bg from "../assets/images/features_bg.webp";
 import features_bg_2 from "../assets/images/features_bg_2.webp";
 import trace_1 from "../assets/images/trace_1.webp";
 import trace_2 from "../assets/images/trace_2.webp";
+import glowing_abstract from "../assets/images/glowing-abstract.webp";
 
 import klingMp3 from "../assets/videos/kling.mov";
 
@@ -31,7 +32,8 @@ const ImagePaths = {
     features_bg: features_bg,
     features_bg_2: features_bg_2,
     trace_1: trace_1,
-    trace_2: trace_2
+    trace_2: trace_2,
+    glowing_abstract: glowing_abstract
 };
 
 const VideoPaths = {

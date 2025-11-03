@@ -8,7 +8,7 @@ import HowItWorks from './pages/HowItWorks';
 import Home from './pages/Home';
 import PhantomSig from './pages/PhantomSig';
 import NeuraTrace from './pages/NeuraTrace';
-import Solutions from './pages/Solutions';
+import NeuraSeal from './pages/NeuraSeal';
 
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         {/* <Route path="/technology" element={<Technology />} /> */}
         <Route path="/phantom-sig" element={<PhantomSig />} />
         <Route path="/neura-trace" element={<NeuraTrace />} />
-        <Route path="/neura-seal" element={<Solutions />} />
+        <Route path="/neura-seal" element={<NeuraSeal />} />
         <Route path="/quality-policy" element={<QualityPolicy />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
       </Route>
