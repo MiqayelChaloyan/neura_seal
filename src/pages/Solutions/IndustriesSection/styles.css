@@ -250,7 +250,7 @@
 
 @media (max-width: 480px) {
   .industry-card {
-    height: 450px;
+    height: 500px;
     padding: 30px 8px;
   }
 }
@@ -542,7 +542,7 @@
     border-right: 0.5px solid #222 !important;
     border-top: 1px solid #222 !important;
     border-bottom: 1px solid #222 !important;
-    height: 300px;
+    height: 400px;
   }
 
   .industry-card svg {
@@ -603,7 +603,7 @@
     border-right: 0.5px solid #222 !important;
     border-top: 1px solid #222 !important;
     border-bottom: 1px solid #222 !important;
-    height: 350px;
+    height: 500px;
   }
 
   /* .industry-card:last-child {
@@ -660,7 +660,7 @@
 
   .industry-card {
     padding: 30px 8px;
-    height: 200px;
+    height: 240px;
     margin: 0;
     border-left: 0.5px solid #222 !important;
     border-right: 0.5px solid #222 !important;
