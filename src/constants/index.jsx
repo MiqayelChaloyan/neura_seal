@@ -53,11 +53,10 @@ const Titles = {
     theTechnology: 'The Technology',
     contactUs: 'Contact Us',
     thePhantomSig: 'PhantomSig',
-    phantomSig: 'Phantom Sig',
+    phantomSig: 'PhantomSig',
     neuraTrace: 'NeuraTrace',
     theCrisis: 'The Crisis',
-    solutions: 'Solutions',
-    neuraSeal: 'NeuraSeal'
+    neuraSeal: 'NeuraSeal',
 };
 
 const Texts = {
@@ -68,7 +67,7 @@ At our core, we combine AI with physics and engineering to create systems that s
     visionText: 'To craft masterpieces of intelligence — built to stand the test of time',
     qualityPolicy: 'Quality Policy',
     copyright: '© Copyright 2025. All Rights Reserved',
-    counterfeitingText: `PhantomSig`,
+    counterfeitingText: 'PhantomSig',
     counterfeitingTextLine1: 'Counterfeiting drains trillions from the global economy,',
     counterfeitingTextLine2: 'destabilizes industries, and destroys trust.',
     weBuiltTheTechnologyToEndIt: `Next-generation, lightweight secure signal transmission \n system for tactical operations and satellite \n communication. Designed to remain impenetrable, undetectable, \n and resilient against jamming, interception, or disruption, \n PhantomSig™ turns every transmission into a ghost.`,

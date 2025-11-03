@@ -19,7 +19,7 @@ const App = () => {
         {/* <Route path="/technology" element={<Technology />} /> */}
         <Route path="/phantom-sig" element={<PhantomSig />} />
         <Route path="/neura-trace" element={<NeuraTrace />} />
-        <Route path="/solutions" element={<Solutions />} />
+        <Route path="/neura-seal" element={<Solutions />} />
         <Route path="/quality-policy" element={<QualityPolicy />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
       </Route>
