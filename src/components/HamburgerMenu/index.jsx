@@ -41,6 +41,7 @@ const pageTitles = {
   '/quality-policy': 'Quality Policy',
   '/how-it-works': 'How It Works',
   '/phantom-sig': 'Phantom Sig',
+  '/neura-trace': 'NeuraTrace'
 };
 
 const HamburgerMenu = () => {
@@ -89,6 +90,8 @@ const HamburgerMenu = () => {
 
     if (target === 'phantom-sig') {
       navigate('/phantom-sig');
+    } else if (target === 'neura-trace'){
+      navigate('/neura-trace');
     } else {
       if (location.pathname !== '/') {
         navigate('/');
@@ -178,6 +181,13 @@ const HamburgerMenu = () => {
                     onClick={() => handleMenuItemClick('phantom-sig')}
                   >
                     {Titles.phantomSig}
+                  </motion.li>
+                  <motion.li
+                    className="menu-item"
+                    variants={itemVariants}
+                    onClick={() => handleMenuItemClick('neura-trace')}
+                  >
+                    {Titles.neuraTrace}
                   </motion.li>
                   <motion.li
                     className="menu-item"

@@ -7,13 +7,13 @@ import IndustriesSection from './IndustriesSection';
 import './styles.css';
 
 
-const PhantomSig = () => {
+const NeuraTrace = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
 
     return (
-        <div className='phantom-sig-container'>
+        <div className='neura-trace-container'>
             <CrisisSection />
             <FeaturesList />
             <IndustriesSection />
@@ -21,4 +21,4 @@ const PhantomSig = () => {
     );
 };  
 
-export default PhantomSig;
+export default NeuraTrace;

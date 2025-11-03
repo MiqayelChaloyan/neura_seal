@@ -1,0 +1,794 @@
+/* Section container */
+.industries-section {
+  background: #000407;
+  color: #fff;
+  padding: 60px 0 0 0;
+  min-height: 50vh;
+  position: relative;
+}
+
+.industry-card h3, p {
+  white-space: pre-line;
+}
+
+/* Border wrapper spans full width for top and bottom borders */
+.industries-section-border-wrapper {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+/* Pseudo-elements for full-width top and bottom borders */
+.industries-section-border-wrapper::before,
+.industries-section-border-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #222;
+  z-index: 0;
+}
+
+.industries-section-border-wrapper::before {
+  top: 0;
+}
+
+.industries-section-border-wrapper::after {
+  bottom: 0;
+}
+
+/* Main container (still 80% width) */
+.industries-section-container {
+  background: #000407;
+  width: 88.6%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  /* Above the borders */
+}
+
+.industries-section-title {
+  padding: 50px 50px 100px 30px;
+}
+
+.industries-section-title h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  font-family: 'D-DIN', sans-serif;
+}
+
+.industries-section-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+/* Slider container styles */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-container .slick-slider {
+  width: 100%;
+}
+
+.slider-container .slick-list {
+  overflow: hidden;
+}
+
+.slider-container .slick-track {
+  display: flex !important;
+  gap: 0;
+}
+
+.slider-container .slick-slide {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-container .slick-slide > div {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure all card borders are visible in the slider */
+.slider-container .slick-slide .industry-card {
+  border-left: 0.5px solid #222 !important;
+  border-right: 0.5px solid #222 !important;
+  border-top: 1px solid #222 !important;
+  border-bottom: 1px solid #222 !important;
+}
+
+
+
+
+/* Responsive slider adjustments */
+@media (max-width: 900px) {
+  .slider-container {
+    padding: 0 10px;
+  }
+  
+  .slider-container .slick-dots {
+    bottom: -25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider-container {
+    padding: 0 5px;
+  }
+  
+  .slider-container .slick-dots {
+    bottom: -20px;
+  }
+  
+  .slider-container .slick-dots li button {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-container {
+    padding: 0;
+  }
+  
+  .slider-container .slick-dots {
+    bottom: -15px;
+  }
+  
+  .slider-container .slick-dots li {
+    margin: 0 3px;
+  }
+  
+  .slider-container .slick-dots li button {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* .slider-container .slick-slide {
+  height: auto;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .slider-container .slick-slide > div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.slider-container button {
+  display: none !important;
+}
+
+
+
+/* Industry card styles for horizontal layout */
+.industry-card {
+  background-color: #000407;
+  text-align: center;
+  padding: 100px 10px 0 0;
+  border-left: 0.5px solid #222;
+  border-bottom: 1px solid #222;
+  border-right: 0.5px solid #222;
+  border-top: 1px solid #222;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  flex: 1;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive card adjustments - consistent height */
+@media (max-width: 1440px) {
+  .industry-card {
+    height: 450px;
+    padding: 80px 8px 0 0;
+    margin: 0;
+    border-left: 0.5px solid #222 !important;
+    border-right: 0.5px solid #222 !important;
+    border-top: 1px solid #222 !important;
+    border-bottom: 1px solid #222 !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .industry-card {
+    height: 450px;
+    padding: 70px 6px 0 0;
+    margin: 0;
+    border-left: 0.5px solid #222 !important;
+    border-right: 0.5px solid #222 !important;
+    border-top: 1px solid #222 !important;
+    border-bottom: 1px solid #222 !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .industry-card {
+    height: 450px;
+    padding: 60px 5px 0 0;
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 900px) {
+  .industry-card {
+    height: 450px;
+    padding: 60px 20px;
+    margin: 0;
+    border: 1px solid #222;
+    border-bottom: 1px solid #222;
+  }
+}
+
+@media (max-width: 768px) {
+  .industry-card {
+    height: 450px;
+    padding: 50px 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .industry-card {
+    height: 450px;
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .industry-card {
+    height: 450px;
+    padding: 30px 8px;
+  }
+}
+
+/* .industry-card:last-child {
+  border-right: 1px solid #222;
+} */
+
+.industry-card svg {
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.industry-card h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin: 20px 0 10px;
+  font-weight: 500;
+  font-family: 'D-DIN', sans-serif;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  height: 80px;
+}
+
+.industry-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'D-DIN', sans-serif;
+  padding: 0 50px;
+}
+
+/* Hover Effect (highlight like first card) */
+.hover-highlight:hover {
+  background-color: #111418;
+}
+
+.hover-highlight:hover svg {
+  color: #00f6ff;
+  transform: scale(1.1);
+}
+
+.hover-highlight:hover h3 {
+  color: #00f6ff;
+  transform: scale(1.05);
+}
+
+/* Responsive Design - Large Desktop */
+@media (max-width: 1440px) {
+  .industries-section {
+    min-height: 35vh;
+    padding: 50px 0 0 0;
+  }
+
+  .industries-section-container {
+    width: 90%;
+    height: 35vh;
+  }
+
+  .industries-section-container::before,
+  .industries-section-container::after {
+    top: -300px;
+  }
+
+  .industries-section-title {
+    padding: 40px 40px 80px 25px;
+  }
+
+  .industries-section-title h1 {
+    font-size: 2.8rem;
+  }
+
+  .industry-card {
+    padding: 80px 0px;
+  }
+
+  .industry-card svg {
+    width: 75px;
+    height: 75px;
+  }
+
+  .industry-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .industry-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive Design - Desktop */
+@media (max-width: 1200px) {
+  .industries-section {
+    min-height: 32vh;
+    padding: 45px 0 0 0;
+  }
+
+  .industries-section-container {
+    width: 92%;
+    height: 32vh;
+  }
+
+  .industries-section-container::before,
+  .industries-section-container::after {
+    top: -280px;
+  }
+
+  .industries-section-title {
+    padding: 35px 35px 70px 20px;
+  }
+
+  .industries-section-title h1 {
+    font-size: 2.6rem;
+  }
+
+  .industry-card {
+    padding: 70px 0px;
+  }
+
+  .industry-card svg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .industry-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .industry-card p {
+    font-size: 0.88rem;
+  }
+}
+
+/* Responsive Design - Tablet Large */
+@media (max-width: 1024px) {
+  .industries-section {
+    min-height: 30vh;
+    padding: 40px 0 0 0;
+  }
+
+  .industries-section-container {
+    width: 94%;
+    height: 30vh;
+  }
+
+  .industries-section-container::before,
+  .industries-section-container::after {
+    top: -260px;
+  }
+
+  .industries-section-title {
+    padding: 30px 30px 60px 15px;
+  }
+
+  .industries-section-title h1 {
+    font-size: 2.4rem;
+  }
+
+  .industry-card {
+    padding: 55px 0px;
+    margin: 0;
+    border-left: 0.5px solid #222 !important;
+    border-right: 0.5px solid #222 !important;
+    border-top: 1px solid #222 !important;
+    border-bottom: 1px solid #222 !important;
+  }
+
+  .industry-card svg {
+    width: 65px;
+    height: 65px;
+  }
+
+  .industry-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .industry-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive design - 900px breakpoint (tablet) */
+@media (max-width: 900px) {
+  .slider-container {
+    padding: 0;
+  }
+
+  .industries-section-border-wrapper::before,
+  .industries-section-border-wrapper::after {
+    display: none !important;
+  }
+
+  .how-it-works-section-border-wrapper::before,
+  .how-it-works-section-border-wrapper::after {
+    display: none !important;
+  }
+
+  .industries-section {
+    min-height: 40vh;
+    padding: 40px 0 0 0;
+  }
+
+  .industries-section-container {
+    width: 90%;
+    height: auto;
+    min-height: 40vh;
+  }
+
+  .industries-section-container::before,
+  .industries-section-container::after {
+    top: -200px;
+  }
+
+  .industries-section-title {
+    padding: 30px 20px 60px 20px;
+  }
+
+  .industries-section-title h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .industries-section-main {
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 0;
+  }
+
+  .industry-card {
+    flex: 1 1 100%;
+    padding: 60px 20px;
+    margin: 0;
+    border-left: 0.5px solid #222 !important;
+    border-right: 0.5px solid #222 !important;
+    border-top: 1px solid #222 !important;
+    border-bottom: 1px solid #222 !important;
+  }
+
+  .industry-card svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .industry-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .industry-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+  .industries-section {
+    min-height: 35vh;
+    padding: 30px 0 0 0;
+  }
+
+  .industries-section-container {
+    width: 92%;
+    min-height: 35vh;
+  }
+
+  .industries-section-container::before,
+  .industries-section-container::after {
+    top: -180px;
+  }
+
+  .industries-section-title {
+    padding: 25px 15px 50px 15px;
+  }
+
+  .industries-section-title h1 {
+    font-size: 2.2rem;
+  }
+
+  .industries-section-main {
+    padding: 15px 0;
+  }
+
+  .industry-card {
+    padding: 50px 15px;
+    margin: 0;
+    border-left: 0.5px solid #222 !important;
+    border-right: 0.5px solid #222 !important;
+    border-top: 1px solid #222 !important;
+    border-bottom: 1px solid #222 !important;
+    height: 300px;
+  }
+
+  .industry-card svg {
+    width: 55px;
+    height: 55px;
+  }
+
+  .industry-card h3 {
+    font-size: 1rem;
+    margin: 15px 0 8px;
+  }
+
+  .industry-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive design - 600px breakpoint (mobile) */
+@media (max-width: 600px) {
+  .industries-section {
+    min-height: 30vh;
+    padding: 0;
+  }
+
+  .industries-section-container {
+    width: 95%;
+    height: auto;
+    min-height: 30vh;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+  }
+
+  .industries-section-container::before,
+  .industries-section-container::after {
+    top: -100px;
+  }
+
+  .industries-section-title {
+    padding: 20px 10px 40px 10px;
+  }
+
+  .industries-section-title h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .industries-section-main {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .industry-card {
+    flex: 1 1 100%;
+    padding: 40px 10px;
+    margin: 0;
+    border-left: 0.5px solid #222 !important;
+    border-right: 0.5px solid #222 !important;
+    border-top: 1px solid #222 !important;
+    border-bottom: 1px solid #222 !important;
+    height: 350px;
+  }
+
+  /* .industry-card:last-child {
+  border-bottom: 1px solid #222;
+} */
+
+  .industry-card svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .industry-card h3 {
+    font-size: 1rem;
+    margin: 15px 0 8px;
+  }
+
+  .industry-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+/* Responsive Design - Mobile Medium */
+@media (max-width: 480px) {
+  .industries-section {
+    min-height: 25vh;
+  }
+
+  .industries-section-border-wrapper {
+    height: 270px;
+  }
+
+  .industries-section-container {
+    width: 98%;
+    min-height: 40vh;
+  }
+
+  .industries-section-container::before,
+  .industries-section-container::after {
+    top: -80px;
+  }
+
+  .industries-section-title {
+    padding: 15px 8px 30px 8px;
+  }
+
+  .industries-section-title h1 {
+    font-size: 1.8rem;
+  }
+
+  .industries-section-main {
+    padding: 0;
+  }
+
+  .industry-card {
+    padding: 30px 8px;
+    height: 200px;
+    margin: 0;
+    border-left: 0.5px solid #222 !important;
+    border-right: 0.5px solid #222 !important;
+    border-top: 1px solid #222 !important;
+    border-bottom: 1px solid #222 !important;
+  }
+
+  .industry-card svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .industry-card h3 {
+    font-size: 0.9rem;
+    margin: 12px 0 6px;
+  }
+
+  .industry-card p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+}
+
+/* Responsive Design - Mobile Small */
+@media (max-width: 360px) {
+  .industries-section {
+    min-height: 20vh;
+  }
+
+  .industries-section-container {
+    width: 100%;
+    min-height: 20vh;
+  }
+
+  .industries-section-container::before,
+  .industries-section-container::after {
+    top: -60px;
+  }
+
+  .industries-section-title {
+    padding: 12px 5px 25px 5px;
+  }
+
+  .industries-section-title h1 {
+    font-size: 1.6rem;
+  }
+
+  .industry-card {
+    padding: 25px 5px;
+    margin: 0;
+    border-left: 0.5px solid #222 !important;
+    border-right: 0.5px solid #222 !important;
+    border-top: 1px solid #222 !important;
+    border-bottom: 1px solid #222 !important;
+  }
+
+  .industry-card svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .industry-card h3 {
+    font-size: 0.85rem;
+    margin: 10px 0 5px;
+  }
+
+  .industry-card p {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .industries-section {
+    min-height: 45vh;
+    padding: 20px 0 0 0;
+  }
+
+  .industries-section-container {
+    min-height: 45vh;
+  }
+
+  .industries-section-container::before,
+  .industries-section-container::after {
+    top: -150px;
+  }
+
+  .industries-section-title {
+    padding: 20px 15px 40px 15px;
+  }
+
+  .industries-section-title h1 {
+    font-size: 2rem;
+  }
+
+  .industries-section-main {
+    padding: 10px 0;
+  }
+
+  .industry-card {
+    padding: 35px 15px;
+    margin: 0;
+    border-left: 0.5px solid #222 !important;
+    border-right: 0.5px solid #222 !important;
+    border-top: 1px solid #222 !important;
+    border-bottom: 1px solid #222 !important;
+  }
+
+  .industry-card svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .industry-card h3 {
+    font-size: 0.95rem;
+    margin: 12px 0 6px;
+  }
+
+  .industry-card p {
+    font-size: 0.8rem;
+  }
+}
+

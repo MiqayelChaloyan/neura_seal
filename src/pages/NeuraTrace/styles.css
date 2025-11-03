@@ -1,4 +1,4 @@
-.phantom-sig-container {
+.neura-trace-container {
     position: relative;
     background-color: #000407;
     padding-top: 290px;
@@ -8,56 +8,56 @@
 
 /* Responsive Design - Large Desktop */
 @media (max-width: 1440px) {
-    .phantom-sig-container {
+    .neura-trace-container {
         padding-top: 250px;
     }
 }
 
 /* Responsive Design - Desktop */
 @media (max-width: 1200px) {
-    .phantom-sig-container {
+    .neura-trace-container {
         padding-top: 220px;
     }
 }
 
 /* Responsive Design - Tablet Large */
 @media (max-width: 1024px) {
-    .phantom-sig-container {
+    .neura-trace-container {
         padding-top: 200px;
     }
 }
 
 /* Responsive Design - Tablet */
 @media (max-width: 768px) {
-    .phantom-sig-container {
+    .neura-trace-container {
         padding-top: 180px;
     }
 }
 
 /* Responsive Design - Mobile Large */
 @media (max-width: 600px) {
-    .phantom-sig-container {
+    .neura-trace-container {
         padding-top: 150px;
     }
 }
 
 /* Responsive Design - Mobile Medium */
 @media (max-width: 480px) {
-    .phantom-sig-container {
+    .neura-trace-container {
         padding-top: 120px;
     }
 }
 
 /* Responsive Design - Mobile Small */
 @media (max-width: 360px) {
-    .phantom-sig-container {
+    .neura-trace-container {
         padding-top: 100px;
     }
 }
 
 /* Landscape orientation adjustments */
 @media (max-height: 500px) and (orientation: landscape) {
-    .phantom-sig-container {
+    .neura-trace-container {
         padding-top: 80px;
     }
 }

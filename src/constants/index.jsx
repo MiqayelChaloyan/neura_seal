@@ -14,6 +14,8 @@ import how_it_work from "../assets/images/how_it_work.webp";
 import who_neural_seal from "../assets/images/who_neural_seal.webp";
 import features_bg from "../assets/images/features_bg.webp";
 import features_bg_2 from "../assets/images/features_bg_2.webp";
+import trace_1 from "../assets/images/trace_1.webp";
+import trace_2 from "../assets/images/trace_2.webp";
 
 import klingMp3 from "../assets/videos/kling.mov";
 
@@ -28,6 +30,8 @@ const ImagePaths = {
     who_neural_seal: who_neural_seal,
     features_bg: features_bg,
     features_bg_2: features_bg_2,
+    trace_1: trace_1,
+    trace_2: trace_2
 };
 
 const VideoPaths = {
@@ -50,6 +54,8 @@ const Titles = {
     contactUs: 'Contact Us',
     thePhantomSig: 'PhantomSig',
     phantomSig: 'Phantom Sig',
+    neuraTrace: 'NeuraTrace',
+    theCrisis: 'The Crisis'
 };
 
 const Texts = {
@@ -64,6 +70,11 @@ At our core, we combine AI with physics and engineering to create systems that s
     counterfeitingTextLine1: 'Counterfeiting drains trillions from the global economy,',
     counterfeitingTextLine2: 'destabilizes industries, and destroys trust.',
     weBuiltTheTechnologyToEndIt: `Next-generation, lightweight secure signal transmission \n system for tactical operations and satellite \n communication. Designed to remain impenetrable, undetectable, \n and resilient against jamming, interception, or disruption, \n PhantomSig™ turns every transmission into a ghost.`,
+
+    neuraTracedescription_1: 'NeuraTrace™ is a world class tax-tracking system built \n not just to track evasion, but to prevent it at the source.',
+    neuraTracedescription_2: 'Tax evasion is more than lost revenue.',
+    neuraTracedescription_2_1: 'It funds black markets. \n It fuels smuggling networks. \n It weakens borders and undermines sovereignty.',
+    neuraTracedescription_2_2: 'Unchecked, it becomes a threat to national security. \n We built the technology to defend against it.'
 };
 
 const Buttons = {
