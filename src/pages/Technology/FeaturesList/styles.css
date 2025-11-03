@@ -25,6 +25,10 @@
   overflow: hidden;
 }
 
+.feature-subtitle-wrapper {
+  height: 40px;
+}
+
 .hexagon-container div {
   width: var(--s);
   height: calc(var(--s)*1.1547); 
@@ -117,6 +121,7 @@
   color: #fff;
   letter-spacing: 0.02em;
   font-family: 'D-DIN', sans-serif;
+  text-transform: uppercase;
 }
 
 .feature-subtitle {

@@ -69,6 +69,7 @@
   color: var(--white-color);
   font-weight: 400;
   font-family: 'D-DIN', sans-serif;
+  text-align: end;
 }
 
 .mission-vision-title-vision {

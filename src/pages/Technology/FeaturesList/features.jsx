@@ -1,33 +1,33 @@
 const features = [
     {
         number: '01',
-        title: 'UNCLONABLE.',
+        title: 'Unbreakable Transmission',
         subtitle: 'LIKE A FINGERPRINT.',
-        description: "One of one. Can't be replicated or forged.",
+        description: "Every signal arrives exactly as sent — immune to distortion, loss, or interception.",
     },
     {
         number: '02',
-        title: 'DETECTION ENGINE:',
+        title: 'Resilient Anti-Jamming',
         subtitle: 'NO MATCH? NO PASS',
-        description: "If it's not a match, it doesn't pass. Period.",
+        description: "Maintains integrity even in hostile or degraded signal environments.",
     },
     {
         number: '03',
-        title: 'GETS SMARTER',
+        title: 'Seamless Integration',
         subtitle: 'WITH EVERY ATTEMPT',
-        description: 'It evolves faster than counterfeiting tactics, learning and adapting with every attempt.',
+        description: 'Deploys on top of existing communication systems — no rip-and-replace required.',
     },
     {
         number: '04',
-        title: 'LIVE INTELLIGENCE',
+        title: 'Mission-Ready & Universal',
         subtitle: 'DASHBOARD',
-        description: 'Real-Time map of where counterfeits hit, their frequency, and financial impact.',
+        description: 'Operates reliably across ground, air, and orbital platforms, even in contested or disconnected environments.',
     },
     {
         number: '05',
-        title: 'SEAMLESS INTEGRATION.',
+        title: 'Adaptive by Design',
         subtitle: 'ZERO DISRUPTION.',
-        description: 'Works with your existing systems - no changes needed.',
+        description: 'Evolves with emerging threats and communication standards to ensure long-term effectiveness.',
     },
     {
         number: '06',
@@ -37,9 +37,10 @@ const features = [
     },
     {
         number: '07',
-        title: 'PATENTED',
+        title: 'Low-Latency Link',
         subtitle: 'TECHNOLOGY',
-        description: 'Proven, trusted, and industry-leading innovation.',
+        description: `Delivers precise, reliable communications when timing is critical.
+Industries We Serve: Defense & Tactical Operations, Satellite & Space Communications, Telecommunication & Infrastructure, Aerospace & Aviation.`,
     },
 ];
 

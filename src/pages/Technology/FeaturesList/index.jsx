@@ -52,7 +52,9 @@ const FeaturesList = () => {
             <div className="feature-number">{number}</div>
             <div className="feature-content">
               <h2 className="feature-title">{title}</h2>
-              <p className="feature-subtitle">{subtitle}</p>
+              {/* <p className="feature-subtitle">{subtitle}</p> */}
+              <div className="feature-subtitle-wrapper">
+              </div>
             </div>
             <div className="feature-description">{description}</div>
           </div>

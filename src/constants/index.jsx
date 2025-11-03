@@ -7,7 +7,6 @@ import InstagramIcon from "../assets/svg/InstagramIcon.jsx";
 import LinkedInIcon from "../assets/svg/LinkedInIcon.jsx";
 import LogoIcon from "../assets/svg/LogoIcon.jsx";
 
-
 // Images
 import visualImg from "../assets/images/visual.webp";
 import crisis_image from "../assets/images/crisis_image.webp";
@@ -15,6 +14,8 @@ import how_it_work from "../assets/images/how_it_work.webp";
 import who_neural_seal from "../assets/images/who_neural_seal.webp";
 import features_bg from "../assets/images/features_bg.webp";
 import features_bg_2 from "../assets/images/features_bg_2.webp";
+
+import klingMp3 from "../assets/videos/kling.mov";
 
 // Constants
 import HowItWorksConstants from "./howItWorks.jsx";
@@ -27,6 +28,10 @@ const ImagePaths = {
     who_neural_seal: who_neural_seal,
     features_bg: features_bg,
     features_bg_2: features_bg_2,
+};
+
+const VideoPaths = {
+    klingMp3: klingMp3,
 };
 
 const SvgPaths = {
@@ -43,20 +48,22 @@ const Titles = {
     whoWeAre: 'Who We Are',
     theTechnology: 'The Technology',
     contactUs: 'Contact Us',
-    theCrisis: 'The Crisis',
+    thePhantomSig: 'PhantomSig',
+    phantomSig: 'Phantom Sig',
 };
 
 const Texts = {
     builtToKnow: 'Built to Know',
-    whoWeAreText: 'We\'re a team of engineers tackling one of the world\'s most damaging and overlooked threats: counterfeiting. We\'ve built the next evolution in product and document security — an impenetrable, scalable authentication system redefining how the world proves authenticity. We don\'t just stop counterfeiting; we ensure it never happens again.',
-    missionText: 'We exist to make counterfeiting obsolete - empowering anyone to prove authenticity instantly, globally, and without compromise.',
-    visionText: 'To establish the global standard for product and document authenticity - a secure, open protocol that anyone, anywhere can adopt to eliminate counterfeiting at its source. This is the new foundation for trust in the global marketplace.',
+    whoWeAreText:  `We are Neura — a frontier R&D lab of engineers and mathematicians building intelligent systems that tackle global threats. From the next evolution in anti-counterfeiting and tax tracking to advanced communication technologies that secure missions from the ground to space, our solutions are scalable, impenetrable, and built to redefine how the world establishes trust and harnesses intelligence.
+At our core, we combine AI with physics and engineering to create systems that see patterns others miss, secure information others can’t, and predict threats before they emerge.`,
+    missionText: 'To build enduring systems of intelligence that enable new frontiers across industries and nations.',    
+    visionText: 'To craft masterpieces of intelligence — built to stand the test of time',
     qualityPolicy: 'Quality Policy',
     copyright: '© Copyright 2025. All Rights Reserved',
-    counterfeitingText: 'Counterfeiting drains trillions from the global economy,<br />destabilizes industries, and destroys trust.',
+    counterfeitingText: `PhantomSig`,
     counterfeitingTextLine1: 'Counterfeiting drains trillions from the global economy,',
     counterfeitingTextLine2: 'destabilizes industries, and destroys trust.',
-    weBuiltTheTechnologyToEndIt: 'We built the technology to end it.',
+    weBuiltTheTechnologyToEndIt: `Next-generation, lightweight secure signal transmission \n system for tactical operations and satellite \n communication. Designed to remain impenetrable, undetectable, \n and resilient against jamming, interception, or disruption, \n PhantomSig™ turns every transmission into a ghost.`,
 };
 
 const Buttons = {
@@ -78,4 +85,5 @@ export {
     Labels,
     SvgPaths,
     HowItWorksConstants,
+    VideoPaths
 };

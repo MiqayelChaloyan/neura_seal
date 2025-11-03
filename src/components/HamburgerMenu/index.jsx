@@ -37,9 +37,10 @@ const itemVariants = {
 
 const pageTitles = {
   '/': '',
-  '/technology': 'Technology',
+  // '/technology': 'Technology',
   '/quality-policy': 'Quality Policy',
   '/how-it-works': 'How It Works',
+  '/phantom-sig': 'Phantom Sig',
 };
 
 const HamburgerMenu = () => {
@@ -86,8 +87,8 @@ const HamburgerMenu = () => {
     });
     window.dispatchEvent(event);
 
-    if (target === 'technology') {
-      navigate('/technology');
+    if (target === 'phantom-sig') {
+      navigate('/phantom-sig');
     } else {
       if (location.pathname !== '/') {
         navigate('/');
@@ -174,9 +175,9 @@ const HamburgerMenu = () => {
                   <motion.li
                     className="menu-item"
                     variants={itemVariants}
-                    onClick={() => handleMenuItemClick('technology')}
+                    onClick={() => handleMenuItemClick('phantom-sig')}
                   >
-                    {Titles.theTechnology}
+                    {Titles.phantomSig}
                   </motion.li>
                   <motion.li
                     className="menu-item"
