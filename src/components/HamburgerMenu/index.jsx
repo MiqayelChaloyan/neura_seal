@@ -41,7 +41,8 @@ const pageTitles = {
   '/quality-policy': 'Quality Policy',
   '/how-it-works': 'How It Works',
   '/phantom-sig': 'Phantom Sig',
-  '/neura-trace': 'NeuraTrace'
+  '/neura-trace': 'NeuraTrace',
+  '/solutions': 'Solutions',
 };
 
 const HamburgerMenu = () => {
@@ -92,6 +93,8 @@ const HamburgerMenu = () => {
       navigate('/phantom-sig');
     } else if (target === 'neura-trace'){
       navigate('/neura-trace');
+    } else if (target === 'solutions'){
+      navigate('/solutions');
     } else {
       if (location.pathname !== '/') {
         navigate('/');
@@ -188,6 +191,13 @@ const HamburgerMenu = () => {
                     onClick={() => handleMenuItemClick('neura-trace')}
                   >
                     {Titles.neuraTrace}
+                  </motion.li>
+                  <motion.li
+                    className="menu-item"
+                    variants={itemVariants}
+                    onClick={() => handleMenuItemClick('solutions')}
+                  >
+                    {Titles.solutions}
                   </motion.li>
                   <motion.li
                     className="menu-item"

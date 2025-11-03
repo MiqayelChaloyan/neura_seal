@@ -55,7 +55,9 @@ const Titles = {
     thePhantomSig: 'PhantomSig',
     phantomSig: 'Phantom Sig',
     neuraTrace: 'NeuraTrace',
-    theCrisis: 'The Crisis'
+    theCrisis: 'The Crisis',
+    solutions: 'Solutions',
+    neuraSeal: 'NeuraSeal'
 };
 
 const Texts = {
@@ -74,7 +76,10 @@ At our core, we combine AI with physics and engineering to create systems that s
     neuraTracedescription_1: 'NeuraTrace™ is a world class tax-tracking system built \n not just to track evasion, but to prevent it at the source.',
     neuraTracedescription_2: 'Tax evasion is more than lost revenue.',
     neuraTracedescription_2_1: 'It funds black markets. \n It fuels smuggling networks. \n It weakens borders and undermines sovereignty.',
-    neuraTracedescription_2_2: 'Unchecked, it becomes a threat to national security. \n We built the technology to defend against it.'
+    neuraTracedescription_2_2: 'Unchecked, it becomes a threat to national security. \n We built the technology to defend against it.',
+    solution_desc_1: 'We’ve built the next evolution in product and document \n security — an impenetrable, scalable authentication \n system redefining how the world proves authenticity. We \n don’t just stop counterfeiting; we ensure it never happens \n again.',
+    solution_desc_2: 'Counterfeiting is a global problem that fuels the \n underground economy and is often linked to organized crime \n networks and illicit activities, including money laundering, \n terrorism financing, and trafficking. It accounts for trillions \n in global economic losses, disrupting industries worldwide. \n Traditional anti-counterfeiting solutions — such as \n QR codes, holograms, and RFID — have proven susceptible \n to replication.',
+    solution_desc_3: 'NeuraSeal eliminates these vulnerabilities with a next \n generation, AI-powered authentication system, built on \n proprietary patented technology that sets a new industry \n benchmark.'
 };
 
 const Buttons = {
