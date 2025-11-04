@@ -9,7 +9,23 @@ import './styles.css';
 const VideoSection = () => {
     const [showVideo, setShowVideo] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
     const videoRef = useRef(null);
+
+    useEffect(() => {
+        const checkMobile = () => {
+          setIsMobile(window.innerWidth <= 900);
+        };
+        
+        // Check on initial load
+        checkMobile();
+        
+        // Add resize listener
+        window.addEventListener('resize', checkMobile);
+        
+        return () => window.removeEventListener('resize', checkMobile);
+      }, []);
 
     useEffect(() => {
       if (!showVideo || !videoRef.current) return;
@@ -63,7 +79,7 @@ const VideoSection = () => {
                       aria-label="Play video"
                     >
                   <span className="video-play-button" aria-hidden="true">
-                  <FaRegCirclePause size={70} color='#fff'/>
+                  <FaRegCirclePause size={isMobile? 40 : 70} color='#fff'/>
                   </span>
                   </button>
                   )}
@@ -77,7 +93,7 @@ const VideoSection = () => {
                 >
                   <img src={ImagePaths.media} alt="PhantomSig poster" className="video-poster-image" />
                   <span className="video-play-button" aria-hidden="true">
-                  <FaRegCirclePlay size={70} color='#fff'/>
+                  <FaRegCirclePlay size={isMobile? 40 : 70} color='#fff'/>
                   </span>
                 </button>
               )}
