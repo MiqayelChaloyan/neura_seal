@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Layout from './layout';
+
 import QualityPolicy from './pages/QualityPolicy';
 import HowItWorks from './pages/HowItWorks';
 import Home from './pages/Home';
