@@ -16,7 +16,7 @@ const CrisisSection = () => {
         <div className="crisis-section-main">
           <div className="crisis-section-visual">
             <video 
-              src={VideoPaths.klingMp3} 
+              src={VideoPaths.klingMov} 
               autoPlay 
               muted 
               loop 

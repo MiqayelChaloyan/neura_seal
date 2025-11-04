@@ -16,8 +16,8 @@ const PhantomSig = () => {
     return (
         <div className='phantom-sig-container'>
             <CrisisSection />
-            <FeaturesList />
             <VideoSection/>
+            <FeaturesList />
             <IndustriesSection />
         </div>
     );

@@ -1,6 +1,7 @@
 .crisis-section-outer {
   position: relative;
   width: 100%;
+  z-index: 2;
 }
 
 .crisis-section-container {
@@ -24,7 +25,7 @@
   content: "";
   position: absolute;
   top: -70px;
-  bottom: -100px;
+  bottom: -250px;
   width: 0.5px;
   background-color: #222;
   z-index: -1;
@@ -237,7 +238,7 @@
     flex-direction: column;
     height: auto;
     min-height: 60vh;
-    padding: 40px 0;
+    padding: 0;
   }
 
   .crisis-section-visual {
@@ -292,7 +293,7 @@
   }
   
   .crisis-section-main {
-    padding: 30px 0;
+    padding: 0;
   }
   
   .crisis-section-visual {
@@ -338,7 +339,7 @@
     flex-direction: column;
     height: auto;
     min-height: 50vh;
-    padding: 20px 0;
+    padding: 0;
   }
 
   .crisis-section-visual {
@@ -405,7 +406,7 @@
   }
   
   .crisis-section-main {
-    padding: 15px 0;
+    padding: 0;
   }
   
   .crisis-section-visual {
@@ -444,7 +445,7 @@
   }
   
   .crisis-section-main {
-    padding: 10px 0;
+    padding: 0;
   }
   
   .crisis-section-visual {
@@ -482,7 +483,7 @@
   }
   
   .crisis-section-main {
-    padding: 20px 0;
+    padding: 0;
   }
   
   .crisis-section-visual {

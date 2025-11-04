@@ -1,41 +1,421 @@
-/* Make the PhantomSig video full-width and responsive */
-.phantom-section-video {
+.video-section-outer {
+    position: relative;
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    background-color: #000;
-    aspect-ratio: 16 / 9;
+    min-height: 100vh;
+  }
+  
+  .video-section-container {
+    position: relative;
+    background: #000407;
+    height: 100%;
+    min-height: 100vh;
+    width: 88.6%;
+    margin: 0 auto;
+    border-top: 1px solid #222;
+    z-index: 1;
+  }
+  
+  .video-section-video {
+    width: 99.8%;
+    height: 100%;
     object-fit: cover;
-}
-
-.phantom-video-section {
-    margin-top: 100px;
+  }
+  
+  .video-section-container::before,
+  .video-section-container::after {
+    content: "";
+    position: absolute;
+    top: -70px;
+    bottom: -250px;
+    width: 0.5px;
+    background-color: #222;
+    z-index: -1;
+  }
+  
+  .video-section-container::before {
+    left: 0;
+  }
+  
+  .video-section-container::after {
+    right: 0;
+  }
+/*   
+  .vertical-line-wrapper {
+    position: absolute;
+    top: -140px;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .vertical-divider {
+    flex: 1;
+    width: 0.5px;
+    background-color: #444;
+    z-index: 1;
+  } */
+  
+  /* removed unused vertical-divider-center */
+  
+  /* Poster/image with play icon overlay */
+  .video-poster-wrapper {
+    position: relative;
+    display: inline-block;
     width: 100%;
-    max-width: 100%;
-}
+    height: 100%;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .video-poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: 9999px;
+    /* background: rgba(0, 0, 0, 0.35); */
+    /* box-shadow: 0 6px 24px rgba(0,0,0,0.45); */
+  }
+  
+  .video-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .video-dot.top {
+    margin-bottom: 10px;
+    transform: translateY(-50%);
+  }
+  
+  .video-dot.bottom {
+    margin-top: 10px;
+    transform: translateY(50%);
+  }
+  
+  .video-section-main {
+    position: relative;
+    height: 100%;
+    display: flex;
+    z-index: 2;
+  }
+  
+  .video-section-visual {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .video-playing-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
 
-@media (max-width: 768px) {
-    .phantom-video-section {
-        margin-top: 70px;
+  
+  /* poster image is styled via .video-poster-image */
+  
+  /* removed unused .video-section-content */
+  
+  .video-section-title {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 140px;
+    font-family: 'D-DIN', sans-serif;
+  }
+  
+  /* removed unused description/bold styles */
+  
+  /* Responsive Design - Large Desktop */
+  @media (max-width: 1440px) {
+    .video-section-container {
+      width: 90%;
+      height: 100%;
+      min-height: 100vh;
+      border-top: 1px solid #222;
+    }
+    
+    .video-section-title {
+      font-size: 2.8rem;
+      margin-top: 120px;
+    }
+  }
+  
+  /* Responsive Design - Desktop */
+  @media (max-width: 1200px) {
+    .video-section-outer, .video-section-container {
+        min-height: 0 !important;
+    }
+    
+    .video-section-container {
+      width: 92%;
+      height: 100%;
+      min-height: 100vh;
+      border-top: 1px solid #222;
+    }
+    
+    .video-section-title {
+      font-size: 2.6rem;
+      margin-top: 110px;
+    }
+  }
+  
+  /* Responsive Design - Tablet Large */
+  @media (max-width: 1024px) {
+
+    .video-section-container {
+      width: 94%;
+      height: 100%;
+      min-height: 100vh;
+      border-top: 1px solid #222;
+    }
+    
+    .video-section-title {
+      font-size: 2.4rem;
+      margin-top: 100px;
+    }
+  }
+  
+  /* Responsive design - 900px breakpoint (tablet) */
+  @media (max-width: 900px) {
+    .video-section-container {
+      width: 90%;
+      height: 100%;
+      min-height: 100vh;
+      border-top: 1px solid #222;
+    }
+    
+  
+    .video-section-container::before,
+    .video-section-container::after {
+      top: -200px;
     }
 
-    .phantom-section-video {
-        aspect-ratio: 16 / 9;
-        max-height: 60vh;
+    .video-section-outer, .video-section-container {
+        min-height: 0 !important;
     }
-}
-
-@media (min-width: 769px) {
-    .phantom-section-video {
-        max-height: 90vh;
+  
+    .video-section-main {
+      flex-direction: column;
+      height: auto;
+      min-height: 0;
+      padding: 40px 0;
     }
-}
-
-@media (max-width: 600px) {
-    .phantom-video-section {
-        margin-top: 0;
+  
+    .video-section-visual {
+      order: 1;
+      flex: none;
+      height: 300px;
+      margin-bottom: 20px;
     }
-}
+  
+    /* removed unused .video-section-content adjustments */
+  
+    .video-section-title {
+      font-size: 2.5rem;
+    }
+  
+    .vertical-divider-center{
+      display: none;
+    }
+  
+    /* removed description/bold responsive rules */
+  
+    .vertical-line-wrapper {
+      top: -100px;
+      bottom: -30px;
+    }
+  
+  }
+  
+  /* Responsive Design - Tablet */
+  @media (max-width: 768px) {
+    .video-section-outer, .video-section-container {
+        min-height: 0 !important;
+    }
 
+    .video-section-container {
+      width: 92%;
+      height: 100%;
+      min-height: 100vh;
+      border-top: 1px solid #222;
+    }
+    
+    .video-section-main {
+      padding: 30px 0;
+    }
+    
+    .video-section-visual {
+      height: 250px;
+      margin-bottom: 15px;
+    }
+    
+    .video-section-title {
+      font-size: 2.2rem;
+    }
+  }
+  
+  /* Responsive design - 600px breakpoint (mobile) */
+  @media (max-width: 600px) {
+    .video-section-container {
+      width: 95%;
+      height: 100%;
+      min-height: 100vh;
+      border-top: 1px solid #222;
+    }
+  
+    /* removed unused content padding */
+  
+    .video-section-container::before,
+    .video-section-container::after {
+      top: -100px;
+    }
+  
+    .video-section-outer, .video-section-container {
+        min-height: 0 !important;
+    }
 
+    .video-section-main {
+      flex-direction: column;
+      height: auto;
+      min-height: 0 !important;
+      padding: 20px 0;
+    }
+  
+    .video-section-visual {
+      order: 1;
+      flex: none;
+      height: 200px;
+      margin-bottom: 15px;
+    }
+  
+    /* poster image uses .video-poster-image */
+  
+    /* removed unused .video-section-content adjustments */
+  
+    .video-section-title {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+  
+    /* removed description/bold responsive rules */
+  
+    .vertical-line-wrapper {
+      top: -50px;
+      bottom: -20px;
+    }
+  
+    /* removed vertical-divider-center */
+  }
+  
+  /* Responsive Design - Mobile Medium */
+  @media (max-width: 480px) {
+    .video-section-outer, .video-section-container {
+        min-height: 0 !important;
+    }
+
+    .video-section-container {
+      width: 98%;
+      min-height: 100vh;
+      border-top: 1px solid #222;
+    }
+    
+    .video-section-main {
+      padding: 15px 0;
+    }
+    
+    .video-section-visual {
+      height: 180px;
+      margin-bottom: 10px;
+    }
+    
+    /* removed unused content padding */
+    
+    .video-section-title {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+    
+    /* removed description/bold responsive rules */
+  }
+  
+  /* Responsive Design - Mobile Small */
+  @media (max-width: 360px) {
+    .video-section-outer, .video-section-container {
+        min-height: 0 !important;
+    }
+
+    .video-section-container {
+      width: 100%;
+      min-height: 100vh;
+      border-top: 1px solid #222;
+    }
+    
+    .video-section-main {
+      padding: 10px 0;
+    }
+    
+    .video-section-visual {
+      height: 160px;
+      margin-bottom: 8px;
+    }
+    
+    /* removed unused content padding */
+    
+    .video-section-title {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+    
+    /* removed description/bold responsive rules */
+  }
+  
+  /* Landscape orientation adjustments */
+  @media (max-height: 500px) and (orientation: landscape) {
+    .video-section-container {
+      min-height: 70vh;
+      border-top: 1px solid #222;
+    }
+    
+    .video-section-main {
+      padding: 20px 0;
+    }
+    
+    .video-section-visual {
+      height: 200px;
+      margin-bottom: 10px;
+    }
+    
+    /* removed unused content padding */
+    
+    .video-section-title {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+  }
+  
+  
