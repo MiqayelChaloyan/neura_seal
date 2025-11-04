@@ -20,9 +20,8 @@ import glowing_abstract from "../assets/images/glowing-abstract.webp";
 import media from "../assets/images/media.webp";
 
 
-// Videos
-import klingMp3 from "../assets/videos/kling.mov";
-import phantomSigMp3 from "../assets/videos/phantomSig.mp4";
+// Videos - Using public folder paths for better Vercel compatibility
+// Files in public folder are served from root, so /videos/filename
 
 // Constants
 import HowItWorksConstants from "./howItWorks.jsx";
@@ -42,8 +41,8 @@ const ImagePaths = {
 };
 
 const VideoPaths = {
-    klingMov: klingMp3,
-    phantomSigMp4: phantomSigMp3,
+    klingMov: "/videos/kling.mov",
+    phantomSigMp4: "/videos/phantomSig.mp4",
 };
 
 const SvgPaths = {
