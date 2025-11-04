@@ -18,7 +18,10 @@ import trace_1 from "../assets/images/trace_1.webp";
 import trace_2 from "../assets/images/trace_2.webp";
 import glowing_abstract from "../assets/images/glowing-abstract.webp";
 
+
+// Videos
 import klingMp3 from "../assets/videos/kling.mov";
+import phantomSigMp3 from "../assets/videos/PhantomSig.mp4";
 
 // Constants
 import HowItWorksConstants from "./howItWorks.jsx";
@@ -38,6 +41,7 @@ const ImagePaths = {
 
 const VideoPaths = {
     klingMp3: klingMp3,
+    phantomSigMp3: phantomSigMp3,
 };
 
 const SvgPaths = {
@@ -53,12 +57,13 @@ const SvgPaths = {
 const Titles = {
     whoWeAre: 'Who We Are',
     theTechnology: 'The Technology',
+    ourTechnologies: 'Our Technologies',
     contactUs: 'Contact Us',
     thePhantomSig: 'PhantomSig',
-    phantomSig: 'PhantomSig',
-    neuraTrace: 'NeuraTrace',
+    phantomSig: 'PhantomSig™',
+    neuraTrace: 'NeuraTrace™',
     theCrisis: 'The Crisis',
-    neuraSeal: 'NeuraSeal',
+    neuraSeal: 'NeuraSeal™',
 };
 
 const Texts = {

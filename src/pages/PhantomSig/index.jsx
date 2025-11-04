@@ -5,6 +5,7 @@ import CrisisSection from './CrisisSection';
 import IndustriesSection from './IndustriesSection';
 
 import './styles.css';
+import VideoSection from './VideoSection';
 
 
 const PhantomSig = () => {
@@ -16,6 +17,7 @@ const PhantomSig = () => {
         <div className='phantom-sig-container'>
             <CrisisSection />
             <FeaturesList />
+            <VideoSection/>
             <IndustriesSection />
         </div>
     );

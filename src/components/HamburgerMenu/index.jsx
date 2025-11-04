@@ -117,6 +117,13 @@ const HamburgerMenu = () => {
     window.dispatchEvent(event);
   };
 
+  const activeTech = (() => {
+    if (location.pathname === '/neura-seal') return 'neura-seal';
+    if (location.pathname === '/neura-trace') return 'neura-trace';
+    if (location.pathname === '/phantom-sig') return 'phantom-sig';
+    return '';
+  })();
+
   return (
     <>
       <header className="fixed-header">
@@ -179,25 +186,15 @@ const HamburgerMenu = () => {
                     {Titles.whoWeAre}
                   </motion.li>
                   <motion.li
-                    className="menu-item"
+                    className={`menu-item has-submenu ${activeTech ? 'active' : ''}`}
                     variants={itemVariants}
-                    onClick={() => handleMenuItemClick('phantom-sig')}
                   >
-                    {Titles.phantomSig}
-                  </motion.li>
-                  <motion.li
-                    className="menu-item"
-                    variants={itemVariants}
-                    onClick={() => handleMenuItemClick('neura-trace')}
-                  >
-                    {Titles.neuraTrace}
-                  </motion.li>
-                  <motion.li
-                    className="menu-item"
-                    variants={itemVariants}
-                    onClick={() => handleMenuItemClick('neura-seal')}
-                  >
-                    {Titles.neuraSeal}
+                    {Titles.ourTechnologies}
+                    <ul className="submenu">
+                      <li className={`submenu-item ${activeTech === 'neura-seal' ? 'active' : ''}`} onClick={() => handleMenuItemClick('neura-seal')}>{Titles.neuraSeal}</li>
+                      <li className={`submenu-item ${activeTech === 'neura-trace' ? 'active' : ''}`} onClick={() => handleMenuItemClick('neura-trace')}>{Titles.neuraTrace}</li>
+                      <li className={`submenu-item ${activeTech === 'phantom-sig' ? 'active' : ''}`} onClick={() => handleMenuItemClick('phantom-sig')}>{Titles.phantomSig}</li>
+                    </ul>
                   </motion.li>
                   <motion.li
                     className="menu-item"

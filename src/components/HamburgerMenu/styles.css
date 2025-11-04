@@ -94,7 +94,61 @@
 }
 
 .menu-item:hover {
-  color: #aaa;
+  color: #33c2d1;
+}
+
+/* Submenu under center item */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: disc;
+  padding: 8px 0 0 22px;
+  margin: 0;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  color: var(--text-color);
+  font-size: var(--large-font-size);
+  line-height: 1.7;
+  cursor: pointer;
+  white-space: nowrap;
+  list-style-type: disc;
+  transition: color 0.3s ease;
+}
+
+.submenu li:hover {
+  color: #33c2d1;
+}
+
+/* Highlight parent label when submenu is open */
+.has-submenu:hover,
+.has-submenu.active {
+  color: #33c2d1;
+}
+
+/* Keep submenu open while hovering submenu */
+.has-submenu:hover .submenu,
+.has-submenu .submenu:hover {
+  display: block;
+}
+
+.submenu-item.active {
+  color: #33c2d1;
+}
+
+.submenu li::hover {
+  color: #33c2d1; /* teal bullet */
 }
 
 .top-left {
@@ -122,7 +176,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  /* width: 60%; */  /* technology */
+  width: 60%;
 }
 
 .menu-sections {
@@ -380,6 +434,17 @@
     gap: 2rem;
     margin-top: 8rem;
     align-items: center;
+  }
+
+  /* On mobile, make submenu static under title and visible when tapping (no hover).
+     We'll keep it hidden by default but position static to avoid overflow. */
+  .has-submenu {
+    position: static;
+  }
+  .has-submenu .submenu {
+    position: static;
+    transform: none;
+    padding-left: 24px;
   }
 
   .menu-item {

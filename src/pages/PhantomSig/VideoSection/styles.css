@@ -1,0 +1,41 @@
+/* Make the PhantomSig video full-width and responsive */
+.phantom-section-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    background-color: #000;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.phantom-video-section {
+    margin-top: 100px;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .phantom-video-section {
+        margin-top: 70px;
+    }
+
+    .phantom-section-video {
+        aspect-ratio: 16 / 9;
+        max-height: 60vh;
+    }
+}
+
+@media (min-width: 769px) {
+    .phantom-section-video {
+        max-height: 90vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .phantom-video-section {
+        margin-top: 0;
+    }
+}
+
+
