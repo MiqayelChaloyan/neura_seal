@@ -41,7 +41,7 @@ const CrisisSection = () => {
             />
           </div>
           <div className="crisis-section-content">
-            <h1 className="crisis-section-title">{Titles.theCrisis}</h1>
+            <h1 className="crisis-section-title crisis">{Titles.theCrisis}</h1>
             <p className="crisis-section-description">
               {Texts.solution_desc_2}
             </p>

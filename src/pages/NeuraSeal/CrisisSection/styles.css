@@ -133,6 +133,10 @@
   text-align: left
 }
 
+.crisis {
+  margin-bottom: 20px !important;
+}
+
 .crisis-section-title {
   font-size: 3rem;
   margin-bottom: 100px;
@@ -178,13 +182,13 @@
   .rtl h1 {
     padding-right: 0;
     padding-left: 80px;
-    text-align: center
+    text-align: left
   }
   
   .rtl p {
     padding-right: 0;
     padding-left: 80px;
-    text-align: center
+    text-align: left
   }
   
 
