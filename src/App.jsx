@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Layout from './layout';
-// import Technology from './pages/Technology';
 import QualityPolicy from './pages/QualityPolicy';
 import HowItWorks from './pages/HowItWorks';
 import Home from './pages/Home';
@@ -16,7 +15,6 @@ const App = () => {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/technology" element={<Technology />} /> */}
         <Route path="/phantom-sig" element={<PhantomSig />} />
         <Route path="/neura-trace" element={<NeuraTrace />} />
         <Route path="/neura-seal" element={<NeuraSeal />} />
