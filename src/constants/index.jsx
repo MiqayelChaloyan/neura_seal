@@ -21,7 +21,7 @@ import glowing_abstract from "../assets/images/glowing-abstract.webp";
 
 // Videos
 import klingMp3 from "../assets/videos/kling.mov";
-import phantomSigMp3 from "../assets/videos/PhantomSig.mp4";
+import phantomSigMp3 from "../assets/videos/phantomSig.mp4";
 
 // Constants
 import HowItWorksConstants from "./howItWorks.jsx";
