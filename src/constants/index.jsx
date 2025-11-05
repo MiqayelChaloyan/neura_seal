@@ -18,6 +18,7 @@ import trace_1 from "../assets/images/trace_1.webp";
 import trace_2 from "../assets/images/trace_2.webp";
 import glowing_abstract from "../assets/images/glowing-abstract.webp";
 import media from "../assets/images/media.webp";
+import crisis_video from "../assets/images/crisis.webp";
 
 
 // Videos - Using public folder paths for better Vercel compatibility
@@ -37,7 +38,8 @@ const ImagePaths = {
     trace_1: trace_1,
     trace_2: trace_2,
     glowing_abstract: glowing_abstract,
-    media: media
+    media: media,
+    crisis_video: crisis_video
 };
 
 const VideoPaths = {

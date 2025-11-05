@@ -3,9 +3,9 @@ import { useEffect } from 'react';
 import FeaturesList from './FeaturesList';
 import CrisisSection from './CrisisSection';
 import IndustriesSection from './IndustriesSection';
+import VideoSection from './VideoSection';
 
 import './styles.css';
-import VideoSection from './VideoSection';
 
 
 const PhantomSig = () => {
