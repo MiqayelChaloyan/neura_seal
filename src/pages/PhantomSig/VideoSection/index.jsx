@@ -64,7 +64,7 @@ const VideoSection = () => {
                     ref={videoRef}
                     src={VideoPaths.phantomSigMp4} 
                     autoPlay 
-                    muted 
+                    // muted 
                     loop 
                     playsInline 
                     alt="PhantomSig video" 
